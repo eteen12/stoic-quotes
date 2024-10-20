@@ -19,7 +19,6 @@ export const metadata = {
   keywords:
     "Stoicism, Stoic quotes, philosophy, wisdom, Marcus Aurelius, Seneca, Epictetus, daily quotes, personal growth, resilience",
   author: "Teleta Development",
-  charset: "UTF-8",
   og: {
     title: "Stoic Quotes",
     description:
@@ -56,11 +55,6 @@ export const metadata = {
   },
 };
 
-export const viewport = {
-  width: "device-width",
-  initialScale: 1,
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -85,10 +79,9 @@ export default function RootLayout({ children }) {
           sizes="16x16"
           href="/favicon/favicon-16x16.png"
         />
-        <link rel="manifest" href="/favicon/site.webmanifest"></link>
+        <link rel="manifest" href="/favicon/site.webmanifest" />
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
-        {/* Add Open Graph and Twitter meta tags */}
         <meta property="og:title" content={metadata.og.title} />
         <meta property="og:description" content={metadata.og.description} />
         <meta property="og:url" content={metadata.og.url} />
@@ -100,7 +93,6 @@ export default function RootLayout({ children }) {
           content={metadata.twitter.description}
         />
         <meta name="twitter:image" content={metadata.twitter.image} />
-        {/* Add Schema.org markup for Google+ */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schema) }}
