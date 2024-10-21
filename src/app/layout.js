@@ -99,6 +99,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.variable} antialiased`}
       >
+        
           <NavBar/>
         {children}
       </body>

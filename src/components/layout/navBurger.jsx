@@ -49,13 +49,13 @@ export default function NavBurger() {
         )}
       >
         <ul
-          className="flex flex-col items-start py-10 gap-8 text-2xl ralewayBold darkColor"
-          style={{ "--font-weight": "500" }}
+          className="flex flex-col items-start py-10 gap-8 text-2xl darkColor"
+          style={{ "--font-weight": "500", fontFamily: "var(--font-inter)" }} // Added Inter font here
         >
           {menuItems.map((item, index) => (
             <li key={index} className="py-2 w-full">
               <div className="flex justify-between items-center">
-                <Link href={item.href} className="ml-6" onClick={handleClose}>
+                <Link href={item.href} className="ml-6" onClick={handleClose} style={{ fontFamily: "var(--font-inter)" }}>
                   {item.name}
                 </Link>
                 <Link href={item.href}>

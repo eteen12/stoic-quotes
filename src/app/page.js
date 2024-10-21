@@ -1,8 +1,11 @@
+import React from "react";
+
+import Hero from "@/components/sections/hero";
 
 export default function Home() {
   return (
-    <div className="min-h-[200vh]">
-
+    <div className="p-2">
+      <Hero/>
     </div>
   );
 }
