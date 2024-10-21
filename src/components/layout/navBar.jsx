@@ -18,7 +18,7 @@ export default function NavBar() {
       <Link href="/" aria-label="Go to Plumbing homepage">
         <div className="relative">
           <h2
-            className="tracking-tighter mohave text-4xl md:text-5xl"
+            className="tracking-tighter inter backdrop:text-4xl md:text-5xl"
             style={{ "--font-weight": "900" }}
           >
             ONE
@@ -28,7 +28,7 @@ export default function NavBar() {
       <div className="sm:hidden flex gap-5">
         <NavBurger />
       </div>
-      <div className="hidden sm:flex items-center px-2 darkColor tracking-tighter ralewayBold">
+      <div className="hidden sm:flex items-center px-2 darkColor tracking-tighter inter">
         <ul className="flex items-center">
           <Link href="/shop" rel="preload">
             <li className="ml-10 hover:border-b text-xl  md:text-2xl">Shop</li>

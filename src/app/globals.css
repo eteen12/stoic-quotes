@@ -3,9 +3,48 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0D0D0D;
+  --foreground: #FAF9F6;
+  --font-inter: "Inter", sans-serif;
 }
+.inter {
+  font-family: var(--font-inter);
+  font-weight: var(--font-weight);
+}
+.tham {
+  position: relative;
+  display: inline-block;
+  width: 2rem; /* Adjust to your preferred width */
+  height: 2rem; /* Adjust to your preferred height */
+  cursor: pointer;
+}
+
+.tham-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.tham-inner {
+  position: absolute;
+  width: 100%;
+  height: 0.2rem; /* Bar height */
+  background-color: black; /* Change as needed */
+  transition: all 0.3s ease;
+}
+
+.tham-active .tham-inner:nth-child(1) {
+  transform: translateY(0.8rem) rotate(45deg);
+}
+
+.tham-active .tham-inner:nth-child(2) {
+  opacity: 0; /* Hide the middle bar */
+}
+
+.tham-active .tham-inner:nth-child(3) {
+  transform: translateY(-0.8rem) rotate(-45deg);
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -17,7 +56,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: inter;
 }
 
 @layer utilities {
