@@ -72,11 +72,12 @@ export default function Home() {
         <div className="mx-auto mt-16 flex justify-center max-w-2xl sm:mt-24 lg:mt-0 lg:max-w-none xl:ml-32">
           <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
             <Image
-              src="./rando.png"
+              src="./rando.webp"
               alt="Marcus Aurelius Bust in the Louvre"
               width={2432}
               height={1442}
               className="w-[76rem]"
+              priority
             />
           </div>
         </div>
