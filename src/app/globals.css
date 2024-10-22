@@ -2,13 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
+/*NAV BURGER*/
+label {
+  display: flex;
+  flex-direction: column;
+  width: 40px;
+  cursor: pointer;
+
+  transform: rotate(180deg);
+}
+
+label span {
+  border-radius: 999999px;
+  height: 4px;
+  margin: 4px 0;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+span:nth-of-type(1) {
+  width: 50%;
+}
+
+span:nth-of-type(2) {
+  width: 95%;
+}
+
+span:nth-of-type(3) {
+  width: 75%;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(6px, 1px);
+}
+
+input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+  transform-origin: top;
+  transform: rotatez(-46deg);
+}
+
+input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+  transform-origin: bottom;
+  width: 50%;
+  transform: translate(16px, -8px) rotatez(43deg);
+}
+
 :root {
   --background: #0d0d0d;
   --foreground: #faf9f6;
   --font-inter: "Inter", sans-serif;
 }
-.bold{
-  font-weight: 800;
+.bold {
+  font-weight: 700;
 }
 .blackText {
   color: #0d0d0d;
@@ -17,10 +66,10 @@
   background-color: #0d0d0d;
 }
 .hoverBg:hover {
-  background-color: #1F1F1F;
+  background-color: #1f1f1f;
 }
 .hoverText:hover {
-  color: #1F1F1F;
+  color: #1f1f1f;
 }
 .whiteText {
   color: #faf9f6;

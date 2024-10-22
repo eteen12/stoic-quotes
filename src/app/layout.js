@@ -1,13 +1,12 @@
-import { Inter} from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/layout/navBar";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  weight: ["100","200","300", "400", "500", "600", "700","800","900"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
-
 
 export const metadata = {
   title: "Stoic Quotes - Daily Wisdom from Stoic Philosophy",
@@ -95,12 +94,10 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.schema) }}
         />
       </head>
-    
-      <body
-        className={`${inter.variable} antialiased`}
-      >
-        
-          <NavBar/>
+
+      <body className={`${inter.variable} antialiased`}>
+        <NavBar />
+
         {children}
       </body>
     </html>

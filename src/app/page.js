@@ -4,8 +4,13 @@ import Hero from "@/components/sections/hero";
 
 export default function Home() {
   return (
-    <div className="p-2">
-      <Hero/>
+    <div>
+      <div className="p-2">
+        <Hero/>
+      </div>
+      <div className="min-h-screen">
+
+      </div>
     </div>
   );
 }
