@@ -25,13 +25,11 @@ export default function NavBar() {
         }}
       >
         <Link href="/" aria-label="Go to Plumbing homepage">
-          <h2 className="relative tracking-tighter text-2xl bold">
+          <h2 className="relative tracking-tighter text-2xl bold z-50">
             Stoic Quotes
           </h2>
         </Link>
-        <div className="sm:hidden flex gap-5">
-          <NavBurger />
-        </div>
+
         <div className="hidden sm:flex items-center px-2 tracking-tighter">
           <ul className="flex items-center">
             <Link href="/shop" rel="preload">
@@ -46,6 +44,9 @@ export default function NavBar() {
               <li className="ml-10 hover:border-b text-xl md:text-2xl">Home</li>
             </Link>
           </ul>
+        </div>
+        <div className="sm:hidden flex gap-5">
+          <NavBurger />
         </div>
       </div>
     </header>

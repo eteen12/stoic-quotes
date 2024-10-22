@@ -2,8 +2,6 @@
 
 import React, { useState } from "react";
 import { useNavHandler } from "@/hooks/useNavHandler";
-
-import classNames from "classnames";
 import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -11,7 +9,7 @@ export default function NavBurger() {
   const [opened, setOpened] = useState(false);
 
   const handleToggle = () => {
-    setOpened(!opened);
+    setOpened((prevOpened) => !prevOpened);
   };
   const handleClose = () => {
     setOpened(false);
@@ -27,29 +25,23 @@ export default function NavBurger() {
 
   return (
     <>
-      <label
-        htmlFor="check"
-        lassName="transition-all ease duration-700"
-        onClick={handleToggle}
-      >
-        <input type="checkbox" id="check" className="hidden " readOnly />
+      <label htmlFor="check" className="transition-all ease duration-700 z-50">
+        <input
+          type="checkbox"
+          id="check"
+          className="sr-only"
+          readOnly
+          onClick={handleToggle}
+        />
         <span style={{ background: text }} className=""></span>
         <span style={{ background: text }}></span>
         <span style={{ background: text }}></span>
       </label>
       <div
-        className={classNames(
-          "fixed top-16 left-0 w-full h-screen bg-gray-50 transition-opacity duration-500 ease-in-out flex flex-col",
-          {
-            "opacity-100 pointer-events-auto": opened,
-            "opacity-0 pointer-events-none": !opened,
-          }
-        )}
+        className={`fixed top-0 left-0 w-full min-h-[100vh] whiteBg transition-opacity duration-500 ease-in-out flex flex-col z-20 
+          ${opened ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
       >
-        <ul
-          className="flex flex-col items-start py-10 gap-8 text-2xl darkColor"
-          style={{ "--font-weight": "500", fontFamily: "var(--font-inter)" }} // Added Inter font here
-        >
+        <ul className="flex flex-col items-start py-10 pt-20 gap-8 text-2xl blackText inter">
           {menuItems.map((item, index) => (
             <li key={index} className="py-2 w-full">
               <div className="flex justify-between items-center">

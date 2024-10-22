@@ -4,12 +4,12 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <div className="overflow-hidden rounded-xl bg-white shadow h-[87vh] w-full md:h-screen">
-      <div className="sm:h-10"></div>
+
       <div className="relative mx-auto h-[100%] w-[100%] ">
         <Image
           src="/hero/heroImageDesktop.webp"
           alt="Hero Image"
-          className="object-contain object-right hidden sm:block"
+          className="object-contain object-right hidden sm:block ml-32 lg:ml-20"
           fill
           priority
         />
