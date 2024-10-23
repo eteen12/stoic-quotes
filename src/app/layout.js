@@ -95,7 +95,7 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${inter.variable} antialiased max-w-[1500px] mx-auto`}>
         <NavBar />
 
         {children}
