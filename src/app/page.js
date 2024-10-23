@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 import Hero from "@/components/sections/hero";
 import StoicVisual1 from "@/components/sections/stoicVisual1";
