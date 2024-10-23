@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
+import DailyQuote from "../quotes/dailyQuote";
 
 const philosophers = [
   { name: "Marcus Aurelius", link: "marcus-aurelius" },
@@ -49,7 +50,7 @@ export default function BentoGrid() {
                     <h3>Daily Quote</h3>
                   </div>
                   <div className="blackBg w-full h-full">
-                    <h3>the quote</h3>
+                    <DailyQuote/>
                   </div>
                 </div>
                 <div className="blackBg w-full h-full">
