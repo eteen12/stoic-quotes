@@ -52,7 +52,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
 }
 
 :root {
-  --background: #0d0d0d;
+  --background: #1f1e1e;
   --foreground: #faf9f6;
   --font-inter: "Inter", sans-serif;
 }
@@ -60,10 +60,10 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   font-weight: 700;
 }
 .blackText {
-  color: #0d0d0d;
+  color: #1f1e1e;
 }
 .blackBg {
-  background-color: #0d0d0d;
+  background-color: #1f1e1e;
 }
 .hoverBg:hover {
   background-color: #1f1f1f;
@@ -117,7 +117,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #f3f4f6;
     --foreground: #ededed;
   }
 }

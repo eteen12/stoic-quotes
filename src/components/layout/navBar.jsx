@@ -1,14 +1,8 @@
-"use client";
-
-import { useNavHandler } from "@/hooks/useNavHandler";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import NavBurger from "./navBurger";
 
 export default function NavBar() {
-  const { scrollingDown, shadow, background, text } = useNavHandler();
-
   const links = [
     { href: "/shop", text: "Quotes" },
     { href: "/contact", text: "Blog" },
@@ -22,24 +16,11 @@ export default function NavBar() {
   ];
 
   return (
-    <header
-      className={`fixed flex justify-between items-center w-full h-16 z-50 transition-all duration-700 md:h-24 ${
-        scrollingDown ? "-translate-y-full" : "translate-y-0 "
-      }`}
-      style={{
-        boxShadow: shadow,
-        background,
-      }}
-    >
-      <div
-        className={`flex justify-between items-center w-full px-5 lg:px-8 xl:px-12 2xl:px-20 transition-all duration-700`}
-        style={{
-          color: text,
-        }}
-      >
+    <header className="flex justify-between items-center w-full h-16 z-50 transition-all duration-700  blackText blackText tracking-tighter bold text-2xl md:text-3xl">
+      <div className="flex justify-between items-center w-full px-5 pt-2 transition-all duration-700">
         <Link href="/" aria-label="Go to Plumbing homepage">
-          <h2 className="relative tracking-tighter text-2xl bold z-50">
-            Stoic Quotes
+          <h2 className="relative tracking-tighter  bold z-50">
+            Stoic Quotes.
           </h2>
         </Link>
 
@@ -51,15 +32,13 @@ export default function NavBar() {
                 href={link.href}
                 rel={link.href === "/shop" ? "preload" : undefined}
               >
-                <li className="ml-10 hover:border-b text-xl md:text-2xl bold">
-                  {link.text}
-                </li>
+                <li className="ml-10 hover:border-b ">{link.text}</li>
               </Link>
             ))}
             <li className="ml-10 hover:border-b text-xl md:text-2xl">
               <Menu as="div" className="relative inline-block text-left">
                 <div>
-                  <MenuButton className="rounded-md blackBg px-8 py-1.5 whiteText shadow-sm hoverBg tracking-tighter bold text-xl flex">
+                  <MenuButton className="rounded-md blackBg px-8 py-1.5 whiteText shadow-sm hoverBg flex tracking-tighter bold md:text-2xl">
                     More
                   </MenuButton>
                 </div>
