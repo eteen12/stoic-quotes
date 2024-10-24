@@ -1,3 +1,4 @@
+import Image from "next/image";
 import blogs from "@/components/blog/blogs";
 import { notFound } from "next/navigation";
 import Head from "next/head";
@@ -11,7 +12,7 @@ export default async function BlogPostPage({ params }) {
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
+    <div className=" mx-auto mt-20">
       <Head>
         <title>{post.title} | Stoic Quotes</title>
         <meta name="description" content={post.description} />
@@ -61,11 +62,45 @@ export default async function BlogPostPage({ params }) {
           })}
         </script>
       </Head>
-      <h1 className="text-3xl font-bold">{post.title}</h1>
-      <img src={post.imageUrl} alt={post.title} className="my-6" />
-      <p>{post.content}</p>
-      <div className="mt-6 text-gray-500">
-        {post.author} &middot; {post.date}
+
+      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+          <div className="lg:pr-4">
+            <div className="lg:max-w-lg">
+              <p className="text-base font-semibold leading-7 text-indigo-600">
+                {post.subject}
+              </p>
+              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                {post.title}
+              </h1>
+              <p className="mt-6 text-xl leading-8 text-gray-700">
+                {post.description}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden w-[48rem] sm:w-[57rem] h-[30rem] rounded-xl whiteBg">
+          <Image alt={post.alt} src={post.src} className="object-contain" fill />
+        </div>
+        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+          <div className="lg:pr-4">
+            <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
+              <h2 className=" text-2xl font-bold tracking-tight text-gray-900">
+                {post.h2}
+              </h2>
+              <p className="mt-6">{post.content}</p>
+              <h2 className=" text-2xl font-bold tracking-tight text-gray-900">
+                Relevant quotes
+              </h2>
+              <p className="mt-6">{post.quotes}</p>
+
+              <h2 className=" text-2xl font-bold tracking-tight text-gray-900">
+                {post.h2v2}
+              </h2>
+              <p className="mt-6">{post.reflection}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
