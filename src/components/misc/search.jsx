@@ -2,23 +2,24 @@
 import { useState } from "react";
 import { IoIosClose, IoMdSearch } from "react-icons/io";
 
-const Search = ({ items }) => {
+const Search = ({ blogs, setFilteredItems }) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredItems, setFilteredItems] = useState([]);
   const [submitted, setSubmitted] = useState(false);
 
   const handleSearch = (e) => {
     e.preventDefault();
-    const filtered = items.filter((item) =>
-      item.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setFilteredItems(filtered);
+
+    const filteredBlogs = blog.filter((blog) => {
+      blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        blog.description.toLowerCase().includes(searchTerm.toLowerCase());
+    });
+    setFilteredBlogs(filteredItems);
     setSubmitted(true);
   };
 
   const handleReset = () => {
     setSearchTerm("");
-    setFilteredItems([]);
+    setFilteredBlogs(blogs);
     setSubmitted(false);
   };
 
@@ -26,9 +27,7 @@ const Search = ({ items }) => {
     <div className="mt-10 items-center justify-center md:px-16">
       <form onSubmit={handleSearch} className="w-full">
         <div className="relative flex items-center whiteBg">
-          <IoMdSearch
-            className="absolute w-8 h-8 left-2.5 blackText"
-          />
+          <IoMdSearch className="absolute w-8 h-8 left-2.5 blackText" />
 
           <input
             type="text"
@@ -45,17 +44,14 @@ const Search = ({ items }) => {
           </button>
         </div>
       </form>
-      {submitted && filteredItems.length > 0 && (
+      {submitted && (
         <ul className="mt-10 flex justify-start ml-1 blackText">
-          {filteredItems.map((item) => (
-            <li key={item.id} className="flex items-center">
-              {item.name}
-              <IoIosClose
-                className="mt-px text-2xl cursor-pointer ml-2"
-                onClick={handleReset} // Reset on click
-              />
-            </li>
-          ))}
+          <li className="flex items-center">
+            <IoIosClose
+              className="mt-px text-2xl cursor-pointer ml-2"
+              onClick={handleReset}
+            />
+          </li>
         </ul>
       )}
     </div>
