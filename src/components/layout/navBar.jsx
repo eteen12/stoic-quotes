@@ -16,7 +16,7 @@ export default function NavBar() {
   ];
 
   return (
-    <header className="flex justify-between items-center w-full h-16 z-50 transition-all duration-700  blackText blackText tracking-tighter bold text-2xl md:text-3xl">
+    <header className="flex justify-between items-center w-full h-16 z-50 transition-all duration-700 blackText tracking-tighter bold text-2xl md:text-3xl">
       <div className="flex justify-between items-center w-full px-5 pt-2 transition-all duration-700">
         <Link href="/" aria-label="Go to Plumbing homepage">
           <h2 className="relative tracking-tighter  bold z-50">
