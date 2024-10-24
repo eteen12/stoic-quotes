@@ -2,18 +2,20 @@
 import { useState } from "react";
 import { IoIosClose, IoMdSearch } from "react-icons/io";
 
-const Search = ({ blogs, setFilteredItems }) => {
+const Search = ({ blogs, setFilteredBlogs }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
   const handleSearch = (e) => {
     e.preventDefault();
 
-    const filteredBlogs = blog.filter((blog) => {
-      blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        blog.description.toLowerCase().includes(searchTerm.toLowerCase());
-    });
-    setFilteredBlogs(filteredItems);
+    const filteredBlogs = blogs.filter(
+      (blog) =>
+        blog.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        blog.description.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
+    setFilteredBlogs(filteredBlogs);
     setSubmitted(true);
   };
 
@@ -47,6 +49,7 @@ const Search = ({ blogs, setFilteredItems }) => {
       {submitted && (
         <ul className="mt-10 flex justify-start ml-1 blackText">
           <li className="flex items-center">
+            <p className="text-lg"> "{searchTerm}"</p>
             <IoIosClose
               className="mt-px text-2xl cursor-pointer ml-2"
               onClick={handleReset}

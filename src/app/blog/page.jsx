@@ -28,7 +28,7 @@ export default function Page() {
             <p className="mt-8 text-lg blackText sm:text-xl/8">
               Posting weekly, containing stoic insights, wisdom and reflections.
             </p>
-            6
+
             <Search blogs={blogs} setFilteredBlogs={setFilteredBlogs} />
           </div>
         </div>
