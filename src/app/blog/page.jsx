@@ -9,7 +9,7 @@ import blogs from "@/components/blog/blogs";
 export default function Page() {
   const [filteredBlogs, setFilteredBlogs] = useState(blogs);
   return (
-    <div className="">
+    <div className="pb-20">
       <div className="relative isolate px-6 lg:px-8">
         <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">

@@ -18,7 +18,7 @@ const BlogCard = ({ post }) => {
             <p className="mt-3 text-base text-gray-500">{post.description}</p>
           </div>
           <div className="mt-6 text-sm text-gray-500">
-            {post.author} &middot; {post.date} &middot; {post.readingTime}
+            {post.author} &middot; {post.date}
           </div>
         </div>
       </div>

@@ -6,8 +6,7 @@
     "content": "Full content of the blog post...",
     "imageUrl": "/images/marcus.jpg",
     "author": "Ethan Breitkreutz",
-    "date": "2024-10-20",
-    "readingTime": "5 min"
+    "date": "Oct 24, 2024"
   },
   {
     "id": "2",
@@ -16,7 +15,15 @@
     "content": "Full content of the blog post...",
     "imageUrl": "/images/death.jpg",
     "author": "Ethan Breitkreutz",
-    "date": "2024-10-21",
-    "readingTime": "6 min"
+    "date": "Oct 24, 2024"
+  },
+  {
+    "id": "3",
+    "title": "Death",
+    "description": "A stoic view on death and its meaning.",
+    "content": "Full content of the blog post...",
+    "imageUrl": "/images/death.jpg",
+    "author": "Ethan Breitkreutz",
+    "date": "Oct 24, 2024"
   }
 ]
