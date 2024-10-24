@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
+
 import DailyQuote from "../quotes/dailyQuote";
+import Date from "../quotes/date";
 
 const philosophers = [
   { name: "Marcus Aurelius", link: "marcus-aurelius" },
@@ -43,19 +45,19 @@ export default function BentoGrid() {
           <div className="relative max-lg:row-start-1 h-[21rem]">
             <div className="absolute inset-px rounded-lg whiteBg  max-lg:rounded-t-[2rem]"></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
-              <div className="grid grid-cols-1 grid-rows-[75%_25%] w-full h-full">
-                <div className="grid grid-cols-[50%_50%]">
-                  <div className="blackText">
-                    {" "}
-                    <h3>Daily Quote</h3>
+              <div className="grid grid-cols-1 grid-rows-[75%_25%] w-full h-full blackText tracking-tighter bold text-2xl md:text-3xl">
+                <div className="grid grid-cols-[40%_60%] p-2 rounded-full">
+                  <div className="">
+                    <h3>
+                      Quote of the <br /> Day
+                    </h3>
                   </div>
-                  <div className="blackBg w-full h-full">
-                    <DailyQuote/>
+                  <div className=" w-full h-full">
+                    <DailyQuote />
                   </div>
                 </div>
-                <div className="blackBg w-full h-full">
-                  {" "}
-                  <h3>{new Date().toLocaleDateString()}</h3>
+                <div className="blackBg w-full h-full whiteText text-3xl md:text-6xl flex justify-center items-center">
+                  <Date />
                 </div>
               </div>
             </div>
