@@ -4,8 +4,8 @@ import NavBurger from "./navBurger";
 
 export default function NavBar() {
   const links = [
-    { href: "/shop", text: "Quotes" },
-    { href: "/contact", text: "Blog" },
+    { href: "/quotes", text: "Quotes" },
+    { href: "/blog", text: "Blog" },
   ];
 
   const menuItems = [
