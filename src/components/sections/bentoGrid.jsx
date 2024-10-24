@@ -3,8 +3,8 @@ import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaXTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
 
-import DailyQuote from "../quotes/dailyQuote";
-import Date from "../quotes/date";
+import DailyQuote from "../misc/dailyQuote";
+import Date from "../misc/date";
 
 const philosophers = [
   { name: "Marcus Aurelius", link: "marcus-aurelius" },
