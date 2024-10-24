@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Search from "@/components/misc/search";
+import BlogCard from "@/components/blog/blogCard";
+import blogs from "@/components/blog/blogs";
 
 const items = [
   { id: 1, name: "Marcus Aurelius" },
@@ -29,11 +31,16 @@ export default function Page() {
               Read the stoic quotes blog.
             </h1>
             <p className="mt-8 text-lg blackText sm:text-xl/8">
-              Posted weekly, containing stoic insights, wisdom and reflections.
+              Posting weekly, containing stoic insights, wisdom and reflections.
             </p>
             <Search items={items} />
           </div>
         </div>
+      </div>
+      <div className="grid grid-cols-1 gap-6 mt-12 sm:grid-cols-2 lg:grid-cols-3">
+        {blogs.map((post) => (
+          <BlogCard key={post.id} post={post} />
+        ))}
       </div>
     </div>
   );

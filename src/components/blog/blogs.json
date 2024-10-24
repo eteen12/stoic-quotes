@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "title": "Marcus Aurelius",
+    "description": "A reflection on the life and wisdom of Marcus Aurelius.",
+    "content": "Full content of the blog post...",
+    "imageUrl": "/images/marcus.jpg",
+    "author": "Ethan Breitkreutz",
+    "date": "2024-10-20",
+    "readingTime": "5 min"
+  },
+  {
+    "id": "2",
+    "title": "Death",
+    "description": "A stoic view on death and its meaning.",
+    "content": "Full content of the blog post...",
+    "imageUrl": "/images/death.jpg",
+    "author": "Ethan Breitkreutz",
+    "date": "2024-10-21",
+    "readingTime": "6 min"
+  }
+]
