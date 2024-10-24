@@ -97,10 +97,10 @@ export default function RootLayout({ children }) {
 
       <body className={`${inter.variable} antialiased max-w-[1700px] mx-auto`}>
         {children}
-        <div className="p-2 md:p-5">
-          <Footer />
-        </div>
+        <Footer />
       </body>
+
+    
     </html>
   );
 }
