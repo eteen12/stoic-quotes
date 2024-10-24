@@ -12,7 +12,7 @@ export default async function BlogPostPage({ params }) {
   }
 
   return (
-    <div className=" mx-auto mt-20">
+    <div className="mx-auto mt-10 sm:mt-20 px-5 blackText mb-10">
       <Head>
         <title>{post.title} | Stoic Quotes</title>
         <meta name="description" content={post.description} />
@@ -64,40 +64,61 @@ export default async function BlogPostPage({ params }) {
       </Head>
 
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
-        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <p className="text-base font-semibold leading-7 text-indigo-600">
+              <p className="text-base font-semibold leading-7 tracking-tighter mediumBold lg:text-lg">
                 {post.subject}
               </p>
-              <h1 className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+              <h1 className="text-3xl font-semibold tracking-tighter bold sm:text-4xl">
                 {post.title}
               </h1>
-              <p className="mt-6 text-xl leading-8 text-gray-700">
+              <p className="mt-1 text-lg leading-8 tracking-tighter lg:text-2xl">
                 {post.description}
               </p>
             </div>
           </div>
         </div>
-        <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden w-[48rem] sm:w-[57rem] h-[30rem] rounded-xl whiteBg">
-          <Image alt={post.alt} src={post.src} className="object-contain" fill />
+        <div className="relative lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden w-full h-[30rem] rounded-xl whiteBg">
+          <div className="relative w-full h-full rounded-xl">
+            <Image
+              alt={post.alt}
+              src={post.src}
+              className="object-cover rounded-xl"
+              fill
+              priority
+            />
+          </div>
         </div>
-        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
-            <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
-              <h2 className=" text-2xl font-bold tracking-tight text-gray-900">
-                {post.h2}
-              </h2>
-              <p className="mt-6">{post.content}</p>
-              <h2 className=" text-2xl font-bold tracking-tight text-gray-900">
+            <div className="max-w-xl text-base leading-7 lg:max-w-lg tracking-tighter">
+              <h2 className=" text-2xl lg:text-3xl bold">{post.h2}</h2>
+              <p className="mt-2 lg:text-xl">{post.content}</p>
+              <h2 className="text-2xl font-bold tracking-tight text-gray-900 mt-5 lg:text-3xl">
                 Relevant quotes
               </h2>
-              <p className="mt-6">{post.quotes}</p>
+              <p className="mt-2 lg:text-xl">{post.quotes}</p>
 
-              <h2 className=" text-2xl font-bold tracking-tight text-gray-900">
+              <h2 className="text-2xl font-bold tracking-tight text-gray-900 mt-5 lg:text-3xl">
                 {post.h2v2}
               </h2>
-              <p className="mt-6">{post.reflection}</p>
+              <p className="mt-2 lg:text-xl">{post.reflection}</p>
+            </div>
+          </div>
+        </div>
+        <div className="mt-6 flex items-center lg:pl-7">
+          <div className="flex-shrink-0">
+            <img
+              alt=""
+              src="/misc/ethan.jpeg"
+              className="inline-block h-10 w-10 rounded-full"
+            />
+          </div>
+          <div className="ml-3">
+            <p className="text-base bold lg:text-lg">{post.author}</p>
+            <div className="flex space-x-1 text-base text-gray-500 lg:text-base">
+              <time>{post.date}</time>
             </div>
           </div>
         </div>
