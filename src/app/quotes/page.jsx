@@ -49,7 +49,6 @@ function Page() {
               cornerstone of Stoic thought.
             </p>
             <Link
-              type="button"
               href="/philosophers/marcus-aurelius"
               className="rounded-md mt-10 blackBg px-7 py-1.5 whiteText shadow-sm hoverBg  tracking-tighter bold text-base absolute bottom-0 mb-10"
             >
@@ -78,12 +77,12 @@ function Page() {
               acceptance of fate. His writings, including Letters to Lucilius,
               explore how to live virtuously in a turbulent world.
             </p>
-            <button
-              type="button"
+            <Link
+              href="/philosophers/seneca"
               className="rounded-md mt-10 blackBg px-7 py-1.5 whiteText shadow-sm hoverBg  tracking-tighter bold text-base absolute bottom-0 mb-10"
             >
               read quotes
-            </button>
+            </Link>
           </div>
         </div>
         <div
@@ -109,12 +108,12 @@ function Page() {
               and desires. His Discourses and Enchiridion are foundational
               texts, offering guidance on living with integrity and resilience.
             </p>
-            <button
-              type="button"
+            <Link
+              href="/philosophers/epictetus"
               className="rounded-md mt-10 blackBg px-7 py-1.5 whiteText shadow-sm hoverBg  tracking-tighter bold text-base absolute bottom-0 mb-10"
             >
               read quotes
-            </button>
+            </Link>
           </div>
         </div>
       </div>
