@@ -2,14 +2,14 @@ import PhilosopherPage from "@/components/quotes/philosopherPage";
 import PhilosopherQuotes from "@/components/quotes/philosopherQuotes";
 
 import philosopherBio from "@/data/philosopherBio";
-import philosopherQuotes from "@/data/quotes";
+import philosopherQuotesData from "@/data/quotes";
 import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
   const philosopherParams = Object.keys(philosopherBio).map((key) => ({
     name: key,
   }));
-  const quoteParams = Object.keys(philosopherQuotes).map((key) => ({
+  const quoteParams = Object.keys(philosopherQuotesData).map((key) => ({
     name: key,
   }));
 
@@ -19,18 +19,16 @@ export async function generateStaticParams() {
 export default async function Philosopher({ params }) {
   const { name } = await params;
   const philosopher = philosopherBio[name.toLowerCase()];
-  const thisPhilosophersQuotes = philosopherQuotes[name.toLowerCase()];
+  const thisPhilosopher = philosopherQuotesData[name.toLowerCase()];
 
   if (!philosopher) {
     return notFound();
   }
-  console.log("Philosopher Data:", philosopher);
-  console.log("Quotes Data:", thisPhilosophersQuotes);
 
   return (
     <>
       <PhilosopherPage philosopher={philosopher} />
-      <PhilosopherQuotes thisPhilosophersQuotes={thisPhilosophersQuotes} />
+      <PhilosopherQuotes thisPhilosopher={thisPhilosopher} />
     </>
   );
 }
