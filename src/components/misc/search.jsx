@@ -40,7 +40,7 @@ const Search = ({ blogs, setFilteredBlogs }) => {
           />
           <button
             type="submit"
-            className="ml-2 blackBg white-text bold rounded-md px-4 py-2"
+            className="ml-2 blackBg white-text bold rounded-md px-4 py-2 transition-transform duration-300 transform hover:scale-105"
           >
             Search
           </button>
