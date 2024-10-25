@@ -19,18 +19,18 @@ export async function generateStaticParams() {
 export default async function Philosopher({ params }) {
   const { name } = await params;
   const philosopher = philosopherBio[name.toLowerCase()];
-  const quotes = philosopherQuotes[name.toLowerCase()];
+  const thisPhilosophersQuotes = philosopherQuotes[name.toLowerCase()];
 
   if (!philosopher) {
     return notFound();
   }
   console.log("Philosopher Data:", philosopher);
-  console.log("Quotes Data:", quotes);
+  console.log("Quotes Data:", thisPhilosophersQuotes);
 
   return (
     <>
       <PhilosopherPage philosopher={philosopher} />
-      {/* <PhilosopherQuotes quotes={philosopher.quotes} /> */}
+      <PhilosopherQuotes thisPhilosophersQuotes={thisPhilosophersQuotes} />
     </>
   );
 }
