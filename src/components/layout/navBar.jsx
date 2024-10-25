@@ -9,7 +9,6 @@ export default function NavBar() {
   ];
 
   const menuItems = [
-    { name: "Bookstore", path: "/bookstore" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
     { name: "Policies", path: "/policies" },
@@ -18,8 +17,8 @@ export default function NavBar() {
   return (
     <header className="flex justify-between items-center w-full h-16 z-50 transition-all duration-700 blackText tracking-tight bold text-2xl md:text-3xl">
       <div className="flex justify-between items-center w-full px-5 pt-2 transition-all duration-700">
-        <Link href="/" aria-label="Go to Plumbing homepage">
-          <h2 className="relative tracking-tight  bold z-50">
+        <Link href="/" aria-label="Go to stoic quotes home page">
+          <h2 className="relative tracking-tight  bold z-50 transition-transform duration-300 transform hoverText">
             Stoic Quotes.
           </h2>
         </Link>
@@ -32,13 +31,13 @@ export default function NavBar() {
                 href={link.href}
                 rel={link.href === "/shop" ? "preload" : undefined}
               >
-                <li className="ml-10 hover:border-b ">{link.text}</li>
+                <li className="ml-10  hoverText">{link.text}</li>
               </Link>
             ))}
-            <li className="ml-10 hover:border-b text-xl md:text-2xl">
+            <li className="ml-10  text-xl md:text-2xl">
               <Menu as="div" className="relative inline-block text-left">
                 <div>
-                  <MenuButton className="rounded-md blackBg px-8 py-1.5 whiteText shadow-sm hoverBg flex tracking-tight bold md:text-2xl -mr-2">
+                  <MenuButton className="rounded-md blackBg px-8 py-1.5 whiteText shadow-sm hoverBg flex tracking-tight bold md:text-2xl -mr-2 transition-transform duration-300 transform hover:scale-105">
                     More
                   </MenuButton>
                 </div>

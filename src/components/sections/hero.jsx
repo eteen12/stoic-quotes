@@ -4,7 +4,9 @@ import NavBar from "../layout/navBar";
 export default function Hero() {
   return (
     <div className="overflow-hidden rounded-xl bg-white shadow h-[87vh] w-full md:h-[95vh] pb-2 md:pb-5">
-      <NavBar />
+      <div className="-ml-2 -mr-2 -mt-2">
+        <NavBar />
+      </div>
       <div className="relative mx-auto h-[100%] w-[100%] ">
         <Image
           src="/hero/heroImageDesktop.webp"
@@ -25,7 +27,7 @@ export default function Hero() {
             Discover what it means <br /> to be stoic
             <button
               type="button"
-              className="absolute rounded-md blackBg px-7 py-1.5 whiteText shadow-sm hoverBg ml-2 tracking-tighter bold text-base md:text-lg md:px-8 md:ml-6"
+              className="absolute rounded-md blackBg px-7 py-1.5 whiteText shadow-sm hoverBg ml-2 tracking-tighter bold text-base md:text-lg md:px-8 md:ml-6 transition-transform duration-300 transform hover:scale-105"
             >
               learn more
             </button>

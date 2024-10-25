@@ -55,12 +55,15 @@ export default function Footer() {
                 <h3 className="tracking-tighter bold text-2xl leading-6 ">
                   Solutions
                 </h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <ul role="list" className="mt-6 space-y-4 ">
                   {navigation.solutions.map((item) => (
-                    <li key={item.name}>
+                    <li
+                      key={item.name}
+                      
+                    >
                       <a
                         href={item.href}
-                        className="text-base tracking-tighter leading-6 mediumBold hoverText"
+                        className="text-base tracking-tighter leading-6 mediumBold hoverText "
                       >
                         {item.name}
                       </a>
@@ -74,7 +77,7 @@ export default function Footer() {
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.support.map((item) => (
-                    <li key={item.name}>
+                    <li key={item.name} >
                       <Link
                         href={item.href}
                         className="text-base tracking-tighter leading-6 mediumBold hoverText"
@@ -110,7 +113,7 @@ export default function Footer() {
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.links.map((item) => (
-                    <li key={item.name}>
+                    <li key={item.name} >
                       <Link
                         href={item.href}
                         className="text-base tracking-tighter leading-6 mediumBold hoverText"
@@ -128,8 +131,7 @@ export default function Footer() {
               Subscribe to the newsletter
             </h3>
             <p className="mt-2 text-base tracking-tighter leading-6 mediumBold hoverText ">
-              The latest news, articles, and resources, sent to your inbox
-              weekly.
+              This is for the Teleta Development newsletter
             </p>
             <form className="mt-6 sm:flex sm:max-w-md">
               <label htmlFor="email-address" className="sr-only">
@@ -147,7 +149,7 @@ export default function Footer() {
               <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
                 <button
                   type="button"
-                  className="absolute rounded-md blackBg px-7 py-1.5 whiteText shadow-sm hoverBg tracking-tighter bold text-base md:text-lg "
+                  className="absolute rounded-md blackBg px-7 py-1.5 whiteText shadow-sm hoverBg tracking-tighter bold text-base md:text-lg transition-transform duration-300 transform hover:scale-105"
                 >
                   subscribe
                 </button>
@@ -155,9 +157,9 @@ export default function Footer() {
             </form>
             <div className="flex space-x-4 sm:space-x-6 md:order-2 justify-end  sm:mt-5 sm:justify-start">
               {navigation.social.map((item) => (
-                <a key={item.name} href={item.href} className=" hoverText">
+                <a key={item.name} href={item.href} className=" hoverText transition-transform duration-300 transform hover:scale-105">
                   <span className="sr-only">{item.name}</span>
-                  <item.icon aria-hidden="true" className="h-8 w-8" />
+                  <item.icon aria-hidden="true" className="h-8 w-8 " />
                 </a>
               ))}
             </div>
