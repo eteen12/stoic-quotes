@@ -1,6 +1,6 @@
 const philosophersData = {
-  marcus: {
-    name: "Marcus Aurelius",
+  "marcus-aurelius": {
+    name: "marcus aurelius",
     image: "https://example.com/marcus.jpg",
     bio: "Roman Emperor and Stoic philosopher known for his writings on Stoicism.",
     details: [
