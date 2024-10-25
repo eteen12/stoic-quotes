@@ -50,7 +50,7 @@ function Page() {
             </p>
             <Link
               type="button"
-              href="marcus-aurelius"
+              href="/philosophers/marcus-aurelius"
               className="rounded-md mt-10 blackBg px-7 py-1.5 whiteText shadow-sm hoverBg  tracking-tighter bold text-base absolute bottom-0 mb-10"
             >
               read quotes
@@ -105,16 +105,15 @@ function Page() {
             </h2>
             <p className="text-center mt-2 ">
               Born a slave, Epictetus became one of the most influential Stoic
-              philosophers. He taught that freedom comes from mastering the
-              mind and desires. His Discourses and Enchiridion are foundational
-              texts, offering guidance on living with integrity and
-              resilience.
+              philosophers. He taught that freedom comes from mastering the mind
+              and desires. His Discourses and Enchiridion are foundational
+              texts, offering guidance on living with integrity and resilience.
             </p>
             <button
               type="button"
               className="rounded-md mt-10 blackBg px-7 py-1.5 whiteText shadow-sm hoverBg  tracking-tighter bold text-base absolute bottom-0 mb-10"
             >
-             read quotes
+              read quotes
             </button>
           </div>
         </div>
