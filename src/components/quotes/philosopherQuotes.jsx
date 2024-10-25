@@ -18,7 +18,7 @@ function PhilosopherQuotes({ thisPhilosopher }) {
               className="py-6 border-b border-gray-400 last:border-0 transition-transform duration-300 transform hover:scale-105"
             >
               <blockquote className="quote text-lg lg:text-xl">
-                {quote.text}
+                "{quote.text}"
               </blockquote>
               <div className="flex gap-10 mt-2">
                 <p className="text-lg lg:text-xl">
