@@ -1,29 +1,36 @@
 import PhilosopherPage from "@/components/quotes/philosopherPage";
-import philosophersData from "@/data/philosopherData";
-import philosophers from "@/data/quotes";
 import PhilosopherQuotes from "@/components/quotes/philosopherQuotes";
+
+import philosopherBio from "@/data/philosopherBio";
+import philosopherQuotes from "@/data/quotes";
 import { notFound } from "next/navigation";
 
-// Example function to generate static paths
 export async function generateStaticParams() {
-  return Object.keys(philosophersData).map((key) => ({
+  const philosopherParams = Object.keys(philosopherBio).map((key) => ({
     name: key,
   }));
+  const quoteParams = Object.keys(philosopherQuotes).map((key) => ({
+    name: key,
+  }));
+
+  return [...philosopherParams, ...quoteParams];
 }
 
 export default async function Philosopher({ params }) {
   const { name } = await params;
-  const philosopher = philosophersData[name];
+  const philosopher = philosopherBio[name.toLowerCase()];
+  const quotes = philosopherQuotes[name.toLowerCase()];
 
   if (!philosopher) {
     return notFound();
   }
-  const quote = philosophers.name;
+  console.log("Philosopher Data:", philosopher);
+  console.log("Quotes Data:", quotes);
 
   return (
     <>
       <PhilosopherPage philosopher={philosopher} />
-      <PhilosopherQuotes name={name} quote={quote} />
+      {/* <PhilosopherQuotes quotes={philosopher.quotes} /> */}
     </>
   );
 }

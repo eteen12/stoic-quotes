@@ -1,238 +1,238 @@
 {
-  "philosophers": [
-    {
-      "name": "Marcus Aurelius",
-      "quotes": [
-        {
-          "index": 1,
-          "text": "The happiness of your life depends upon the quality of your thoughts."
-        },
-        {
-          "index": 2,
-          "text": "You have power over your mind, not outside events. Realize this, and you will find strength."
-        },
-        {
-          "index": 3,
-          "text": "Waste no more time arguing about what a good man should be. Be one."
-        },
-        {
-          "index": 4,
-          "text": "If it is not right, do not do it; if it is not true, do not say it."
-        },
-        {
-          "index": 5,
-          "text": "When you arise in the morning, think of what a privilege it is to be alive."
-        },
-        {
-          "index": 6,
-          "text": "The best revenge is to be unlike him who performed the injury."
-        },
-        { "index": 7, "text": "Confine yourself to the present." },
-        {
-          "index": 8,
-          "text": "It is not death that a man should fear, but he should fear never beginning to live."
-        },
-        {
-          "index": 9,
-          "text": "Look well into thyself; there is a source of strength which will always spring up."
-        },
-        {
-          "index": 10,
-          "text": "He who lives in harmony with himself lives in harmony with the universe."
-        },
-        {
-          "index": 11,
-          "text": "Reject your sense of injury and the injury itself disappears."
-        },
-        {
-          "index": 12,
-          "text": "The soul becomes dyed with the color of its thoughts."
-        },
-        { "index": 13, "text": "What we do now echoes in eternity." },
-        {
-          "index": 14,
-          "text": "Accept whatever comes to you woven in the pattern of your destiny."
-        },
-        {
-          "index": 15,
-          "text": "Perfection of character is this: to live each day as if it were your last."
-        },
-        {
-          "index": 16,
-          "text": "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth."
-        },
-        {
-          "index": 17,
-          "text": "The impediment to action advances action. What stands in the way becomes the way."
-        },
-        {
-          "index": 18,
-          "text": "Observe constantly that all things take place by change."
-        },
-        {
-          "index": 19,
-          "text": "Do every act of your life as though it were the very last act of your life."
-        },
-        {
-          "index": 20,
-          "text": "To live happily is an inward power of the soul."
-        }
-      ]
-    },
-    {
-      "name": "Seneca",
-      "quotes": [
-        {
-          "index": 1,
-          "text": "Luck is what happens when preparation meets opportunity."
-        },
-        {
-          "index": 2,
-          "text": "Difficulties strengthen the mind, as labor does the body."
-        },
-        {
-          "index": 3,
-          "text": "We suffer more often in imagination than in reality."
-        },
-        {
-          "index": 4,
-          "text": "It is not the man who has too little, but the man who craves more, that is poor."
-        },
-        {
-          "index": 5,
-          "text": "As is a tale, so is life: not how long it is, but how good it is, is what matters."
-        },
-        {
-          "index": 6,
-          "text": "Begin at once to live, and count each separate day as a separate life."
-        },
-        {
-          "index": 7,
-          "text": "He suffers more than necessary, who suffers before it is necessary."
-        },
-        {
-          "index": 8,
-          "text": "If you want to live, do not worry about your possessions."
-        },
-        {
-          "index": 9,
-          "text": "We are more often frightened than hurt; and we suffer more in imagination than in reality."
-        },
-        { "index": 10, "text": "The greatest remedy for anger is delay." },
-        {
-          "index": 11,
-          "text": "It is a rough road that leads to the heights of greatness."
-        },
-        {
-          "index": 12,
-          "text": "Hang on to your youthful enthusiasms—you’ll be able to use them better when you’re older."
-        },
-        {
-          "index": 13,
-          "text": "A gift consists not in what is done or given, but in the intention of the giver or doer."
-        },
-        {
-          "index": 14,
-          "text": "Associate with people who are likely to improve you."
-        },
-        {
-          "index": 15,
-          "text": "Every new beginning comes from some other beginning’s end."
-        },
-        {
-          "index": 16,
-          "text": "It is the power of the mind to be unconquerable."
-        },
-        {
-          "index": 17,
-          "text": "Nothing, to my way of thinking, is a better proof of a well-ordered mind than a man’s ability to stop just where he is."
-        },
-        {
-          "index": 18,
-          "text": "To wish to be well is a part of becoming well."
-        },
-        {
-          "index": 19,
-          "text": "Wealth is the slave of a wise man. The master of a fool."
-        },
-        {
-          "index": 20,
-          "text": "The time will come when diligent research over long periods will bring to light things which now lie hidden."
-        }
-      ]
-    },
-    {
-      "name": "Epictetus",
-      "quotes": [
-        {
-          "index": 1,
-          "text": "First say to yourself what you would be; and then do what you have to do."
-        },
-        { "index": 2, "text": "No man is free who is not master of himself." },
-        {
-          "index": 3,
-          "text": "It’s not what happens to you, but how you react to it that matters."
-        },
-        {
-          "index": 4,
-          "text": "The key is to keep company only with people who uplift you."
-        },
-        {
-          "index": 5,
-          "text": "Wealth consists not in having great possessions, but in having few wants."
-        },
-        {
-          "index": 6,
-          "text": "Men are disturbed not by things, but by the view which they take of them."
-        },
-        {
-          "index": 7,
-          "text": "If you want to improve, be content to be thought foolish and stupid."
-        },
-        { "index": 8, "text": "Don’t explain your philosophy. Embody it." },
-        {
-          "index": 9,
-          "text": "Freedom is the only worthy goal in life. It is won by disregarding things that lie beyond our control."
-        },
-        {
-          "index": 10,
-          "text": "Circumstances don’t make the man, they only reveal him to himself."
-        },
-        {
-          "index": 11,
-          "text": "If evil be said of thee, and if it be true, correct yourself; if it be a lie, laugh at it."
-        },
-        {
-          "index": 12,
-          "text": "The essence of philosophy is that a man should so live that his happiness shall depend as little as possible on external things."
-        },
-        { "index": 13, "text": "Only the educated are free." },
-        { "index": 14, "text": "Keep your intentions pure." },
-        {
-          "index": 15,
-          "text": "To accuse others for one’s own misfortunes is a sign of want of education."
-        },
-        {
-          "index": 16,
-          "text": "Know, first, who you are, and then adorn yourself accordingly."
-        },
-        {
-          "index": 17,
-          "text": "Small-minded people blame others. Average people blame themselves. Wise people blame no one."
-        },
-        {
-          "index": 18,
-          "text": "We should not have either a blunt knife or a freedom of speech which is careless and rough."
-        },
-        {
-          "index": 19,
-          "text": "No great thing is created suddenly, any more than a bunch of grapes or a fig."
-        },
-        {
-          "index": 20,
-          "text": "Attach yourself to what is spiritually superior."
-        }
-      ]
-    }
-  ]
+  "marcus-aurelius": {
+    "name": "Marcus Aurelius",
+    "quotes": [
+      {
+        "index": 1,
+        "text": "The happiness of your life depends upon the quality of your thoughts."
+      },
+      {
+        "index": 2,
+        "text": "You have power over your mind, not outside events. Realize this, and you will find strength."
+      },
+      {
+        "index": 3,
+        "text": "Waste no more time arguing about what a good man should be. Be one."
+      },
+      {
+        "index": 4,
+        "text": "If it is not right, do not do it; if it is not true, do not say it."
+      },
+      {
+        "index": 5,
+        "text": "When you arise in the morning, think of what a privilege it is to be alive."
+      },
+      {
+        "index": 6,
+        "text": "The best revenge is to be unlike him who performed the injury."
+      },
+      { "index": 7, "text": "Confine yourself to the present." },
+      {
+        "index": 8,
+        "text": "It is not death that a man should fear, but he should fear never beginning to live."
+      },
+      {
+        "index": 9,
+        "text": "Look well into thyself; there is a source of strength which will always spring up."
+      },
+      {
+        "index": 10,
+        "text": "He who lives in harmony with himself lives in harmony with the universe."
+      },
+      {
+        "index": 11,
+        "text": "Reject your sense of injury and the injury itself disappears."
+      },
+      {
+        "index": 12,
+        "text": "The soul becomes dyed with the color of its thoughts."
+      },
+      { "index": 13, "text": "What we do now echoes in eternity." },
+      {
+        "index": 14,
+        "text": "Accept whatever comes to you woven in the pattern of your destiny."
+      },
+      {
+        "index": 15,
+        "text": "Perfection of character is this: to live each day as if it were your last."
+      },
+      {
+        "index": 16,
+        "text": "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth."
+      },
+      {
+        "index": 17,
+        "text": "The impediment to action advances action. What stands in the way becomes the way."
+      },
+      {
+        "index": 18,
+        "text": "Observe constantly that all things take place by change."
+      },
+      {
+        "index": 19,
+        "text": "Do every act of your life as though it were the very last act of your life."
+      },
+      {
+        "index": 20,
+        "text": "To live happily is an inward power of the soul."
+      }
+    ]
+  },
+
+  "seneca": {
+    "name": "Seneca",
+    "quotes": [
+      {
+        "index": 1,
+        "text": "Luck is what happens when preparation meets opportunity."
+      },
+      {
+        "index": 2,
+        "text": "Difficulties strengthen the mind, as labor does the body."
+      },
+      {
+        "index": 3,
+        "text": "We suffer more often in imagination than in reality."
+      },
+      {
+        "index": 4,
+        "text": "It is not the man who has too little, but the man who craves more, that is poor."
+      },
+      {
+        "index": 5,
+        "text": "As is a tale, so is life: not how long it is, but how good it is, is what matters."
+      },
+      {
+        "index": 6,
+        "text": "Begin at once to live, and count each separate day as a separate life."
+      },
+      {
+        "index": 7,
+        "text": "He suffers more than necessary, who suffers before it is necessary."
+      },
+      {
+        "index": 8,
+        "text": "If you want to live, do not worry about your possessions."
+      },
+      {
+        "index": 9,
+        "text": "We are more often frightened than hurt; and we suffer more in imagination than in reality."
+      },
+      { "index": 10, "text": "The greatest remedy for anger is delay." },
+      {
+        "index": 11,
+        "text": "It is a rough road that leads to the heights of greatness."
+      },
+      {
+        "index": 12,
+        "text": "Hang on to your youthful enthusiasms—you’ll be able to use them better when you’re older."
+      },
+      {
+        "index": 13,
+        "text": "A gift consists not in what is done or given, but in the intention of the giver or doer."
+      },
+      {
+        "index": 14,
+        "text": "Associate with people who are likely to improve you."
+      },
+      {
+        "index": 15,
+        "text": "Every new beginning comes from some other beginning’s end."
+      },
+      {
+        "index": 16,
+        "text": "It is the power of the mind to be unconquerable."
+      },
+      {
+        "index": 17,
+        "text": "Nothing, to my way of thinking, is a better proof of a well-ordered mind than a man’s ability to stop just where he is."
+      },
+      {
+        "index": 18,
+        "text": "To wish to be well is a part of becoming well."
+      },
+      {
+        "index": 19,
+        "text": "Wealth is the slave of a wise man. The master of a fool."
+      },
+      {
+        "index": 20,
+        "text": "The time will come when diligent research over long periods will bring to light things which now lie hidden."
+      }
+    ]
+  },
+
+  "epictetus": {
+    "name": "Epictetus",
+    "quotes": [
+      {
+        "index": 1,
+        "text": "First say to yourself what you would be; and then do what you have to do."
+      },
+      { "index": 2, "text": "No man is free who is not master of himself." },
+      {
+        "index": 3,
+        "text": "It’s not what happens to you, but how you react to it that matters."
+      },
+      {
+        "index": 4,
+        "text": "The key is to keep company only with people who uplift you."
+      },
+      {
+        "index": 5,
+        "text": "Wealth consists not in having great possessions, but in having few wants."
+      },
+      {
+        "index": 6,
+        "text": "Men are disturbed not by things, but by the view which they take of them."
+      },
+      {
+        "index": 7,
+        "text": "If you want to improve, be content to be thought foolish and stupid."
+      },
+      { "index": 8, "text": "Don’t explain your philosophy. Embody it." },
+      {
+        "index": 9,
+        "text": "Freedom is the only worthy goal in life. It is won by disregarding things that lie beyond our control."
+      },
+      {
+        "index": 10,
+        "text": "Circumstances don’t make the man, they only reveal him to himself."
+      },
+      {
+        "index": 11,
+        "text": "If evil be said of thee, and if it be true, correct yourself; if it be a lie, laugh at it."
+      },
+      {
+        "index": 12,
+        "text": "The essence of philosophy is that a man should so live that his happiness shall depend as little as possible on external things."
+      },
+      { "index": 13, "text": "Only the educated are free." },
+      { "index": 14, "text": "Keep your intentions pure." },
+      {
+        "index": 15,
+        "text": "To accuse others for one’s own misfortunes is a sign of want of education."
+      },
+      {
+        "index": 16,
+        "text": "Know, first, who you are, and then adorn yourself accordingly."
+      },
+      {
+        "index": 17,
+        "text": "Small-minded people blame others. Average people blame themselves. Wise people blame no one."
+      },
+      {
+        "index": 18,
+        "text": "We should not have either a blunt knife or a freedom of speech which is careless and rough."
+      },
+      {
+        "index": 19,
+        "text": "No great thing is created suddenly, any more than a bunch of grapes or a fig."
+      },
+      {
+        "index": 20,
+        "text": "Attach yourself to what is spiritually superior."
+      }
+    ]
+  }
 }
