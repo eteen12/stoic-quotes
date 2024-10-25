@@ -16,15 +16,15 @@ export default function NavBar() {
   ];
 
   return (
-    <header className="flex justify-between items-center w-full h-16 z-50 transition-all duration-700 blackText tracking-tighter bold text-2xl md:text-3xl">
+    <header className="flex justify-between items-center w-full h-16 z-50 transition-all duration-700 blackText tracking-tight bold text-2xl md:text-3xl">
       <div className="flex justify-between items-center w-full px-5 pt-2 transition-all duration-700">
         <Link href="/" aria-label="Go to Plumbing homepage">
-          <h2 className="relative tracking-tighter  bold z-50">
+          <h2 className="relative tracking-tight  bold z-50">
             Stoic Quotes.
           </h2>
         </Link>
 
-        <div className="hidden sm:flex items-center px-2 tracking-tighter">
+        <div className="hidden sm:flex items-center px-2 tracking-tight">
           <ul className="flex items-center">
             {links.map((link, index) => (
               <Link
@@ -38,7 +38,7 @@ export default function NavBar() {
             <li className="ml-10 hover:border-b text-xl md:text-2xl">
               <Menu as="div" className="relative inline-block text-left">
                 <div>
-                  <MenuButton className="rounded-md blackBg px-8 py-1.5 whiteText shadow-sm hoverBg flex tracking-tighter bold md:text-2xl">
+                  <MenuButton className="rounded-md blackBg px-8 py-1.5 whiteText shadow-sm hoverBg flex tracking-tight bold md:text-2xl">
                     More
                   </MenuButton>
                 </div>

@@ -1,7 +1,10 @@
 import Image from "next/image";
-import blogs from "@/components/blog/blogs";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import Head from "next/head";
+
+import blogs from "@/components/blog/blogs";
+import Author from "@/components/blog/author";
 
 export default async function BlogPostPage({ params }) {
   const { id } = await params;
@@ -64,10 +67,10 @@ export default async function BlogPostPage({ params }) {
       </Head>
 
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
-        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:grid lg:w-full lg:max-w-9xl lg:grid-cols-2 lg:gap-x-8 ">
           <div className="lg:pr-4">
-            <div className="lg:max-w-lg">
-              <p className="text-base font-semibold leading-7 tracking-tighter mediumBold lg:text-lg">
+            <div className="">
+              <p className="text-base font-semibold leading-7 tracking-tighter mediumBold lg:text-xl">
                 {post.subject}
               </p>
               <h1 className="text-3xl font-semibold tracking-tighter bold sm:text-4xl">
@@ -90,7 +93,7 @@ export default async function BlogPostPage({ params }) {
             />
           </div>
         </div>
-        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 ">
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 lg:max-w-lg tracking-tighter">
               <h2 className=" text-2xl lg:text-3xl bold">{post.h2}</h2>
@@ -107,21 +110,9 @@ export default async function BlogPostPage({ params }) {
             </div>
           </div>
         </div>
-        <div className="mt-6 flex items-center lg:pl-7">
-          <div className="flex-shrink-0">
-            <img
-              alt=""
-              src="/misc/ethan.jpeg"
-              className="inline-block h-10 w-10 rounded-full"
-            />
-          </div>
-          <div className="ml-3">
-            <p className="text-base bold lg:text-lg">{post.author}</p>
-            <div className="flex space-x-1 text-base text-gray-500 lg:text-base">
-              <time>{post.date}</time>
-            </div>
-          </div>
-        </div>
+        <Link href="/about" className="flex">
+          <Author post={post} />
+        </Link>
       </div>
     </div>
   );
