@@ -38,7 +38,7 @@ export default function NavBar() {
             <li className="ml-10 hover:border-b text-xl md:text-2xl">
               <Menu as="div" className="relative inline-block text-left">
                 <div>
-                  <MenuButton className="rounded-md blackBg px-8 py-1.5 whiteText shadow-sm hoverBg flex tracking-tight bold md:text-2xl">
+                  <MenuButton className="rounded-md blackBg px-8 py-1.5 whiteText shadow-sm hoverBg flex tracking-tight bold md:text-2xl -mr-2">
                     More
                   </MenuButton>
                 </div>

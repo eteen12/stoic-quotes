@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Head from "next/head";
+import { FaXTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
 
 import blogs from "@/components/blog/blogs";
 import Author from "@/components/blog/author";
@@ -110,9 +111,40 @@ export default async function BlogPostPage({ params }) {
             </div>
           </div>
         </div>
-        <Link href="/about" className="flex">
-          <Author post={post} />
-        </Link>
+        <div className="">
+          <div className="flex gap-5">
+            <a
+              href={`https://twitter.com/intent/tweet?url=https://www.stoicquotes.ca/blog/${post.id}&text=${encodeURIComponent(post.title)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl md:text-4xl"
+              aria-label="Share on Twitter"
+            >
+              <FaXTwitter />
+            </a>
+            <a
+              href={`https://www.facebook.com/sharer/sharer.php?u=https://www.stoicquotes.ca/blog/${post.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl md:text-4xl"
+              aria-label="Share on Facebook"
+            >
+              <FaFacebook />
+            </a>
+            <a
+              href={`https://www.instagram.com/?url=https://www.stoicquotes.ca/blog/${post.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl md:text-4xl"
+              aria-label="Share on Instagram"
+            >
+              <FaInstagram />
+            </a>
+          </div>
+          <Link href="/about" className="flex">
+            <Author post={post} />
+          </Link>
+        </div>
       </div>
     </div>
   );

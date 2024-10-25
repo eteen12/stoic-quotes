@@ -15,9 +15,9 @@ export default function NavBurger() {
   };
 
   const menuItems = [
-    { name: "Shop", href: "/shop" },
+    { name: "Quotes", href: "/quotes" },
     { name: "Contact", href: "/contact" },
-    { name: "Faq", href: "/#faq" },
+    { name: "Blog", href: "/Blog" },
     { name: "Home", href: "/" },
   ];
 
