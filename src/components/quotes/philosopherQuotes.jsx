@@ -19,7 +19,7 @@ function PhilosopherQuotes({ thisPhilosopher }) {
                   - <strong>{thisPhilosopher.name}</strong>
                 </p>
                 <Link
-                  href={`/quotes/${thisPhilosopher.name.toLowerCase()}/${quote.index}`}
+                  href={`/philosophers/${thisPhilosopher.name.toLowerCase()}/${quote.index - 1}`}
                 >
                   <FaShareFromSquare className="mt-1 text-2xl" />
                 </Link>
