@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import quotes from "./quotes.json"; 
+import quotes from "@/data/dailyQuotes.json";
 
 const DailyQuote = () => {
   const [quote, setQuote] = useState("");

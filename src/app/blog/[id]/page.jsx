@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import Head from "next/head";
 import { FaXTwitter, FaFacebook, FaInstagram } from "react-icons/fa6";
 
-import blogs from "@/components/blog/blogs";
+import blogs from "@/data/blogs";
 import Author from "@/components/blog/author";
 
 export default async function BlogPostPage({ params }) {

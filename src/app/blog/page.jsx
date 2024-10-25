@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import Search from "@/components/misc/search";
 import BlogCard from "@/components/blog/blogCard";
-import blogs from "@/components/blog/blogs";
+import blogs from "@/data/blogs";
 
 function Page() {
   const [filteredBlogs, setFilteredBlogs] = useState(blogs);
@@ -41,7 +41,6 @@ function Page() {
           ))}
         </div>
       </div>
-      
     </>
   );
 }
