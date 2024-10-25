@@ -1,7 +1,7 @@
 {
   "marcus-aurelius": {
     "name": "Marcus Aurelius",
-    "image": "/quotes/marcusBustTrans.png",
+    "image": "/quotes/marcusBust.png",
     "bio": "Marcus Aurelius was a Roman Emperor and Stoic philosopher, widely recognized for his profound insights into human nature and the practice of virtue.",
     "details": [
       {
@@ -36,7 +36,7 @@
   },
   "epictetus": {
     "name": "Epictetus",
-    "image": "/quotes/epicTrans.png",
+    "image": "/quotes/epicBust.png",
     "bio": "Epictetus was a former slave who rose to become a prominent Stoic philosopher, emphasizing the importance of personal freedom and self-control.",
     "details": [
       {
@@ -71,7 +71,7 @@
   },
   "seneca": {
     "name": "Seneca",
-    "image": "/quotes/senecaBustTrans.png",
+    "image": "/quotes/senecaBust.png",
     "bio": "Seneca was a Roman Stoic philosopher, statesman, and dramatist, whose works profoundly influenced Stoic thought and literature.",
     "details": [
       {

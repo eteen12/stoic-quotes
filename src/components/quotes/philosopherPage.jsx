@@ -2,20 +2,17 @@ import Image from "next/image";
 
 export default function PhilosopherPage({ philosopher }) {
   return (
-    <div className="overflow-hidden whiteBg rounded-xl blackText tracking-tight">
-      <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <div className="absolute bottom-0 left-3/4 top-0 hidden w-screen bg-gray-50 lg:block" />
-        <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
-          <div>
-            <h2 className="text-lg">About</h2>
-            <h3 className="mt-2 text-3xl bold leading-8 sm:text-4xl">
-              {philosopher.name} quotes, and biography
-            </h3>
-          </div>
+    <div className="overflow-hidden whiteBg rounded-xl blackText tracking-tight py-16 shadow-lg">
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-prose text-base ">
+          <h2 className="text-lg font-semibold ">About/Quotes</h2>
+          <h3 className="mt-2 text-3xl font-bold leading-8 sm:text-4xl text-gray-900">
+            {philosopher.name} - Quotes and Biography
+          </h3>
         </div>
-        <div className="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
-          <div className="relative lg:col-start-2 lg:row-start-1 rounded-xl  lg:-mt-14">
-            <div className="relative mx-auto max-w-prose text-base lg:max-w-none ">
+        <div className="mt-8">
+          <div className="relative rounded-xl overflow-hidden">
+            <div className="relative mx-auto max-w-[700px] text-base">
               <Image
                 alt={philosopher.name}
                 src={philosopher.image}
@@ -25,14 +22,15 @@ export default function PhilosopherPage({ philosopher }) {
               />
             </div>
           </div>
-          <div className="mt-8 lg:mt-0">
-            <div className="mx-auto max-w-prose text-base lg:max-w-none">
-              <p className="text-lg blackText">{philosopher.bio}</p>
+          <div className="mt-8 blackBg rounded-xl whiteText shadow-2xl px-12 p-10">
+            <div className="mx-auto  text-base">
+              <p className="text-lg">{philosopher.bio}</p>
             </div>
-            <ul className="about-list blackText text-lg ">
+            <ul className="about-list text-lg mt-4">
               {philosopher.details.map((detail, index) => (
-                <li key={index} className="pt-2">
-                  <strong>{detail.label}:</strong> {detail.text}
+                <li key={index} className="pt-4 lightText">
+                  <strong className="bold whiteText">{detail.label}:</strong>{" "}
+                  {detail.text}
                 </li>
               ))}
             </ul>

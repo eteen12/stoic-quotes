@@ -95,7 +95,7 @@ export default async function BlogPostPage({ params }) {
         </div>
 
         {/* Content Sections */}
-        <div className="text-left mx-auto max-w-xl leading-7 tracking-tighter">
+        <div className="text-left mx-auto max-w-3xl leading-7 tracking-tighter">
           <h2 className="text-2xl lg:text-3xl bold">{post.h2}</h2>
           <p className="mt-2 lg:text-xl">{post.content}</p>
 
@@ -110,12 +110,17 @@ export default async function BlogPostPage({ params }) {
           <p className="mt-2 lg:text-xl">{post.reflection}</p>
         </div>
 
-        
         <div className="mt-10 text-center sm:flex justify-center gap-5 items-center">
+          <ShareButtons
+            postUrl={postUrl}
+            quoteText={quoteText}
+            className="transition-transform duration-300 transform hover:scale-105"
+          />
 
-          <ShareButtons postUrl={postUrl} quoteText={quoteText} />
-
-          <Link href="/about" className="mb-6 flex justify-center items-center ">
+          <Link
+            href="/about"
+            className="mb-6 flex justify-center items-center "
+          >
             <Author post={post} />
           </Link>
         </div>

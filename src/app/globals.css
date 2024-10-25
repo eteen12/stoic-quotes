@@ -8,6 +8,12 @@ html {
 body {
   overflow-x: hidden;
 }
+.lightBg {
+  background-color: #f3f4f6;
+}
+.lightText {
+  color: #e4e2e2;
+}
 
 /*NAV BURGER*/
 label {

@@ -4,10 +4,10 @@ function Page() {
   return (
     <>
       <div className="pb-20">
-        <div className="relative isolate px-6 lg:px-8">
+        <div className="relative isolate px-6 lg:px-8 ">
           <div className="mx-auto max-w-5xl py-32 sm:py-48 lg:py-56">
             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-              <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+              <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 transition-transform duration-300 transform hover:scale-105">
                 read about the developer and writer{" "}
                 <Link href="/about" className="font-semibold blackText">
                   <span aria-hidden="true" className="absolute inset-0" />
@@ -29,7 +29,7 @@ function Page() {
         </div>
       </div>
       <div className="relative grid w-full  gap-5 p-5 mx-auto max-w-[400px] sm:max-w-[500px] md:max-w-[800px] lg:max-w-[1400px] md:grid-cols-2 lg:grid-cols-3 ">
-        <div className="relative grid grid-cols-1 grid-rows-[50%_50%] whiteBg shadow-lg rounded-xl h-[600px] lg:h-[630px] p-5">
+        <div className="relative grid grid-cols-1 grid-rows-[50%_50%] whiteBg shadow-lg rounded-xl h-[600px] lg:h-[630px] p-5 transition-transform duration-300 transform hover:scale-105">
           <div className="relative h-full w-full rounded-xl">
             <Image
               src="/quotes/marcusOnHorse.png"
@@ -57,7 +57,7 @@ function Page() {
           </div>
         </div>
 
-        <div className="relative grid grid-cols-1 grid-rows-[50%_50%] whiteBg shadow-lg rounded-xl h-[600px] lg:h-[630px] p-5">
+        <div className="relative grid grid-cols-1 grid-rows-[50%_50%] whiteBg shadow-lg rounded-xl h-[600px] lg:h-[630px] p-5 transition-transform duration-300 transform hover:scale-105">
           <div className="relative h-full w-full rounded-xl">
             <Image
               src="/quotes/senecaDeath.png"
@@ -87,7 +87,7 @@ function Page() {
         </div>
         <div
           className="relative whiteBg shadow-lg grid grid-cols-1 grid-rows-[50%_50%] rounded-xl h-[600px] 
-      lg:h-[630px] md:col-span-2 lg:col-span-1 md:w-[55%] lg:w-full md:flex md:flex-col md:justify-center md:mx-auto p-5"
+      lg:h-[630px] md:col-span-2 lg:col-span-1 md:w-[55%] lg:w-full md:flex md:flex-col md:justify-center md:mx-auto p-5 transition-transform duration-300 transform hover:scale-105"
         >
           <div className="relative h-full w-full rounded-xl">
             <Image

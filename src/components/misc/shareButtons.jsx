@@ -16,7 +16,7 @@ const ShareButtons = ({ postUrl, quoteText }) => {
         rel="noopener noreferrer"
         aria-label="Share on Twitter"
       >
-        <FaXTwitter className="text-3xl md:text-4xl hoverText" />
+        <FaXTwitter className="text-3xl md:text-4xl hoverText transition-transform duration-300 transform hover:scale-105" />
       </a>
       <a
         href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(postUrl)}`}
@@ -24,18 +24,18 @@ const ShareButtons = ({ postUrl, quoteText }) => {
         rel="noopener noreferrer"
         aria-label="Share on Facebook"
       >
-        <FaFacebook className="text-3xl md:text-4xl hoverText" />
+        <FaFacebook className="text-3xl md:text-4xl hoverText transition-transform duration-300 transform hover:scale-105" />
       </a>
       <a
         href={`https://www.instagram.com/?url=${encodeURIComponent(postUrl)}`}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Share on Instagram"
+        aria-label="Share on Instagram transition-transform duration-300 transform hover:scale-105"
       >
-        <FaInstagram className="text-3xl md:text-4xl hoverText" />
+        <FaInstagram className="text-3xl md:text-4xl hoverText transition-transform duration-300 transform hover:scale-105" />
       </a>
       <button onClick={handleCopyLink} className="py-2">
-        <FaLink className="mr-2 text-3xl md:text-4xl hoverText" />
+        <FaLink className="mr-2 text-3xl md:text-4xl hoverText transition-transform duration-300 transform hover:scale-105" />
       </button>
     </div>
   );
