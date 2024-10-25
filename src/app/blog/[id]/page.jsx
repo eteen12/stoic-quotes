@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Head from "next/head";
 import ShareButtons from "@/components/misc/shareButtons";
-
 import blogs from "@/data/blogs";
 import Author from "@/components/blog/author";
 
@@ -14,21 +13,18 @@ export default async function BlogPostPage({ params }) {
   if (!post) {
     return notFound();
   }
-  const quoteText = (
-    <>
-      {post.title} a stoic blog by {post.author}{""}
-    </>
-  );
+
+  const quoteText = `${post.title} - a stoic blog by ${post.author}`;
   const postUrl = `https://www.stoicquotes.ca/blog/${id}`;
 
   return (
-    <div className="mx-auto mt-10 sm:mt-20 px-5 blackText mb-10">
+    <div className="mx-auto mt-10 sm:mt-20 px-5 blackText mb-10 max-w-3xl text-center">
       <Head>
         <title>{post.title} | Stoic Quotes</title>
         <meta name="description" content={post.description} />
         <meta
           name="keywords"
-          content="Stoicism, philosophy, Marcus Aurelius, Epictetus, Seneca, personal growth, canada"
+          content="Stoicism, philosophy, Marcus Aurelius, Epictetus, Seneca, personal growth, Canada"
         />
         <meta name="author" content="Teleta Development" />
 
@@ -64,7 +60,7 @@ export default async function BlogPostPage({ params }) {
               name: "Teleta Development",
               logo: {
                 "@type": "ImageObject",
-                url: "https://www.stoicquotes.ca/logo.png", // Add your logo URL
+                url: "https://www.stoicquotes.ca/logo.png",
               },
             },
             datePublished: post.date,
@@ -73,55 +69,53 @@ export default async function BlogPostPage({ params }) {
         </script>
       </Head>
 
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
-        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:grid lg:w-full lg:max-w-9xl lg:grid-cols-2 lg:gap-x-8 ">
-          <div className="lg:pr-4">
-            <div className="">
-              <p className="text-base font-semibold leading-7 tracking-tighter mediumBold lg:text-xl">
-                {post.subject}
-              </p>
-              <h1 className="text-3xl font-semibold tracking-tighter bold sm:text-4xl">
-                {post.title}
-              </h1>
-              <p className="mt-1 text-lg leading-8 tracking-tighter lg:text-2xl">
-                {post.description}
-              </p>
-            </div>
-          </div>
+      <div>
+        {/* Post Header */}
+        <div className="pb-8">
+          <p className="text-base font-semibold leading-7 tracking-tighter mediumBold lg:text-xl">
+            {post.subject}
+          </p>
+          <h1 className="text-3xl font-semibold tracking-tighter bold sm:text-4xl">
+            {post.title}
+          </h1>
+          <p className="mt-1 text-lg leading-8 tracking-tighter lg:text-2xl">
+            {post.description}
+          </p>
         </div>
-        <div className="relative lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden w-full h-[30rem] rounded-xl whiteBg">
-          <div className="relative w-full h-full rounded-xl">
-            <Image
-              alt={post.alt}
-              src={post.src}
-              className="object-cover rounded-xl"
-              fill
-              priority
-            />
-          </div>
-        </div>
-        <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 ">
-          <div className="lg:pr-4">
-            <div className="max-w-xl text-base leading-7 lg:max-w-lg tracking-tighter">
-              <h2 className=" text-2xl lg:text-3xl bold">{post.h2}</h2>
-              <p className="mt-2 lg:text-xl">{post.content}</p>
-              <h2 className="text-2xl font-bold tracking-tight text-gray-900 mt-5 lg:text-3xl">
-                Relevant quotes
-              </h2>
-              <p className="mt-2 lg:text-xl">{post.quotes}</p>
 
-              <h2 className="text-2xl font-bold tracking-tight text-gray-900 mt-5 lg:text-3xl">
-                {post.h2v2}
-              </h2>
-              <p className="mt-2 lg:text-xl">{post.reflection}</p>
-            </div>
-          </div>
+        {/* Image Section */}
+        <div className="relative w-full h-[30rem] rounded-xl whiteBg mx-auto mb-8">
+          <Image
+            alt={post.alt}
+            src={post.src}
+            className="object-cover rounded-xl"
+            fill
+            priority
+          />
         </div>
-        <div className="">
-          <div className="flex gap-5">
-            <ShareButtons postUrl={postUrl} quoteText={quoteText} />
-          </div>
-          <Link href="/about" className="flex">
+
+        {/* Content Sections */}
+        <div className="text-left mx-auto max-w-xl leading-7 tracking-tighter">
+          <h2 className="text-2xl lg:text-3xl bold">{post.h2}</h2>
+          <p className="mt-2 lg:text-xl">{post.content}</p>
+
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900 mt-5 lg:text-3xl">
+            Relevant Quotes
+          </h2>
+          <p className="mt-2 lg:text-xl">{post.quotes}</p>
+
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900 mt-5 lg:text-3xl">
+            {post.h2v2}
+          </h2>
+          <p className="mt-2 lg:text-xl">{post.reflection}</p>
+        </div>
+
+        
+        <div className="mt-10 text-center sm:flex justify-center gap-5 items-center">
+
+          <ShareButtons postUrl={postUrl} quoteText={quoteText} />
+
+          <Link href="/about" className="mb-6 flex justify-center items-center ">
             <Author post={post} />
           </Link>
         </div>
