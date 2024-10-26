@@ -53,7 +53,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
@@ -95,10 +95,8 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body
-        className={`${inter.variable} antialiased max-w-[1700px] mx-auto`}
-      >
-       {children}
+      <body className={`${inter.variable} antialiased max-w-[1700px] mx-auto`}>
+        {children}
         <Footer />
       </body>
     </html>

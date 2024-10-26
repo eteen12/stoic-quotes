@@ -123,7 +123,7 @@ function Page() {
             </h2>
             <p className="text-center mt-2 ">
               Roman Emperor and Stoic philosopher, Marcus Aurelius, believed in
-              controlling one's thoughts and emotions. His book Meditations is a
+              controlling one&apos;s thoughts and emotions. His book Meditations is a
               cornerstone of Stoic thought.
             </p>
             <Link

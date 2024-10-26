@@ -36,7 +36,7 @@ function Page() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-6 mt-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 mt-12 sm:grid-cols-2 lg:grid-cols-3 max-w-[1500px] mx-auto">
           {filteredBlogs.map((post) => (
             <BlogCard key={post.id} post={post} />
           ))}

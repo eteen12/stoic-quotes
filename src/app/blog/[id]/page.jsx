@@ -44,56 +44,6 @@ export default async function BlogPostPage({ params }) {
 
   return (
     <div className="mx-auto mt-10 sm:mt-20 px-5 blackText mb-10 max-w-3xl text-center">
-      <Head>
-        <title>{post.title} | Stoic Quotes</title>
-        <meta name="description" content={post.description} />
-        <meta
-          name="keywords"
-          content="Stoicism, philosophy, Marcus Aurelius, Epictetus, Seneca, personal growth, Canada"
-        />
-        <meta name="author" content="Teleta Development" />
-
-        {/* Open Graph Meta Tags for Social Sharing */}
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.description} />
-        <meta property="og:image" content={post.imageUrl} />
-        <meta
-          property="og:url"
-          content={`https://www.stoicquotes.ca/blog/${post.id}`}
-        />
-        <meta property="og:type" content="article" />
-
-        {/* Twitter Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={post.description} />
-        <meta name="twitter:image" content={post.imageUrl} />
-
-        {/* Structured Data (JSON-LD for SEO) */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline: post.title,
-            image: post.imageUrl,
-            author: {
-              "@type": "Person",
-              name: post.author,
-            },
-            publisher: {
-              "@type": "Organization",
-              name: "Teleta Development",
-              logo: {
-                "@type": "ImageObject",
-                url: "https://www.stoicquotes.ca/logo.png",
-              },
-            },
-            datePublished: post.date,
-            description: post.description,
-          })}
-        </script>
-      </Head>
-
       <div>
         {/* Post Header */}
         <div className="pb-8">
@@ -111,16 +61,39 @@ export default async function BlogPostPage({ params }) {
         {/* Image Section */}
         <div className="relative w-full h-[30rem] rounded-xl whiteBg mx-auto mb-8">
           <Image
-            alt={post.alt}
+            alt={`${post.attributionText} ${", "} ${post.attributionDescription}`}
             src={post.src}
             className="object-cover rounded-xl"
             fill
             priority
           />
         </div>
+        <div>
+          <div className="text-xs -mt-8 text-right">
+            <div className="flex justify-end">
+              <a
+                href={post.attributionLink}
+                className="underline"
+                target="_blank"
+                aria-label={`link to ${post.attributionText} ${""} ${post.attributionDescription}`}
+              >
+                {post.attributionText}
+              </a>
+              <p>, {post.attributionDescription}</p>
+            </div>
+            <a
+              className="mt-2 underline"
+              target="_blank"
+              href={post.imageLicense}
+              aria-label="link to image license"
+            >
+              license
+            </a>
+          </div>
+        </div>
 
         {/* Content Sections */}
-        <div className="text-left mx-auto max-w-3xl leading-7 tracking-tighter">
+        <div className="text-left mx-auto max-w-3xl leading-7 tracking-tighter mt-5">
           <h2 className="text-2xl lg:text-3xl bold">{post.h2}</h2>
           <p className="mt-2 lg:text-xl">{post.content}</p>
 

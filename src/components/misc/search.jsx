@@ -49,7 +49,7 @@ const Search = ({ blogs, setFilteredBlogs }) => {
       {submitted && (
         <ul className="mt-10 flex justify-start ml-1 blackText">
           <li className="flex items-center">
-            <p className="text-lg"> "{searchTerm}"</p>
+            <p className="text-lg"> &quot;{searchTerm}&quot;</p>
             <IoIosClose
               className="mt-px text-2xl cursor-pointer ml-2"
               onClick={handleReset}

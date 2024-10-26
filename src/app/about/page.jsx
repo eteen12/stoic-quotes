@@ -62,10 +62,10 @@ export default function Page() {
                   About Me
                 </p>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                  My name is Ethan Breitkreutz, and I'm passionate about
+                  My name is Ethan Breitkreutz, and I&apos;m passionate about
                   philosophy, particularly Stoicism, which has been a large part
                   of my life. As a high school student and an up-and-coming web
-                  developer, I've learned the value of simplicity and inner
+                  developer, I&apos;ve learned the value of simplicity and inner
                   strength that Stoicism teaches.
                 </p>
                 <p className="mt-6 text-lg leading-8 text-gray-600">

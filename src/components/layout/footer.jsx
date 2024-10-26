@@ -15,9 +15,10 @@ const navigation = {
   ],
   links: [
     { name: "Blog", href: "/blog" },
-    { name: "Quotes", href: "quotes" },
-    { name: "About", href: "about" },
-    { name: "Shop", href: "shop" },
+    { name: "Quotes", href: "/quotes" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+    { name: "Policies", href: "/policies" },
   ],
   social: [
     {
@@ -60,6 +61,8 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
+                        aria-label="click to go the teleta development website"
+                        target="_blank"
                         className="text-base tracking-tighter leading-6 mediumBold hoverText "
                       >
                         {item.name}
@@ -77,6 +80,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <Link
                         href={item.href}
+                        aria-label="click to go to the contact section"
                         className="text-base tracking-tighter leading-6 mediumBold hoverText"
                       >
                         {item.name}
@@ -96,6 +100,8 @@ export default function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
+                        aria-label="link for teleta development company"
+                        target="_blank"
                         className="text-base tracking-tighter leading-6 mediumBold hoverText"
                       >
                         {item.name}
@@ -113,6 +119,7 @@ export default function Footer() {
                     <li key={item.name}>
                       <Link
                         href={item.href}
+                        aria-label={`go to ${item.name} page`}
                         className="text-base tracking-tighter leading-6 mediumBold hoverText"
                       >
                         {item.name}
@@ -139,6 +146,7 @@ export default function Footer() {
                 name="email-address"
                 type="email"
                 required
+                aria-label="please do not enter your email here, it will not work"
                 placeholder="dont enter anything, it wont work"
                 autoComplete="email"
                 className="w-full min-w-0 appearance-none rounded-md border-0 bg-white/5 px-3 py-2 text-base  shadow-md ring-1 ring-inset ring-white/10 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-stone-100 sm:w-64 sm:text-sm sm:leading-6 xl:w-full"
@@ -157,6 +165,7 @@ export default function Footer() {
                 <a
                   key={item.name}
                   href={item.href}
+                  aria-label={`visit the ${item.name} page`}
                   className=" hoverText transition-transform duration-300 transform hover:scale-105"
                 >
                   <span className="sr-only">{item.name}</span>
@@ -172,6 +181,7 @@ export default function Footer() {
             <a
               href="https://TeletaDevelopment.com"
               target="_blank"
+              aria-label="visit the teleta development website"
               className=" hover:underline"
             >
               Teleta Development
