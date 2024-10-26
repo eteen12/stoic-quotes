@@ -32,7 +32,7 @@ function Page() {
         <div className="relative grid grid-cols-1 grid-rows-[50%_50%] whiteBg shadow-lg rounded-xl h-[600px] lg:h-[630px] p-5 transition-transform duration-300 transform hover:scale-105">
           <div className="relative h-full w-full rounded-xl">
             <Image
-              src="/quotes/marcusOnHorse.png"
+              src="/quotes/marcusOnHorse.webp"
               alt="hi"
               fill
               className="object-cover rounded-xl"
@@ -60,7 +60,7 @@ function Page() {
         <div className="relative grid grid-cols-1 grid-rows-[50%_50%] whiteBg shadow-lg rounded-xl h-[600px] lg:h-[630px] p-5 transition-transform duration-300 transform hover:scale-105">
           <div className="relative h-full w-full rounded-xl">
             <Image
-              src="/quotes/senecaDeath.png"
+              src="/quotes/senecaDeath.webp"
               alt="hi"
               fill
               className="object-cover rounded-xl"
@@ -91,7 +91,7 @@ function Page() {
         >
           <div className="relative h-full w-full rounded-xl">
             <Image
-              src="/bento/epictetusWriting.png"
+              src="/bento/epictetusWriting.webp"
               alt="hi"
               fill
               className="object-cover rounded-xl"

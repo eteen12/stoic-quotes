@@ -13,6 +13,8 @@ const philosophers = [
 ];
 
 export default function BentoGrid() {
+  const quoteText = `Visit the website to see the quote of the day.`;
+  const postUrl = `https://www.stoicquotes.ca/`;
   return (
     <div className=" py-12">
       <div className="mx-auto px-2 max-w-none">
@@ -29,7 +31,7 @@ export default function BentoGrid() {
                   <DailyQuote />
                 </div>
                 <div className="-mt-10">
-                  <ShareButtons />
+                  <ShareButtons postUrl={postUrl} quoteText={quoteText} />
                 </div>
               </div>
               <div className="blackBg whiteText w-full h-full text-4xl md:text-6xl flex justify-center items-center rounded-b-lg">
@@ -47,7 +49,10 @@ export default function BentoGrid() {
                 <div className=" sm:px-10 flex flex-col justify-center h-full">
                   <div className="flex flex-col justify-center text-center items-center h-full blackText">
                     <p>made by</p>
-                    <a href="https://TeletaDevelopment.com">
+                    <a
+                      href="https://TeletaDevelopment.com"
+                      aria-label="visit teleta development website"
+                    >
                       <h2 className="text-center mb-1 text-3xl md:text-4xl blackText bold tracking-tight ">
                         Teleta Development.
                       </h2>
@@ -63,22 +68,24 @@ export default function BentoGrid() {
           <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2 transition-transform duration-300 transform hover:scale-105">
             <div className="absolute inset-px rounded-lg whiteBg "></div>
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
-              <div className="px-8 pt-8 sm:px-10 sm:pt-10 h-[21rem]">
+              <div className="relative px-8 pt-8 sm:px-10 sm:pt-10 h-[21rem]">
                 <Image
-                  src="/bento/epictetusWriting.jpg"
-                  alt="epictetusWriting"
+                  src="/bento/epictetusWriting.webp"
+                  alt="epictetus writing black and white photo"
                   className="object-cover"
+                  loading="lazy"
                   fill
                 />
                 <div className="absolute bottom-0 right-0 z-50 whiteText tracking-tighter bold text-2xl md:text-3xl p-14 flex flex-col  text-left">
                   <h2 className="">
                     Read weekly stoic <br /> blogs
-                    <button
-                      type="button"
+                    <Link
+                      href="/blog"
+                      aria-label="read stoic blogs now"
                       className="absolute rounded-md blackBg px-7 py-1.5 whiteText shadow-sm hoverBg ml-2 tracking-tighter bold text-base md:text-lg md:px-8 md:ml-6"
                     >
                       read now
-                    </button>
+                    </Link>
                   </h2>
                 </div>
               </div>
@@ -94,8 +101,8 @@ export default function BentoGrid() {
                 </h2>
                 <Image
                   className="object-contain mt-16"
-                  src="/bento/marcusFace.png"
-                  alt="marcusFace"
+                  src="/bento/marcusFace.webp"
+                  alt="marcus aurelius face image cracked bronze sculpture"
                   fill
                 />
               </div>
@@ -104,6 +111,7 @@ export default function BentoGrid() {
                   <Link
                     key={philosopher.name}
                     href={philosopher.link}
+                    aria-label={`${philosopher.name} quotes read now`}
                     className="flex justify-between "
                   >
                     <h2>{philosopher.name}</h2>

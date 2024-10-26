@@ -64,7 +64,7 @@ export default function Page() {
                 <div className="relative h-[500px] mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
                   <Image
                     alt="Product screenshot"
-                    src="/misc/ethan.jpeg"
+                    src="/misc/ethan.webp"
                     className="-mb-12 w-[57rem] max-w-none rounded-tl-xl bg-gray-800 ring-1 ring-white/10 object-cover"
                     fill
                   />

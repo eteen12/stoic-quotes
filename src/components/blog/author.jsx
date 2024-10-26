@@ -7,7 +7,7 @@ export default function Author({ post }) {
       <div className="flex-shrink-0 h-10 w-10 lg:h-12 lg:w-12 rounded-full transition-transform duration-300 transform hover:scale-105">
         <Image
           alt="Ethan Breitkreutz author and owner of Teleta Development"
-          src="/misc/ethan.jpeg"
+          src="/misc/ethan.webp"
           className="inline-block h-10 w-10 lg:h-12 lg:w-12 rounded-full"
           width={400}
           height={400}
