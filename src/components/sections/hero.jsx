@@ -19,9 +19,14 @@ export default function Hero() {
       </div>
       <div className="relative mx-auto h-[600px] w-full sm:hidden">
         <Image
-          src="/hero/heroImageMobile.webp"
+          src="/hero/heroImageMobile_nxcvhm_c_scale,w_830.webp"
           alt="black and white marcus aurelius equestrian statue"
-          className="object-cover sm:hidden"
+          className="object-cover sm:hidden object-left"
+          sizes="(max-width: 830px) 100vw, 830px"
+          srcSet="
+          /hero/heroImageMobile_nxcvhm_c_scale,w_300.webp 300w,
+          /hero/heroImageMobile_nxcvhm_c_scale,w_713.webp 713w,
+          /hero/heroImageMobile_nxcvhm_c_scale,w_830.webp 830w"
           fill
           priority
         />
@@ -32,7 +37,7 @@ export default function Hero() {
           <Link
             href="/quotes"
             className="relative rounded-md blackBg px-7 py-1.5 whiteText shadow-sm hoverBg ml-2 tracking-tighter bold text-base md:text-lg md:px-8 md:ml-6 transition-transform duration-300 transform hover:scale-105"
-            aria-label="Learn more about Stoic quotes" 
+            aria-label="Learn more about Stoic quotes"
           >
             learn more
           </Link>

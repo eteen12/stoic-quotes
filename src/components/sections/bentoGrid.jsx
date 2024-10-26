@@ -103,6 +103,7 @@ export default function BentoGrid() {
                   className="object-contain mt-16"
                   src="/bento/marcusFace.webp"
                   alt="marcus aurelius face image cracked bronze sculpture"
+                  loading="lazy"
                   fill
                 />
               </div>
