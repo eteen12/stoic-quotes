@@ -14,7 +14,7 @@ export default function PhilosopherPage({ philosopher }) {
           <div className="relative rounded-xl overflow-hidden">
             <div className="relative mx-auto max-w-[700px] text-base">
               <Image
-                alt={philosopher.name}
+                alt={`Bust of ${philosopher.name} with a shadow transparent image`}
                 src={philosopher.image}
                 width={1184}
                 height={1376}
