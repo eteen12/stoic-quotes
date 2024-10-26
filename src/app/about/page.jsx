@@ -1,5 +1,28 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "Ethan Breitkreutz - About Me",
+  description:
+    "Learn more about Ethan Breitkreutz, a passionate Canadian web developer and business owner. Discover insights on Stoicism and explore his web development services at Teleta Development.",
+  keywords:
+    "Ethan Breitkreutz, web developer, Teleta Development, Stoicism, philosophy, personal growth, Canadian entrepreneur",
+  openGraph: {
+    title: "Ethan Breitkreutz - About Me",
+    description:
+      "Learn more about Ethan Breitkreutz, a passionate Canadian web developer and business owner. Discover insights on Stoicism and explore his web development services at Teleta Development.",
+    url: "https://TeletaDevelopment.com/about", 
+    type: "website",
+    images: "https://www.stoicquotes.ca/misc/ethan.webp", 
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ethan Breitkreutz - About Me",
+    description:
+      "Learn more about Ethan Breitkreutz, a passionate Canadian web developer and business owner. Discover insights on Stoicism and explore his web development services at Teleta Development.",
+    image: "https://TeletaDevelopment.com/misc/ethan.webp", 
+  },
+};
+
 export default function Page() {
   return (
     <>
@@ -51,7 +74,7 @@ export default function Page() {
                 </p>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
                   For web development services or general inquiries, feel free
-                  to contact me. 
+                  to contact me.
                 </p>
               </div>
             </div>
