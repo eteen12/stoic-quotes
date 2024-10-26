@@ -19,13 +19,13 @@ export default function BentoGrid() {
     <div className=" py-12">
       <div className="mx-auto px-2 max-w-none">
         <div className=" mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-          <div className="relative lg:row-span-2 whiteBg shadow-lg h-[30rem] sm:h-[44rem] rounded-lg overflow-hidden transition-transform duration-300 transform hover:scale-105">
+          <div className="relative lg:row-span-2 whiteBg shadow-lg h-[35rem] sm:h-[44rem] rounded-lg overflow-hidden transition-transform duration-300 transform hover:scale-105">
             <div className="grid grid-cols-1 grid-rows-[70%_30%] w-full h-full blackText tracking-tighter bold text-2xl md:text-3xl">
               <div className="grid grid-rows-[40%_60%] p-5">
                 <div className="flex flex-col justify-between ">
-                  <h3 className="sm:text-3xl ">
+                  <h1 className="sm:text-3xl ">
                     Quote of the <br /> Day
-                  </h3>
+                  </h1>
                 </div>
                 <div className="w-full h-full text-center sm:text-3xl ">
                   <DailyQuote />
@@ -70,7 +70,14 @@ export default function BentoGrid() {
             <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
               <div className="relative px-8 pt-8 sm:px-10 sm:pt-10 h-[21rem]">
                 <Image
-                  src="/bento/epictetusWriting.webp"
+                  sizes="(max-width: 1000px) 100vw, 1000px"
+                  srcSet="
+                  /bento/epictetusWriting_i5itci_c_scale,w_100.webp 100w,
+                  /bento/epictetusWriting_i5itci_c_scale,w_358.webp 358w,
+                  /bento/epictetusWriting_i5itci_c_scale,w_621.webp 621w,
+                  /bento/epictetusWriting_i5itci_c_scale,w_844.webp 844w,
+                  /bento/epictetusWriting_i5itci_c_scale,w_1000.webp 1000w"
+                  src="/bento/epictetusWriting_i5itci_c_scale,w_1000.webp"
                   alt="epictetus writing black and white photo"
                   className="object-cover"
                   loading="lazy"
@@ -101,7 +108,14 @@ export default function BentoGrid() {
                 </h2>
                 <Image
                   className="object-contain mt-16"
-                  src="/bento/marcusFace.webp"
+                  sizes="(max-width: 890px) 100vw, 890px"
+                  srcSet="
+/bento/marcusFace_jdohmm_c_scale,w_100.webp 100w,
+/bento/marcusFace_jdohmm_c_scale,w_416.webp 416w,
+/bento/marcusFace_jdohmm_c_scale,w_605.webp 605w,
+/bento/marcusFace_jdohmm_c_scale,w_786.webp 786w,
+/bento/marcusFace_jdohmm_c_scale,w_890.webp 890w"
+                  src="/bento/marcusFace_jdohmm_c_scale,w_890.webp"
                   alt="marcus aurelius face image cracked bronze sculpture"
                   loading="lazy"
                   fill

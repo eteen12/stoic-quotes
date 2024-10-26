@@ -31,10 +31,12 @@ export default function NavBurger() {
     <>
       <label
         htmlFor="check"
+        aria-label="click to see selection of website pages"
         className={`${styles.burgerLabel} transition-all ease duration-700 z-50`}
       >
         <input
           type="checkbox"
+          aria-label="click to see selection of website pages"
           id="check"
           className={styles.hiddenCheckbox}
           readOnly
@@ -64,6 +66,7 @@ export default function NavBurger() {
                 <Link
                   href={item.href}
                   className="ml-5"
+                  aria-label={`go to the ${item.name} page section`}
                   onClick={() => handleClose(index)}
                 >
                   {item.name}
@@ -71,6 +74,7 @@ export default function NavBurger() {
                 <Link href={item.href}>
                   <IoIosArrowForward
                     className="mt-px mr-3.5 text-5xl"
+                    aria-label={`go to the ${item.name} page section`}
                     onClick={() => handleClose(index)}
                   />
                 </Link>

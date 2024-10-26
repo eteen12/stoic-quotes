@@ -34,7 +34,11 @@ const ShareButtons = ({ postUrl, quoteText }) => {
       >
         <FaInstagram className="text-3xl md:text-4xl hoverText transition-transform duration-300 transform hover:scale-105" />
       </a>
-      <button onClick={handleCopyLink} className="py-2">
+      <button
+        onClick={handleCopyLink}
+        className="py-2"
+        aria-label="copy link to quote to keyboard"
+      >
         <FaLink className="mr-2 text-3xl md:text-4xl hoverText transition-transform duration-300 transform hover:scale-105" />
       </button>
     </div>

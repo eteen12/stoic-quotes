@@ -18,6 +18,7 @@ export default function PhilosopherPage({ philosopher }) {
                 src={philosopher.image}
                 width={1184}
                 height={1376}
+                priority
                 className="rounded-lg object-cover object-center "
               />
             </div>

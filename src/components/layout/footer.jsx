@@ -176,7 +176,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-16 border-t border-stone-800 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-sm leading-5 text-gray-400 md:text-base text-center">
+          <p className="text-sm leading-5 blackText md:text-base text-center">
             &copy; 2024{" "}
             <a
               href="https://TeletaDevelopment.com"

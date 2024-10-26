@@ -15,9 +15,9 @@ const DailyQuote = () => {
   }, []);
 
   return (
-    <h3>
+    <h2>
       &quot;{quote}&quot; - {author}
-    </h3>
+    </h2>
   );
 };
 
