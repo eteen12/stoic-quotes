@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
-import "@/app/globals.css";
+import styles from "./Burgers.module.css";
 
 export default function NavBurger() {
   const [opened, setOpened] = useState(false);
@@ -16,7 +16,7 @@ export default function NavBurger() {
   const handleClose = (index) => {
     setActiveIndex(index);
     setOpened(false);
-    setTimeout(() => setActiveIndex(null), 500); 
+    setTimeout(() => setActiveIndex(null), 500);
   };
 
   const menuItems = [
@@ -28,17 +28,26 @@ export default function NavBurger() {
 
   return (
     <>
-      <label htmlFor="check" className="transition-all ease duration-700 z-50">
+      <label
+        htmlFor="check"
+        className={`${styles.burgerLabel} transition-all ease duration-700 z-50`}
+      >
         <input
           type="checkbox"
           id="check"
-          className="sr-only"
+          className={styles.hiddenCheckbox}
           readOnly
           onClick={handleToggle}
         />
-        <span className="blackBg"></span>
-        <span className="blackBg"></span>
-        <span className="blackBg"></span>
+        <span
+          className={`${styles.burgerSpan} bg-black ${opened ? styles.checkedSpan1 : ""}`}
+        ></span>
+        <span
+          className={`${styles.burgerSpan} bg-black ${opened ? styles.checkedSpan2 : ""}`}
+        ></span>
+        <span
+          className={`${styles.burgerSpan} bg-black ${opened ? styles.checkedSpan3 : ""}`}
+        ></span>
       </label>
       <div
         className={`fixed top-0 left-0 w-full min-h-[100vh] whiteBg transition-opacity duration-500 ease-in-out flex flex-col z-20 
@@ -49,7 +58,7 @@ export default function NavBurger() {
             <li key={index} className="w-full">
               <div
                 className={`flex justify-between items-center transition-transform duration-300 
-                  ${activeIndex === index ? "transform translate-x-4" : ""}`} // Move right on click
+                  ${activeIndex === index ? "transform translate-x-4" : ""}`}
               >
                 <Link
                   href={item.href}
@@ -61,7 +70,7 @@ export default function NavBurger() {
                 <Link href={item.href}>
                   <IoIosArrowForward
                     className="mt-px mr-3.5 text-5xl"
-                    onClick={() => handleClose(index)} // Pass index here
+                    onClick={() => handleClose(index)}
                   />
                 </Link>
               </div>

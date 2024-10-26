@@ -14,54 +14,6 @@ body {
 .lightText {
   color: #e4e2e2;
 }
-/*NAV BURGER*/
-label {
-  display: flex;
-  flex-direction: column;
-  width: 40px;
-  cursor: pointer;
-
-  transform: rotate(180deg);
-}
-
-label span {
-  border-radius: 999999px;
-  height: 4px;
-  margin: 4px 0;
-  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-}
-
-span:nth-of-type(1) {
-  width: 50%;
-}
-
-span:nth-of-type(2) {
-  width: 95%;
-}
-
-span:nth-of-type(3) {
-  width: 75%;
-}
-
-input[type="checkbox"] {
-  display: none;
-}
-
-input[type="checkbox"]:checked ~ span:nth-of-type(1) {
-  transform-origin: bottom;
-  transform: rotatez(45deg) translate(6px, 1px);
-}
-
-input[type="checkbox"]:checked ~ span:nth-of-type(2) {
-  transform-origin: top;
-  transform: rotatez(-46deg);
-}
-
-input[type="checkbox"]:checked ~ span:nth-of-type(3) {
-  transform-origin: bottom;
-  width: 50%;
-  transform: translate(16px, -8px) rotatez(43deg);
-}
 
 :root {
   --background: #1f1e1e;
@@ -95,39 +47,6 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
 .inter {
   font-family: var(--font-inter);
   font-weight: var(--font-weight);
-}
-.tham {
-  position: relative;
-  display: inline-block;
-  width: 2rem; /* Adjust to your preferred width */
-  height: 2rem; /* Adjust to your preferred height */
-  cursor: pointer;
-}
-
-.tham-box {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.tham-inner {
-  position: absolute;
-  width: 100%;
-  height: 0.2rem; /* Bar height */
-  background-color: black; /* Change as needed */
-  transition: all 0.3s ease;
-}
-
-.tham-active .tham-inner:nth-child(1) {
-  transform: translateY(0.8rem) rotate(45deg);
-}
-
-.tham-active .tham-inner:nth-child(2) {
-  opacity: 0; /* Hide the middle bar */
-}
-
-.tham-active .tham-inner:nth-child(3) {
-  transform: translateY(-0.8rem) rotate(-45deg);
 }
 
 @media (prefers-color-scheme: dark) {

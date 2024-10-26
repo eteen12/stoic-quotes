@@ -7,9 +7,9 @@ import DailyQuote from "../misc/dailyQuote";
 import Date from "../misc/date";
 
 const philosophers = [
-  { name: "Marcus Aurelius", link: "marcus-aurelius" },
-  { name: "Seneca The Younger", link: "seneca-the-younger" },
-  { name: "Epictetus", link: "epictetus" },
+  { name: "Marcus Aurelius", link: "/philosophers/marcus-aurelius" },
+  { name: "Seneca The Younger", link: "/philosophers/seneca" },
+  { name: "Epictetus", link: "/philosophers/epictetus" },
 ];
 
 export default function BentoGrid() {
@@ -25,7 +25,7 @@ export default function BentoGrid() {
                     Quote of the <br /> Day
                   </h3>
                 </div>
-                <div className="w-full h-full text-center sm:text-3xl">
+                <div className="w-full h-full text-center sm:text-3xl ">
                   <DailyQuote />
                 </div>
                 <div className="-mt-10">
@@ -89,7 +89,9 @@ export default function BentoGrid() {
             <div className="absolute inset-px rounded-lg whiteBg"></div>
             <div className="relative h-[44rem] grid grid-cols-1 grid-rows-[40%_60%] overflow-hidden text-xl">
               <div className="relative w-full h-full">
-                <h2 className="text-center mt-5 text-3xl md:text-4xl blackText bold tracking-tight">Discover quotes by</h2>
+                <h2 className="text-center mt-5 text-3xl md:text-4xl blackText bold tracking-tight">
+                  Discover quotes by
+                </h2>
                 <Image
                   className="object-contain mt-16"
                   src="/bento/marcusFace.png"

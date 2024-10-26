@@ -95,12 +95,12 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body className={`${inter.variable} antialiased max-w-[1700px] mx-auto`}>
-        {children}
+      <body
+        className={`${inter.variable} antialiased max-w-[1700px] mx-auto`}
+      >
+       {children}
         <Footer />
       </body>
-
-    
     </html>
   );
 }
