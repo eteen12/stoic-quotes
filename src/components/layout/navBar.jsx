@@ -24,18 +24,19 @@ export default function NavBar() {
         </Link>
 
         <div className="hidden sm:flex items-center px-2 tracking-tight">
-          <ul className="flex items-center">
+        <ul className="flex items-center">
             {links.map((link, index) => (
-              <Link
-                key={index}
-                aria-label={`go to the ${link.text} section page`}
-                href={link.href}
-                rel={link.href === "/shop" ? "preload" : undefined}
-              >
-                <li className="ml-10  hoverText">{link.text}</li>
-              </Link>
+              <li key={index} className="ml-10 hoverText">
+                <Link
+                  aria-label={`go to the ${link.text} section page`}
+                  href={link.href}
+                  rel={link.href === "/shop" ? "preload" : undefined}
+                >
+                  {link.text}
+                </Link>
+              </li>
             ))}
-            <li className="ml-10  text-xl md:text-2xl">
+            <li className="ml-10 text-xl md:text-2xl">
               <Menu as="div" className="relative inline-block text-left">
                 <div>
                   <MenuButton
@@ -55,7 +56,7 @@ export default function NavBar() {
                         {item.isButton ? (
                           <button
                             type="submit"
-                            aria-label={`go to the  ${item.name} page`}
+                            aria-label={`go to the ${item.name} page`}
                             className="block w-full px-4 py-2 text-left text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
                           >
                             {item.name}
@@ -63,7 +64,7 @@ export default function NavBar() {
                         ) : (
                           <Link
                             href={item.path}
-                            aria-label={`go to the  ${item.name} page`}
+                            aria-label={`go to the ${item.name} page`}
                             className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
                           >
                             {item.name}

@@ -15,7 +15,7 @@ export default function Author({ post }) {
       </div>
       <div className="ml-3 lg:ml-4">
         <p className="text-base bold lg:text-lg blackText">{post.author}</p>
-        <div className="flex space-x-1 text-base text-gray-500 lg:text-base">
+        <div className="flex space-x-1 text-base  lg:text-base">
           <time>{post.date}</time>
         </div>
       </div>

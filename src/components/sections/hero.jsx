@@ -36,10 +36,10 @@ export default function Hero() {
           Discover what it means <br /> to be stoic
           <Link
             href="/quotes"
-            className="relative rounded-md blackBg px-7 py-1.5 whiteText shadow-sm hoverBg ml-2 tracking-tighter bold text-base md:text-lg md:px-8 md:ml-6 transition-transform duration-300 transform hover:scale-105"
-            aria-label="Learn more about Stoic quotes"
+            className="relative rounded-md blackBg px-7 py-1.5 sm:py-2 sm:text-lg whiteText shadow-sm hoverBg ml-4 tracking-tighter bold text-base md:text-lg md:px-8 md:ml-10 transition-transform duration-300 transform hover:scale-105"
+            aria-label="Learn more about Stoic quotes and philosophy"
           >
-            learn more
+            discover
           </Link>
         </h1>
       </div>

@@ -17,9 +17,9 @@ const BlogCard = ({ post }) => {
         <div className="flex-1 flex flex-col justify-between p-6">
           <div>
             <p className="text-sm lg:text-base font-medium">{post.subject}</p>
-            <h3 className="mt-2 lg:mt-1 text-xl lg:text-2xl font-semibold text-gray-900">
+            <h1 className="mt-2 lg:mt-1 text-xl lg:text-2xl font-semibold text-gray-900">
               {post.title}
-            </h3>
+            </h1>
             <p className="mt-3 text-base lg:text-lg text-gray-500 line-clamp-3 overflow-hidden max-h-[100px]">
               {post.description}
             </p>

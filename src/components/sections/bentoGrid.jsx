@@ -126,11 +126,11 @@ export default function BentoGrid() {
                   <Link
                     key={philosopher.name}
                     href={philosopher.link}
-                    aria-label={`${philosopher.name} quotes read now`}
+                    aria-label={`read ${philosopher.name} quotes now`}
                     className="flex justify-between "
                   >
                     <h2>{philosopher.name}</h2>
-                    <IoIosArrowForward className="mt-px text-3xl md:text-4xl md:mt-0" />
+                    <IoIosArrowForward className="mt-px text-3xl md:text-4xl md:mt-0" aria-label={`read ${philosopher.name} quotes now`}/>
                   </Link>
                 ))}
               </div>
