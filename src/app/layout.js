@@ -15,6 +15,7 @@ export const metadata = {
   keywords:
     "Stoicism, Stoic quotes, philosophy, wisdom, Marcus Aurelius, Seneca, Epictetus, daily quotes, personal growth, resilience",
   author: "Teleta Development",
+  metadataBase: new URL("https://www.stoicquotes.ca"),
   og: {
     title: "Stoic Quotes",
     description:

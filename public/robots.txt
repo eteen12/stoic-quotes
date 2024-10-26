@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://stoicquotes.ca
+
+# Sitemaps
+Sitemap: https://stoicquotes.ca/sitemap.xml
