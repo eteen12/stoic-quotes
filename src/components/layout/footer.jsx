@@ -57,10 +57,7 @@ export default function Footer() {
                 </h3>
                 <ul role="list" className="mt-6 space-y-4 ">
                   {navigation.solutions.map((item) => (
-                    <li
-                      key={item.name}
-                      
-                    >
+                    <li key={item.name}>
                       <a
                         href={item.href}
                         className="text-base tracking-tighter leading-6 mediumBold hoverText "
@@ -77,7 +74,7 @@ export default function Footer() {
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.support.map((item) => (
-                    <li key={item.name} >
+                    <li key={item.name}>
                       <Link
                         href={item.href}
                         className="text-base tracking-tighter leading-6 mediumBold hoverText"
@@ -113,7 +110,7 @@ export default function Footer() {
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.links.map((item) => (
-                    <li key={item.name} >
+                    <li key={item.name}>
                       <Link
                         href={item.href}
                         className="text-base tracking-tighter leading-6 mediumBold hoverText"
@@ -142,7 +139,7 @@ export default function Footer() {
                 name="email-address"
                 type="email"
                 required
-                placeholder="Enter your email"
+                placeholder="dont enter anything, it wont work"
                 autoComplete="email"
                 className="w-full min-w-0 appearance-none rounded-md border-0 bg-white/5 px-3 py-2 text-base  shadow-md ring-1 ring-inset ring-white/10 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-stone-100 sm:w-64 sm:text-sm sm:leading-6 xl:w-full"
               />
@@ -157,7 +154,11 @@ export default function Footer() {
             </form>
             <div className="flex space-x-4 sm:space-x-6 md:order-2 justify-end  sm:mt-5 sm:justify-start">
               {navigation.social.map((item) => (
-                <a key={item.name} href={item.href} className=" hoverText transition-transform duration-300 transform hover:scale-105">
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className=" hoverText transition-transform duration-300 transform hover:scale-105"
+                >
                   <span className="sr-only">{item.name}</span>
                   <item.icon aria-hidden="true" className="h-8 w-8 " />
                 </a>
