@@ -84,7 +84,7 @@ export default async function Page({ params }) {
     notFound();
   }
 
-  const postUrl = `https://www.stoicquotes.ca/${philosopher.name}/${id}`;
+  const postUrl = `https://www.stoicquotes.ca/philosophers/${philosopher.name}/${id}`;
 
   const displayName =
     philosopher.name === "Marcus-Aurelius"
