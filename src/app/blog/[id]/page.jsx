@@ -6,6 +6,31 @@ import ShareButtons from "@/components/misc/shareButtons";
 import blogs from "@/data/blogs";
 import Author from "@/components/blog/author";
 
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const post = blogs.find((p) => p.id === id);
+
+  return {
+    title: post.title,
+    description: post.description,
+    keywords:
+      "Stoicism, philosophy, Marcus Aurelius, Epictetus, Seneca, personal growth, Canada",
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      images: [post.src],
+      url: `https://www.stoicquotes.ca/blog/${post.id}`,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      image: post.imageUrl,
+    },
+  };
+}
+
 export default async function BlogPostPage({ params }) {
   const { id } = await params;
   const post = blogs.find((p) => p.id === id);

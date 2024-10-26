@@ -2,7 +2,6 @@ import { FaShareFromSquare } from "react-icons/fa6";
 import Link from "next/link";
 
 function PhilosopherQuotes({ thisPhilosopher }) {
-  // Check if the philosopher's name is Marcus-Aurelius
   const displayName =
     thisPhilosopher.name === "Marcus-Aurelius" ? "Marcus Aurelius" : thisPhilosopher.name;
 
@@ -18,7 +17,7 @@ function PhilosopherQuotes({ thisPhilosopher }) {
         >
           {thisPhilosopher.quotes.map((quote, index) => (
             <li
-              key={index} // Use index for the key, as quote.index is not defined in the map
+              key={index} 
               className="py-6 border-b border-gray-400 last:border-0 transition-transform duration-300 transform hover:scale-105"
             >
               <blockquote className="quote text-lg lg:text-xl">
@@ -26,11 +25,11 @@ function PhilosopherQuotes({ thisPhilosopher }) {
               </blockquote>
               <div className="flex gap-10 mt-2">
                 <p className="text-lg lg:text-xl">
-                  - <strong>{displayName}</strong> {/* Use displayName here */}
+                  - <strong>{displayName}</strong> 
                 </p>
                 <Link
-                  href={`/philosophers/${thisPhilosopher.name.toLowerCase()}/${index}`} // Change quote.index to index
-                  aria-label={`Share quote from ${displayName}: ${quote.text}`} // Use displayName here as well
+                  href={`/philosophers/${thisPhilosopher.name.toLowerCase()}/${index}`}
+                  aria-label={`Share quote from ${displayName}: ${quote.text}`} 
                 >
                   <FaShareFromSquare className="mt-1 text-2xl" />
                 </Link>

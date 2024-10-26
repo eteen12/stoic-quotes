@@ -86,7 +86,6 @@ export default async function Page({ params }) {
 
   const postUrl = `https://www.stoicquotes.ca/${philosopher.name}/${id}`;
 
-  // Check if philosopher's name is Marcus-Aurelius
   const displayName =
     philosopher.name === "Marcus-Aurelius"
       ? "Marcus Aurelius"
