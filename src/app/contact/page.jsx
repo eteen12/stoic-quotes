@@ -1,4 +1,27 @@
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
+
+export const metadata = {
+  title: "Contact Stoic Quotes/Ethan Breitkreutz",
+  description:
+    "Get in touch with Ethan Breitkreutz, a passionate web developer. Whether you have inquiries about web development services or the website feel free to reach out!",
+  keywords:
+    "Ethan Breitkreutz, contact, web developer, Teleta Development, inquiries, philosophy",
+  openGraph: {
+    title: "Contact Ethan Breitkreutz",
+    description:
+      "Get in touch with Ethan Breitkreutz, a passionate web developer. Whether you have inquiries about web development services or the website feel free to reach out!",
+    url: "https://TeletaDevelopment.com/contact",
+    type: "website",
+    image: "https://www.stoicquotes.ca/marcusFaceLogo.webp",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Ethan Breitkreutz",
+    description:
+      "Get in touch with Ethan Breitkreutz, a passionate web developer. Whether you have inquiries about web development services or the website feel free to reach out!",
+    image: "https://www.stoicquotes.ca/marcusFaceLogo.webp",
+  },
+};
 
 export default function Example() {
   return (
@@ -134,7 +157,7 @@ export default function Example() {
                 Want to talk?
               </h3>
               <form
-                action="#"
+                action="https://formspree.io/f/mzzbdpyb" //take it i really really dont care
                 method="POST"
                 className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
               >
@@ -262,7 +285,7 @@ export default function Example() {
                 </div>
                 <div className="sm:col-span-2 sm:flex sm:justify-end">
                   <button
-                    type="button"
+                    type="submit"
                     className="absolute rounded-md blackBg px-7 py-1.5 whiteText shadow-sm hoverBg tracking-tighter bold text-base md:text-lg transition-transform duration-300 transform hover:scale-105"
                   >
                     send message
