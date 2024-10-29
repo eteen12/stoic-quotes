@@ -20,7 +20,7 @@ export default function NavBurger() {
   };
 
   const menuItems = [
-    // { name: "Quotes", href: "/quotes" },
+    { name: "Quotes", href: "/quotes" },
     { name: "Blog", href: "/blog" },
     { name: "Home", href: "/" },
     { name: "Contact", href: "/contact" },
