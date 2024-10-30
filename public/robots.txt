@@ -1,9 +1,6 @@
-# *
+# Allow all search engines full access
 User-agent: *
 Allow: /
 
-# Host
-Host: https://www.stoicquotes.ca
-
-# Sitemaps
+# Sitemap location
 Sitemap: https://www.stoicquotes.ca/sitemap.xml

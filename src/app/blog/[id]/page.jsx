@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Head from "next/head";
 import ShareButtons from "@/components/misc/shareButtons";
 import blogs from "@/data/blogs";
 import Author from "@/components/blog/author";
@@ -13,8 +12,7 @@ export async function generateMetadata({ params }) {
   return {
     title: post.title,
     description: post.description,
-    keywords:
-      "Stoicism, philosophy, Marcus Aurelius, Epictetus, Seneca, personal growth, Canada",
+    keywords: `Stoicism, ${post.title}, ${post.subject}, Marcus Aurelius, Epictetus, Seneca`,
     openGraph: {
       title: post.title,
       description: post.description,

@@ -7,6 +7,9 @@ import BlogCard from "@/components/blog/blogCard";
 import blogs from "@/data/blogs";
 
 
+
+
+
 function Page() {
   const [filteredBlogs, setFilteredBlogs] = useState(blogs);
   return (
