@@ -16,7 +16,7 @@ export default function NavBar() {
 
   return (
     <header className="fixed justify-between items-center w-full h-14 z-50 transition-all duration-700 blackText tracking-tight text-xl sm:text-2xl md:text-2xl whiteBg">
-      <div className="flex justify-between items-center w-full px-4 sm:px-8  mt-2.5  max-w-7xl mx-auto">
+      <div className="flex justify-between items-center w-full px-4 sm:px-8  mt-2.5 mx-auto max-w-[1700px]">
         <Link href="/" aria-label="Go to stoic quotes home page">
           <h2 className="relative tracking-tight z-50 transition-transform duration-300 transform hoverText">
             StoicQuotes.ca
