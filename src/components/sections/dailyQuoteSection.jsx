@@ -19,19 +19,26 @@ export default function DailyQuoteSection() {
             Developer chosen daily <br /> quote -
           </h2>
         </div>
-        <div className="md:w-[50%] md:ml-auto lg:w-[40%] xl:w-[30%]">
+        <div className="md:w-[50%] md:ml-auto lg:w-[40%] xl:w-[35%]">
           <Link href="/#daily-quote">
             <h3 className="grayText text-lg sm:text-xl tracking-tight">
               <DailyQuote />
             </h3>
           </Link>
-          <div className="flex mt-10">
-            <span className="h-0.5 blackBg w-[70%] mt-3"></span>
-            <div className="ml-auto px-2 text-nowrap text-lg sm:text-xl">
-              <Date />
-            </div>
-            <span className="h-0.5 blackBg w-[20%] mt-3"></span>
+        </div>
+        <div className="flex mt-10 md:w-[50%] md:ml-auto lg:w-[40%] xl:w-[35%]">
+          <span className="h-0.5 blackBg w-[70%] mt-3"></span>
+          <div className="ml-auto px-2 text-nowrap text-lg sm:text-xl">
+            <Date />
           </div>
+          <span className="h-0.5 blackBg w-[20%] mt-3"></span>
+        </div>
+        {/*Links*/}
+        <div className="md:w-[65%] md:ml-auto lg:w-[55%] xl:w-[49%] md:-mt-7">
+          <span className="h-0.5 blackBg w-[20%] mt-3 hidden md:flex"></span>
+          <ul>
+            <li>hi</li>
+          </ul>
         </div>
       </div>
     </>
