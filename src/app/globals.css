@@ -41,6 +41,9 @@ body {
   font-family: var(--font-inter);
   font-weight: var(--font-weight);
 }
+.grayText {
+  color: #757575;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -70,3 +73,7 @@ h1 {
 .shrinkAnimation:hover {
   transform: scale(0.99);
 }
+
+/*FOR DATE*/
+
+

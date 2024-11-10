@@ -24,7 +24,7 @@ export default function Hero() {
         />
       </div>
       <div className="w-full mt-16 text-lg sm:text-xl sm:mt-24 md:w-[65%] md:ml-auto ">
-        <h2 className="lg:w-[50%] xl:w-[40%]">
+        <h2 className="lg:w-[50%] xl:w-[40%] tracking-tight">
           Read quotes from the famous stoics, and read the daily quote. The blog
           is updated weekly with insights on stoic applications to modern day
           life.

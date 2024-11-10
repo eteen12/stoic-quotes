@@ -6,7 +6,9 @@ const DateDisplay = () => {
 
   useEffect(() => {
     const getFormattedDate = () => {
-      return new Date().toLocaleDateString();
+      const options = { year: "2-digit", month: "2-digit", day: "2-digit" };
+      const date = new Date().toLocaleDateString("en-GB", options); // en-GB uses the dd/mm/yy format
+      return date.replace(/\//g, "-"); // Replace slashes with dashes
     };
 
     setCurrentDate(getFormattedDate());

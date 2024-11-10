@@ -1,16 +1,13 @@
 import React from "react";
 
 import Hero from "@/components/sections/hero";
-// import BentoGrid from "@/components/sections/bentoGrid";
+import DailyQuoteSection from "@/components/sections/dailyQuoteSection";
 
 export default function Home() {
   return (
     <div>
       <Hero />
-      {/* <div className="h-screen ">
-
-      </div> */}
-      {/* <BentoGrid /> */}
+      <DailyQuoteSection />
     </div>
   );
 }
