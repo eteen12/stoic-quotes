@@ -97,7 +97,7 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${inter.variable} antialiased transition-all duration-700`}>
         <NavBar />
         {children}
         <Footer />

@@ -15,15 +15,15 @@ export default function NavBar() {
   ];
 
   return (
-    <header className="fixed justify-between items-center w-full h-14 z-50 transition-all duration-700 blackText tracking-tight text-xl md:text-2xl whiteBg">
-      <div className="flex justify-between items-center w-full px-2 transition-all mt-2.5 duration-700 max-w-7xl mx-auto">
+    <header className="fixed justify-between items-center w-full h-14 z-50 transition-all duration-700 blackText tracking-tight text-xl sm:text-2xl md:text-2xl whiteBg">
+      <div className="flex justify-between items-center w-full px-4 sm:px-8  mt-2.5  max-w-7xl mx-auto">
         <Link href="/" aria-label="Go to stoic quotes home page">
           <h2 className="relative tracking-tight z-50 transition-transform duration-300 transform hoverText">
             StoicQuotes.ca
           </h2>
         </Link>
 
-        <div className="hidden sm:flex items-center px-2 tracking-tight">
+        <div className="hidden md:flex items-center px-2 tracking-tight">
           <ul className="flex items-center">
             {links.map((link, index) => (
               <li key={index} className="ml-10 hoverText">
@@ -79,7 +79,7 @@ export default function NavBar() {
           </ul>
         </div>
 
-        <div className="sm:hidden flex gap-5">
+        <div className="md:hidden flex gap-5">
           <NavBurger />
         </div>
       </div>

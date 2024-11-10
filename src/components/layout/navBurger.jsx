@@ -53,10 +53,10 @@ export default function NavBurger() {
         ></span>
       </label>
       <div
-        className={`fixed top-0 left-0 w-full min-h-[100vh] whiteBg transition-opacity duration-500 ease-in-out flex flex-col z-20 mt-12 
+        className={`fixed top-0 left-0 w-full min-h-[100vh] whiteBg transition-opacity duration-500 ease-in-out flex flex-col z-20 mt-12 sm:mt-14 px-4 sm:px-8 
           ${opened ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
       >
-        <ul className="flex flex-col items-start gap-4 tracking-tighter text-xl ">
+        <ul className="flex flex-col items-start gap-4 tracking-tighter text-xl sm:text-2xl">
           {menuItems.map((item, index) => (
             <li key={index} className="w-full">
               <div
@@ -65,7 +65,7 @@ export default function NavBurger() {
               >
                 <Link
                   href={item.href}
-                  className="ml-5"
+                  className=""
                   aria-label={`go to the ${item.name} page section`}
                   onClick={() => handleClose(index)}
                 >
@@ -73,7 +73,7 @@ export default function NavBurger() {
                 </Link>
                 <Link href={item.href}>
                   <GoArrowRight
-                    className="mt-px mr-4 text-5xl"
+                    className="mt-px  text-5xl"
                     aria-label={`go to the ${item.name} page section`}
                     onClick={() => handleClose(index)}
                   />
