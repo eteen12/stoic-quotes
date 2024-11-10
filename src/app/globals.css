@@ -9,28 +9,21 @@ body {
   overflow-x: hidden;
 }
 .lightBg {
-  background-color: #f3f4f6;
-}
-.lightText {
-  color: #e4e2e2;
-}
-
-:root {
-  --background: #1f1e1e;
-  --foreground: #faf9f6;
-  --font-inter: "Inter", sans-serif;
+  background-color: #faf9f6;
 }
 .bold {
-  font-weight: 700;
-}
-.mediumBold {
   font-weight: 600;
+}
+:root {
+  --background: #faf9f6;
+  --foreground: #151515;
+  --font-inter: "Inter", sans-serif;
 }
 .blackText {
   color: #1f1e1e;
 }
 .blackBg {
-  background-color: #141414;
+  background-color: #151515;
 }
 .hoverBg:hover {
   background-color: #3a3a3a;
@@ -51,8 +44,8 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #f3f4f6;
-    --foreground: #ededed;
+    --background: #faf9f6;
+    --foreground: #151515;
   }
 }
 
@@ -60,10 +53,20 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-inter);
+  font-weight: 500;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+h1 {
+  letter-spacing: -0.05em;
+}
+.transition3 {
+  transition: all 0.3s;
+}
+.shrinkAnimation:hover {
+  transform: scale(0.99);
 }

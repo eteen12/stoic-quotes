@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { IoIosArrowForward } from "react-icons/io";
+import { GoArrowRight } from "react-icons/go";
 import styles from "./Burgers.module.css";
 
 export default function NavBurger() {
@@ -53,10 +53,10 @@ export default function NavBurger() {
         ></span>
       </label>
       <div
-        className={`fixed top-0 left-0 w-full min-h-[100vh] whiteBg transition-opacity duration-500 ease-in-out flex flex-col z-20 
+        className={`fixed top-0 left-0 w-full min-h-[100vh] whiteBg transition-opacity duration-500 ease-in-out flex flex-col z-20 mt-12 
           ${opened ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
       >
-        <ul className="flex flex-col items-start py-10 pt-20 gap-8 tracking-tighter bold text-2xl md:text-3xl ">
+        <ul className="flex flex-col items-start gap-4 tracking-tighter text-xl ">
           {menuItems.map((item, index) => (
             <li key={index} className="w-full">
               <div
@@ -72,8 +72,8 @@ export default function NavBurger() {
                   {item.name}
                 </Link>
                 <Link href={item.href}>
-                  <IoIosArrowForward
-                    className="mt-px mr-3.5 text-5xl"
+                  <GoArrowRight
+                    className="mt-px mr-4 text-5xl"
                     aria-label={`go to the ${item.name} page section`}
                     onClick={() => handleClose(index)}
                   />

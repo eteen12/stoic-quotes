@@ -15,16 +15,16 @@ export default function NavBar() {
   ];
 
   return (
-    <header className="flex justify-between items-center w-full h-16 z-50 transition-all duration-700 blackText tracking-tight bold text-2xl md:text-3xl">
-      <div className="flex justify-between items-center w-full px-5 pt-2 transition-all duration-700">
+    <header className="fixed justify-between items-center w-full h-14 z-50 transition-all duration-700 blackText tracking-tight text-xl md:text-2xl whiteBg">
+      <div className="flex justify-between items-center w-full px-2 transition-all mt-2.5 duration-700 max-w-7xl mx-auto">
         <Link href="/" aria-label="Go to stoic quotes home page">
-          <h2 className="relative tracking-tight  bold z-50 transition-transform duration-300 transform hoverText">
-            Stoic Quotes.
+          <h2 className="relative tracking-tight z-50 transition-transform duration-300 transform hoverText">
+            StoicQuotes.ca
           </h2>
         </Link>
 
         <div className="hidden sm:flex items-center px-2 tracking-tight">
-        <ul className="flex items-center">
+          <ul className="flex items-center">
             {links.map((link, index) => (
               <li key={index} className="ml-10 hoverText">
                 <Link
@@ -40,7 +40,7 @@ export default function NavBar() {
               <Menu as="div" className="relative inline-block text-left">
                 <div>
                   <MenuButton
-                    className="rounded-md blackBg px-8 py-1.5 whiteText shadow-sm hoverBg flex tracking-tight bold md:text-2xl -mr-2 transition-transform duration-300 transform hover:scale-105"
+                    className="rounded-md blackBg px-8 py-1.5 whiteText shadow-sm hoverBg flex tracking-tight md:text-2xl -mr-2 transition-transform duration-300 transform hover:scale-105"
                     aria-label="click the more button for an extended choice of pages"
                   >
                     More
