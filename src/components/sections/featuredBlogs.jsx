@@ -12,11 +12,11 @@ export default function FeaturedBlogs() {
     <>
       <div className="h-fit w-full pb-12 px-4 sm:px-8 transition-all duration-700 max-w-[1700px] mx-auto">
         <div className="mb-20 md:mb-32">
-          <h2 className="text-3xl sm:text-4xl xl:text-5xl lg:text-5xl tracking-tight text-right">
-            - Featured Blogs
+          <h2 className="text-3xl sm:text-4xl xl:text-5xl lg:text-5xl tracking-tight text-left">
+            Featured Blogs -
           </h2>
         </div>
-        <div className="grid grid-cols-1 gap-16 md:w-[70%] lg:w-[60%] mr-auto ">
+        <div className="grid grid-cols-1 gap-16 md:w-[70%] lg:w-[60%] ml-auto ">
           {featuredPosts.map((post) => (
             <BlogCard
               key={post.id}
@@ -28,8 +28,12 @@ export default function FeaturedBlogs() {
             />
           ))}
         </div>
-        <div className="w-full flex md:justify-end md:-mt-14">
-          <Button link="/blogs" text="View all blogs" className="" />
+        <div className="w-full flex md:justify-start md:-mt-20 md:pt-1">
+          <Button
+            link="/blogs"
+            text="View all blogs"
+            className="w-full md:w-auto"
+          />
         </div>
       </div>
     </>

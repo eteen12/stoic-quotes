@@ -39,7 +39,7 @@ export default function PhilosopherSection() {
           </ul>
         </div>
 
-        <Button text="View all philosophers" link="/" className="" />
+        <Button text="View all philosophers" link="/" className="w-full md:w-auto" />
       </div>
     </div>
   );

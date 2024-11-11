@@ -6,7 +6,7 @@ import Date from "../misc/date";
 import Button from "../reusables/button";
 
 export default function DailyQuoteSection() {
-  const quoteText = `Visit the site to see the daily quote \n`;
+  const quoteText = `Visit StoicQuotes.ca to see the daily quote. \n`;
   const postUrl = `https://www.stoicquotes.ca/#daily-quote`;
   const handleCopyLink = () => {
     navigator.clipboard.writeText(postUrl);
@@ -37,12 +37,46 @@ export default function DailyQuoteSection() {
         {/*Links*/}
         <div className="md:w-[%] md:ml-auto lg:w-[65%] xl:w-[49%] md:-mt-7">
           <span className="h-0.5 blackBg w-[45%] lg:w-[30%] xl:w-[20%] mt-3 hidden md:flex"></span>
-          <ul>
-            <li>hi</li>
+          <ul className="space-y-3 ">
+            <li className="grayText text-lg sm:text-xl sm:mt-5">Share</li>
+            <li className="">
+              <a
+                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(postUrl)}`}
+                target="_blank"
+                aria-label="Share on Facebook"
+                className="text-lg sm:text-xl transition3 hoverText"
+              >
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a
+                href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(postUrl)}&text=${encodeURIComponent(quoteText)}`}
+                target="_blank"
+                aria-label="Share on Twitter"
+                className="text-lg sm:text-xl transition3 hoverText"
+              >
+                Twitter
+              </a>
+            </li>
+            <li>
+              <button
+                onClick={handleCopyLink}
+                className="text-lg sm:text-xl transition3 hoverText"
+                aria-label="copy link to quote to keyboard"
+              >
+                Copy link
+              </button>
+              <div className="h-0.5 bg-black w-20 sm:w-24 mt-5"></div>
+            </li>
           </ul>
         </div>
-        <div className="mt-10">
-          <Button link="/quotes" text="View all quotes" />
+        <div className="mt-10 sm:flex sm:justify-end sm:-mt-9">
+          <Button
+            link="/quotes"
+            text="View all quotes"
+            className="w-full sm:w-auto transition3 shrinkAnimation "
+          />
         </div>
       </div>
     </>
