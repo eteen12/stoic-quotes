@@ -11,16 +11,16 @@ export default function Hero() {
         </h1>
         <span className="aria-hidden h-1.5 w-10 blackBg mt-8 ml-2 sm:mt-14 sm:h-2 sm:w-12 md:mt-20 md:h-3 md:w-14"></span>
       </div>
-      <div className="flex gap-1 mt-5 sm:mt-6">
+      <div className="flex gap-2 mt-5 sm:mt-6">
         <Button
           link="/blog"
-          text="BLOGS"
-          className="py-0.5 text-xs sm:text-sm"
+          text="Blogs"
+          className="py-0.5 text-xs sm:text-sm md:text-base "
         />
         <Button
           link="/quotes"
-          text="QUOTES"
-          className="py-0.5 text-xs sm:text-sm"
+          text="Quotes"
+          className="py-0.5 text-xs sm:text-sm md:text-base md:py-0"
         />
       </div>
       <div className="w-full mt-16 text-lg sm:text-xl sm:mt-24 md:w-[65%] md:ml-auto ">

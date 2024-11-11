@@ -5,7 +5,7 @@ export default function Button({ link, text, className = "" }) {
     <Link
       type="button"
       href={link}
-      className={`inline-flex justify-center items-center gap-x-2 px-6 bold rounded-full border border-black
+      className={`inline-flex justify-center items-center gap-x-2 px-6 bold rounded-full border border-black py-1
          shrinkAnimation transition3 hover:bg-black hover:text-white  ${className}`}
     >
       {text}

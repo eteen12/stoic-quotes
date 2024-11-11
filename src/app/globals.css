@@ -9,13 +9,13 @@ body {
   overflow-x: hidden;
 }
 .lightBg {
-  background-color: #faf9f6;
+  background-color: #ffff;
 }
 .bold {
   font-weight: 600;
 }
 :root {
-  --background: #faf9f6;
+  --background: #ffff;
   --foreground: #151515;
   --font-inter: "Inter", sans-serif;
 }
@@ -32,10 +32,10 @@ body {
   color: #3d3d3d;
 }
 .whiteText {
-  color: #faf9f6;
+  color: #ffff;
 }
 .whiteBg {
-  background-color: #faf9f6;
+  background-color: #ffff;
 }
 .inter {
   font-family: var(--font-inter);
@@ -47,7 +47,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #faf9f6;
+    --background: #ffff;
     --foreground: #151515;
   }
 }
@@ -73,7 +73,32 @@ h1 {
 .shrinkAnimation:hover {
   transform: scale(0.99);
 }
+.animation {
+  transition: all 0.3s;
+  transform: scale(0.99);
+}
 
-/*FOR DATE*/
+/**/
+.liStyle {
+  position: relative;
+}
 
+.liStyle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #151515;
+  transition: width 0.4s ease-in-out;
+}
 
+.liStyle:hover::after,
+.liStyle:active::after {
+  width: 100%;
+}
+
+.liStyle:hover a {
+  color: black;
+}
