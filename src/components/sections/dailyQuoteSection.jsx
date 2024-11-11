@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import DailyQuote from "../misc/dailyQuote";
 import Date from "../misc/date";
+import Button from "../reusables/button";
 
 export default function DailyQuoteSection() {
   const quoteText = `Visit the site to see the daily quote \n`;
@@ -13,7 +14,7 @@ export default function DailyQuoteSection() {
   };
   return (
     <>
-      <div className="h-fit w-full pb-12 px-4 sm:px-8 transition-all duration-700 max-w-[1700px] mx-auto">
+      <div className="h-fit w-full pb-20 px-4 sm:px-8 transition-all duration-700 max-w-[1700px] mx-auto">
         <div className="pb-5 sm:pb-10 md:w-[50%] lg:w-[60%]">
           <h2 className="text-3xl sm:text-4xl xl:text-5xl lg:text-5xl tracking-tight">
             Developer chosen daily <br /> quote -
@@ -34,11 +35,14 @@ export default function DailyQuoteSection() {
           <span className="h-0.5 blackBg w-[20%] mt-3"></span>
         </div>
         {/*Links*/}
-        <div className="md:w-[65%] md:ml-auto lg:w-[55%] xl:w-[49%] md:-mt-7">
-          <span className="h-0.5 blackBg w-[20%] mt-3 hidden md:flex"></span>
+        <div className="md:w-[%] md:ml-auto lg:w-[65%] xl:w-[49%] md:-mt-7">
+          <span className="h-0.5 blackBg w-[45%] lg:w-[30%] xl:w-[20%] mt-3 hidden md:flex"></span>
           <ul>
             <li>hi</li>
           </ul>
+        </div>
+        <div className="mt-10">
+          <Button link="/quotes" text="View all quotes" />
         </div>
       </div>
     </>

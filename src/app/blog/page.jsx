@@ -6,10 +6,6 @@ import Search from "@/components/misc/search";
 import BlogCard from "@/components/blog/blogCard";
 import blogs from "@/data/blogs";
 
-
-
-
-
 function Page() {
   const [filteredBlogs, setFilteredBlogs] = useState(blogs);
   return (
@@ -41,7 +37,14 @@ function Page() {
         </div>
         <div className="grid grid-cols-1 gap-5 mt-12 sm:grid-cols-2 lg:grid-cols-3 max-w-[1500px] mx-auto">
           {filteredBlogs.map((post) => (
-            <BlogCard key={post.id} post={post} />
+            <BlogCard
+              key={post.id}
+              post={post}
+              className={`min-h-[500px] h-full max-w-[500px] mx-auto`}
+              imageHeight={`h-60`}
+              textSize={`text-xl lg:text-2xl`}
+              blogBorderTextSize={`text-sm`}
+            />
           ))}
         </div>
       </div>

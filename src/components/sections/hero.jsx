@@ -4,7 +4,7 @@ import SrcSetImage from "../reusables/srcSetImage";
 
 export default function Hero() {
   return (
-    <div className=" h-fit py-24 sm:pt-32 px-4 sm:px-8 transition-all duration-700 max-w-[1700px] mx-auto">
+    <div className=" h-fit py-24 pt-32 sm:pt-52 px-4 sm:px-8 transition-all duration-700 max-w-[1700px] mx-auto">
       <div className="blackText w-full pt-10 flex">
         <h1 className="blackText text-6xl sm:text-8xl md:text-9xl ">
           Stoicism
