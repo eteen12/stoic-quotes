@@ -43,7 +43,9 @@ export const metadata = {
     sameAs: [
       "https://www.facebook.com/TeletaDevelopment",
       "https://www.instagram.com/Teleta_Development/",
-      "https://www.linkedin.com/in/ethan-breitkreutz-43399b322/",
+      "https://www.linkedin.com/in/ethan-breitkreutz",
+      "https://www.youtube.com/@TeletaDevelopment",
+      "https://github.com/eteen12",
     ],
     potentialAction: {
       "@type": "SearchAction",
@@ -97,7 +99,9 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body className={`${inter.variable} antialiased transition-all duration-700`}>
+      <body
+        className={`${inter.variable} antialiased transition-all duration-700`}
+      >
         <NavBar />
         {children}
         <Footer />

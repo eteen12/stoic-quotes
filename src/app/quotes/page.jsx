@@ -14,7 +14,7 @@ export const metadata = {
     description:
       "Explore profound insights and motivational quotes from Stoic philosophers Marcus Aurelius, Seneca, and Epictetus. Enhance your resilience and wisdom with timeless teachings.",
     url: "https://www.stoicquotes.ca/quotes",
-    image: "https://www.stoicquotes.ca/bento/marcusFaceLogo.webp",
+    image: "https://www.stoicquotes.ca/marcusFaceLogo.webp",
     type: "website",
   },
   twitter: {
@@ -22,7 +22,7 @@ export const metadata = {
     title: "Inspiring Stoic Quotes",
     description:
       "Explore profound insights and motivational quotes from Stoic philosophers Marcus Aurelius, Seneca, and Epictetus. Enhance your resilience and wisdom with timeless teachings.",
-    image: "https://www.stoicquotes.ca/bento/marcusFaceLogo.webp",
+    image: "https://www.stoicquotes.ca/marcusFaceLogo.webp",
   },
   schema: {
     "@context": "https://schema.org",
@@ -31,11 +31,13 @@ export const metadata = {
     url: "https://www.stoicquotes.ca/quotes",
     description:
       "Explore profound insights and motivational quotes from Stoic philosophers Marcus Aurelius, Seneca, and Epictetus. Enhance your resilience and wisdom with timeless teachings.",
-    image: "https://www.stoicquotes.ca/bento/marcusFaceLogo.webp",
+    image: "https://www.stoicquotes.ca/marcusFaceLogo.webp",
     sameAs: [
       "https://www.facebook.com/TeletaDevelopment",
       "https://www.instagram.com/Teleta_Development/",
-      "https://www.linkedin.com/in/ethan-breitkreutz-43399b322/",
+      "https://www.linkedin.com/in/ethan-breitkreutz",
+      "https://www.youtube.com/@TeletaDevelopment",
+      "https://github.com/eteen12",
     ],
     potentialAction: {
       "@type": "SearchAction",
@@ -48,7 +50,6 @@ export const metadata = {
 function Page() {
   return (
     <>
-
       <div className="pb-20">
         <div className="relative isolate px-6 lg:px-8 ">
           <div className="mx-auto max-w-5xl py-32 sm:py-48 lg:py-56">
@@ -95,8 +96,8 @@ function Page() {
             </h2>
             <p className="text-center mt-2 ">
               Roman Emperor and Stoic philosopher, Marcus Aurelius, believed in
-              controlling one&apos;s thoughts and emotions. His book Meditations is a
-              cornerstone of Stoic thought.
+              controlling one&apos;s thoughts and emotions. His book Meditations
+              is a cornerstone of Stoic thought.
             </p>
             <Link
               href="/philosophers/marcus-aurelius"
@@ -142,20 +143,20 @@ function Page() {
       lg:h-[630px] md:col-span-2 lg:col-span-1 md:w-[55%] lg:w-full md:flex md:flex-col md:justify-center md:mx-auto p-5 transition-transform duration-300 transform hover:scale-105"
         >
           <div className="relative h-full w-full rounded-xl">
-          <Image
-                  sizes="(max-width: 1000px) 100vw, 1000px"
-                  srcSet="
+            <Image
+              sizes="(max-width: 1000px) 100vw, 1000px"
+              srcSet="
                   /bento/epictetusWriting_i5itci_c_scale,w_100.webp 100w,
                   /bento/epictetusWriting_i5itci_c_scale,w_358.webp 358w,
                   /bento/epictetusWriting_i5itci_c_scale,w_621.webp 621w,
                   /bento/epictetusWriting_i5itci_c_scale,w_844.webp 844w,
                   /bento/epictetusWriting_i5itci_c_scale,w_1000.webp 1000w"
-                  src="/bento/epictetusWriting_i5itci_c_scale,w_1000.webp"
-                  alt="epictetus writing black and white photo"
-                  className="object-cover rounded-xl"
-                  loading="lazy"
-                  fill
-                />
+              src="/bento/epictetusWriting_i5itci_c_scale,w_1000.webp"
+              alt="epictetus writing black and white photo"
+              className="object-cover rounded-xl"
+              loading="lazy"
+              fill
+            />
           </div>
           <div className=" h-full w-full blackText items-center flex flex-col">
             <h2 className="text-2xl text-center pt-2 bold md:text-2xl">
