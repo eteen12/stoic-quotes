@@ -1,21 +1,30 @@
-import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+"use client";
 import Link from "next/link";
+import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+
+import { useNavHandler } from "../hooks/useNavHandler";
 import NavBurger from "./navBurger";
 
+const links = [
+  { href: "/quotes", text: "Quotes" },
+  { href: "/blog", text: "Blog" },
+];
+const menuItems = [
+  { name: "About", path: "/about" },
+  { name: "Contact", path: "/contact" },
+  { name: "Policies", path: "/policies" },
+  { name: "Home", path: "/" },
+];
+
 export default function NavBar() {
-  const links = [
-    { href: "/quotes", text: "Quotes" },
-    { href: "/blog", text: "Blog" },
-  ];
-  const menuItems = [
-    { name: "About", path: "/about" },
-    { name: "Contact", path: "/contact" },
-    { name: "Policies", path: "/policies" },
-    { name: "Home", path: "/" },
-  ];
+  const { scrollingDown, shadow, opacity } = useNavHandler();
 
   return (
-    <header className="fixed justify-between items-center w-full h-14 z-50 transition-all duration-700 blackText tracking-tight text-2xl whiteBg">
+    <header
+      className={`fixed justify-between items-center w-full h-14 z-50 transition-all duration-700 blackText tracking-tight text-2xl
+    ${scrollingDown ? "-translate-y-full" : "translate-y-0"}`}
+      style={{ boxShadow: shadow, background: `rgba(255, 255, 255, ${opacity})` }}
+    >
       <div className="flex justify-between items-center w-full px-4 sm:px-8  mt-2.5 mx-auto max-w-[1700px]">
         <Link href="/" aria-label="Go to stoic quotes home page">
           <h2 className="relative tracking-tight shrinkAnimation transition3 hoverText">

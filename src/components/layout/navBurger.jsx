@@ -74,9 +74,9 @@ export default function NavBurger() {
             </li>
           ))}
         </ul>
-        
+
         <div className="text-right w-full mt-4">
-        <div className="h-1 w-full whiteBg"></div>
+          <div className="h-1 w-full whiteBg"></div>
           <p className="whiteText">
             <span className="text-sm/6 ">
               &copy; 2024{" "}
