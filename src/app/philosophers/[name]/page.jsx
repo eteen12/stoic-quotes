@@ -53,12 +53,13 @@ export async function generateMetadata({ params }) {
       sameAs: [
         "https://www.facebook.com/TeletaDevelopment",
         "https://www.instagram.com/Teleta_Development/",
-        "https://www.linkedin.com/in/ethan-breitkreutz-43399b322/",
+        "https://www.linkedin.com/company/teleta-development",
+        "https://www.youtube.com/@TeletaDevelopment",
+        "https://github.com/eteen12",
       ],
       potentialAction: {
         "@type": "SearchAction",
-        target:
-          "https://stoicquotes.ca/philosophers/search?q={search_term_string}",
+        target: "https://www.stoicquotes.ca/quotes/search?q=stoic+quotes",
         "query-input": "required name=search_term_string",
       },
     },

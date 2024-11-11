@@ -10,17 +10,25 @@ export const metadata = {
     title: "Ethan Breitkreutz - About Me",
     description:
       "Learn more about Ethan Breitkreutz, a passionate Canadian web developer and business owner. Discover insights on Stoicism and explore his web development services at Teleta Development.",
-    url: "https://TeletaDevelopment.com/about", 
+    url: "https://TeletaDevelopment.com/about",
     type: "website",
-    images: "https://www.stoicquotes.ca/misc/ethan.webp", 
+    images: "https://www.stoicquotes.ca/misc/ethan.webp",
   },
   twitter: {
     card: "summary_large_image",
     title: "Ethan Breitkreutz - About Me",
     description:
       "Learn more about Ethan Breitkreutz, a passionate Canadian web developer and business owner. Discover insights on Stoicism and explore his web development services at Teleta Development.",
-    image: "https://TeletaDevelopment.com/misc/ethan.webp", 
+    image: "https://TeletaDevelopment.com/misc/ethan.webp",
   },
+  sameAs: [
+    "https://www.facebook.com/TeletaDevelopment",
+    "https://www.instagram.com/ethan_breitkreutz/",
+    "https://www.linkedin.com/in/ethan-breitkreutz",
+    "https://www.youtube.com/@TeletaDevelopment",
+    "https://github.com/eteen12",
+  ],
+ 
 };
 
 export default function Page() {
