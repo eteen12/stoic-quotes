@@ -33,16 +33,20 @@
 
 .checkedSpan1 {
   transform-origin: bottom;
-  transform: rotatez(45deg) translate(3px, -1px);
+  background-color: white;
+  transform: rotatez(45deg) translate(4px, -1px);
 }
 
 .checkedSpan2 {
   transform-origin: top;
+  background-color: white;
   transform: rotateZ(-46deg);
 }
 
 .checkedSpan3 {
   transform-origin: bottom;
+  height: 3px;
+  background-color: white;
   width: 50%;
-  transform: translate(7px, -7px) rotateZ(46deg);
+  transform: translate(7.5px, -7px) rotateZ(45deg);
 }
