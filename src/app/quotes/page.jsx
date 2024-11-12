@@ -3,6 +3,17 @@ import Button from "@/components/reusables/button";
 import Image from "next/image";
 import Link from "next/link";
 
+const philosophers = [
+  {
+    name: "Marcus Aurelius",
+    imageSrc: "/quotes/marcusOnHorse.webp",
+    altText: "Marcus Aurelius equestrian statue black and white image",
+    description:
+      "Roman Emperor and Stoic philosopher, Marcus Aurelius, believed in controlling one’s thoughts and emotions. His book Meditations is a cornerstone of Stoic thought.",
+    link: "/philosophers/marcus-aurelius",
+  },
+];
+
 export const metadata = {
   title:
     "Inspiring Stoic Quotes: Wisdom from Marcus Aurelius, Seneca, and Epictetus",
@@ -130,106 +141,40 @@ function Page() {
           />
         </div>
       </div>
-      <div className="relative grid w-full  gap-5 p-5 mx-auto max-w-[400px] sm:max-w-[500px] md:max-w-[800px] lg:max-w-[1400px] md:grid-cols-2 lg:grid-cols-3 ">
-        <div className="relative grid grid-cols-1 grid-rows-[50%_50%] whiteBg h-[600px] lg:h-[630px] ">
-          <div className="relative h-full w-full">
-            <div className="h-0.5 bg-black w-[50%] -mt-1"></div>
 
-            <Image
-              src="/quotes/marcusOnHorse.webp"
-              alt="Marcus Aurelius equestrian statue black and white image"
-              fill
-              className="object-cover "
-              loading="lazy"
-            />
+      <div className="relative grid w-full gap-5 p-5 mx-auto  grid-cols-1">
+        {philosophers.map((philosopher, index) => (
+          <div
+            key={index}
+            className="relative grid grid-cols-1 grid-rows-[50%_50%] whiteBg h-[600px] lg:h-[730px] max-w-[600px] mx-auto"
+          >
+            <div className="relative h-full w-full">
+              <Image
+                src={philosopher.imageSrc}
+                alt={philosopher.altText}
+                fill
+                className="object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div className="h-full w-full blackText  flex flex-col">
+              <div>
+                <h2 className="text-2xl pt-2  md:text-2xl inline-block ">
+                  {philosopher.name}
+                  <div className="h-0.5 bg-black w-full mt-2"></div>
+                </h2>
+              </div>
+              <p className="text-right mt-5">{philosopher.description}</p>
+              <div className="mt-10 flex justify-end">
+                <Button
+                  link="/quotes"
+                  text="Read"
+                  className="w-full sm:w-auto transition3 shrinkAnimation "
+                />
+              </div>
+            </div>
           </div>
-          <div className=" h-full w-full blackText items-center flex flex-col">
-            <h2 className="text-2xl text-center pt-2 bold md:text-2xl">
-              Marcus Aurelius
-            </h2>
-            <p className="text-center mt-2 ">
-              Roman Emperor and Stoic philosopher, Marcus Aurelius, believed in
-              controlling one&apos;s thoughts and emotions. His book Meditations
-              is a cornerstone of Stoic thought.
-            </p>
-            <Link
-              href="/philosophers/marcus-aurelius"
-              aria-label="read marcus aurelius quotes"
-              className="rounded-md mt-10 blackBg px-7 py-1.5 whiteText shadow-sm hoverBg  tracking-tighter bold text-base absolute bottom-0 mb-10"
-            >
-              read quotes
-            </Link>
-          </div>
-        </div>
-
-        <div className="relative grid grid-cols-1 grid-rows-[50%_50%] whiteBg shadow-lg rounded-xl h-[600px] lg:h-[630px] p-5 transition-transform duration-300 transform hover:scale-105">
-          <div className="relative h-full w-full rounded-xl">
-            <Image
-              src="/quotes/senecaDeath.webp"
-              alt="seneca's suicide, forced by nero painting black and white"
-              fill
-              className="object-cover rounded-xl"
-              loading="lazy"
-            />
-          </div>
-          <div className=" h-full w-full blackText items-center flex flex-col">
-            <h2 className="text-2xl text-center pt-2 bold md:text-2xl">
-              Seneca The Younger
-            </h2>
-            <p className="text-center mt-2 ">
-              Seneca, a Roman Stoic philosopher, statesman, and tutor to Emperor
-              Nero, emphasized the importance of wisdom, self-control, and the
-              acceptance of fate. His writings, including Letters to Lucilius,
-              explore how to live virtuously in a turbulent world.
-            </p>
-            <Link
-              href="/philosophers/seneca"
-              aria-label="read seneca quotes"
-              className="rounded-md mt-10 blackBg px-7 py-1.5 whiteText shadow-sm hoverBg  tracking-tighter bold text-base absolute bottom-0 mb-10"
-            >
-              read quotes
-            </Link>
-          </div>
-        </div>
-        <div
-          className="relative whiteBg shadow-lg grid grid-cols-1 grid-rows-[50%_50%] rounded-xl h-[600px] 
-      lg:h-[630px] md:col-span-2 lg:col-span-1 md:w-[55%] lg:w-full md:flex md:flex-col md:justify-center md:mx-auto p-5 transition-transform duration-300 transform hover:scale-105"
-        >
-          <div className="relative h-full w-full rounded-xl">
-            <Image
-              sizes="(max-width: 1000px) 100vw, 1000px"
-              srcSet="
-                  /bento/epictetusWriting_i5itci_c_scale,w_100.webp 100w,
-                  /bento/epictetusWriting_i5itci_c_scale,w_358.webp 358w,
-                  /bento/epictetusWriting_i5itci_c_scale,w_621.webp 621w,
-                  /bento/epictetusWriting_i5itci_c_scale,w_844.webp 844w,
-                  /bento/epictetusWriting_i5itci_c_scale,w_1000.webp 1000w"
-              src="/bento/epictetusWriting_i5itci_c_scale,w_1000.webp"
-              alt="epictetus writing black and white photo"
-              className="object-cover rounded-xl"
-              loading="lazy"
-              fill
-            />
-          </div>
-          <div className=" h-full w-full blackText items-center flex flex-col">
-            <h2 className="text-2xl text-center pt-2 bold md:text-2xl">
-              Epictetus
-            </h2>
-            <p className="text-center mt-2 ">
-              Born a slave, Epictetus became one of the most influential Stoic
-              philosophers. He taught that freedom comes from mastering the mind
-              and desires. His Discourses and Enchiridion are foundational
-              texts, offering guidance on living with integrity and resilience.
-            </p>
-            <Link
-              href="/philosophers/epictetus"
-              aria-label="read epictetus quotes"
-              className="rounded-md mt-10 blackBg px-7 py-1.5 whiteText shadow-sm hoverBg  tracking-tighter bold text-base absolute bottom-0 mb-10"
-            >
-              read quotes
-            </Link>
-          </div>
-        </div>
+        ))}
       </div>
     </>
   );
