@@ -12,6 +12,22 @@ const philosophers = [
       "Roman Emperor and Stoic philosopher, Marcus Aurelius, believed in controlling one’s thoughts and emotions. His book Meditations is a cornerstone of Stoic thought.",
     link: "/philosophers/marcus-aurelius",
   },
+  {
+    name: "Marcus",
+    imageSrc: "/quotes/marcusOnHorse.webp",
+    altText: "Marcus Aurelius equestrian statue black and white image",
+    description:
+      "Roman Emperor and Stoic philosopher, Marcus Aurelius, believed in controlling one’s thoughts and emotions. His book Meditations is a cornerstone of Stoic thought.",
+    link: "/philosophers/marcus-aurelius",
+  },
+  {
+    name: "Marcus B",
+    imageSrc: "/quotes/marcusOnHorse.webp",
+    altText: "Marcus Aurelius equestrian statue black and white image",
+    description:
+      "Roman Emperor and Stoic philosopher, Marcus Aurelius, believed in controlling one’s thoughts and emotions. His book Meditations is a cornerstone of Stoic thought.",
+    link: "/philosophers/marcus-aurelius",
+  },
 ];
 
 export const metadata = {
@@ -142,11 +158,13 @@ function Page() {
         </div>
       </div>
 
-      <div className="relative grid w-full gap-5 p-5 mx-auto  grid-cols-1">
+      <div className="relative grid w-full p-5 mx-auto  grid-cols-1 max-w-[1700px]">
         {philosophers.map((philosopher, index) => (
           <div
             key={index}
-            className="relative grid grid-cols-1 grid-rows-[50%_50%] whiteBg h-[600px] lg:h-[730px] max-w-[600px] mx-auto"
+            className={`relative grid grid-cols-1 grid-rows-[50%_50%] whiteBg h-[600px] lg:h-[600px] xl:h-[630px] max-w-[600px] lg:max-w-[650px] mx-auto lg:mx-0 ${
+              index === 1 ? " lg:mr-auto" : "lg:ml-auto"
+            }`}
           >
             <div className="relative h-full w-full">
               <Image
@@ -157,15 +175,21 @@ function Page() {
                 loading="lazy"
               />
             </div>
-            <div className="h-full w-full blackText  flex flex-col">
-              <div>
-                <h2 className="text-2xl pt-2  md:text-2xl inline-block ">
+            <div className="h-fit blackText flex flex-col">
+              <div className={`${index === 1 ? "text-right" : ""}`}>
+                <h2 className="text-2xl pt-2  md:text-2xl inline-block">
                   {philosopher.name}
                   <div className="h-0.5 bg-black w-full mt-2"></div>
                 </h2>
               </div>
-              <p className="text-right mt-5">{philosopher.description}</p>
-              <div className="mt-10 flex justify-end">
+              <p
+                className={` mt-5 ${index === 1 ? "text-left" : "text-right"}`}
+              >
+                {philosopher.description}
+              </p>
+              <div
+                className={`mt-10 flex ${index === 1 ? "justify-start" : "justify-end"}`}
+              >
                 <Button
                   link="/quotes"
                   text="Read"
