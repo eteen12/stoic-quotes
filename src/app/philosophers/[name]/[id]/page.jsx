@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import philosopherQuotesData from "@/data/quotes";
-import ShareButtons from "@/components/misc/shareButtons";
+import ShareButtons from "@/components/reusables/shareButtons";
 
 export async function generateStaticParams() {
   const quoteParams = [];

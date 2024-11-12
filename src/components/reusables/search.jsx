@@ -26,24 +26,24 @@ const Search = ({ blogs, setFilteredBlogs }) => {
   };
 
   return (
-    <div className="mt-10 items-center justify-center md:px-16">
+    <div className="items-center justify-center transition-all duration-700">
       <form onSubmit={handleSearch} className="w-full">
-        <div className="relative flex items-center whiteBg">
-          <IoMdSearch className="absolute w-8 h-8 left-2.5 blackText" />
-
+        <div className="relative flex items-center mt-10">
           <input
             type="text"
-            placeholder="Marcus Aurelius, Death, Love..."
+            placeholder="Marcus Aurelius, Love..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md pl-14 pr-3 py-2.5 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+            className="w-full border-b-2 pr-3 py-2.5 border-black sm:w-[45%] lg:w-[49%]  placeholder:text-gray-500 text-lg sm:text-xl "
           />
-          <button
-            type="submit"
-            className="ml-2 blackBg white-text bold rounded-md px-4 py-2 transition-transform duration-300 transform hover:scale-105"
-          >
-            Search
-          </button>
+          <div className="absolute right-0 -bottom-10 sm:bottom-0">
+            <button
+              type="submit"
+              className="inline-flex justify-center items-center gap-x-2 px-6 bold py-0.5 sm:py-1 rounded-full border-2 border-black shrinkAnimation transition3 hover:bg-black hover:text-white "
+            >
+              Search
+            </button>
+          </div>
         </div>
       </form>
       {submitted && (

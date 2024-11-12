@@ -1,4 +1,4 @@
-import DateDisplay from "@/components/misc/date";
+import DateDisplay from "@/components/reusables/date";
 import Button from "@/components/reusables/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -151,14 +151,14 @@ function Page() {
 
         <div className="mt-5 sm:flex sm:justify-end sm:-mt-9 lg:justify-start">
           <Button
-            link="/quotes"
-            text="View all quotes"
+            link="/about"
+            text="Read about the author"
             className="w-full sm:w-auto transition3 shrinkAnimation "
           />
         </div>
       </div>
 
-      <div className="relative grid w-full p-5 mx-auto  grid-cols-1 max-w-[1700px]">
+      <div className="relative grid w-full gap-10 lg:gap-0 mb-20 p-5 mx-auto  grid-cols-1 max-w-[1700px]">
         {philosophers.map((philosopher, index) => (
           <div
             key={index}

@@ -1,5 +1,5 @@
-import PhilosopherPage from "@/components/quotes/philosopherPage";
-import PhilosopherQuotes from "@/components/quotes/philosopherQuotes";
+import PhilosopherPage from "@/components/sections/philosopherPage";
+import PhilosopherQuotes from "@/components/sections/philosopherQuotes";
 
 import philosopherBio from "@/data/philosopherBio";
 import philosopherQuotesData from "@/data/quotes";

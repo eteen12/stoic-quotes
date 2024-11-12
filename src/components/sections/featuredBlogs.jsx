@@ -1,4 +1,4 @@
-import BlogCard from "../blog/blogCard";
+import BlogCard from "./blogCard";
 import blogData from "@/data/blogs";
 import Button from "../reusables/button";
 

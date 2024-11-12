@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
 
-import DailyQuote from "../misc/dailyQuote";
-import Date from "../misc/date";
+import DailyQuote from "../reusables/dailyQuote";
+import Date from "../reusables/date";
 import Button from "../reusables/button";
 
 export default function DailyQuoteSection() {

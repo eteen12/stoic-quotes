@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import ShareButtons from "@/components/misc/shareButtons";
+import ShareButtons from "@/components/reusables/shareButtons";
 import blogs from "@/data/blogs";
-import Author from "@/components/blog/author";
+import Author from "@/components/reusables/author";
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
