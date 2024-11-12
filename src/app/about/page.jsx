@@ -1,3 +1,4 @@
+import Author from "@/components/reusables/author";
 import Image from "next/image";
 
 export const metadata = {
@@ -26,29 +27,22 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <div className="pb-20">
+      <div className="py-20">
         <div className="relative isolate px-6 lg:px-8 ">
-          <div className="mx-auto max-w-5xl py-32 sm:py-48 lg:py-56">
-            <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-              <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 transition-transform duration-300 transform hover:scale-105">
-                visit teleta development{" "}
-                <a
-                  href="https://TeletaDevelopment.com"
-                  target="_blank"
-                  className="font-semibold blackText"
-                >
-                  <span aria-hidden="true" className="absolute inset-0" />
-                  see more <span aria-hidden="true">&rarr;</span>
-                </a>
-              </div>
-            </div>
-            <div className="text-center">
-              <h1 className="text-balance text-5xl font-semibold tracking-tight blackText sm:text-7xl">
-                Meet the one man show.
-              </h1>
-              <p className="mt-8 text-lg blackText sm:text-xl/8">
-                Ethan Breitkreutz, Canadian business owner
-              </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2">
+          <div className="w-full min-h-full relative">
+            <div className="relative flex-shrink-0 h-10 w-10 lg:h-12 lg:w-12 rounded-full transition-transform duration-300 transform hover:scale-105">
+                    <Image
+            alt="Ethan Breitkreutz author and owner of Teleta Development"
+            src="/misc/ethan.webp"
+            className="inline-block h-28 w-auto lg:h-12 lg:w-12 rounded-full"
+           fill
+                    />
+                  </div>
+          </div>
+            <div className="w-full h-full">
+              <h1 className="text-3xl">Ethan Breitkreutz is a web developer, who enjoys philosophy, programming, dirtbiking and music.
+                 </h1>
             </div>
           </div>
         </div>
@@ -85,12 +79,7 @@ export default function Page() {
                   className="absolute -inset-y-px -left-3 -z-10 w-full origin-bottom-left skew-x-[-30deg] bg-indigo-100 opacity-20 ring-1 ring-inset ring-white"
                 />
                 <div className="relative h-[500px] mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
-                  <Image
-                    alt="Product screenshot"
-                    src="/misc/ethan.webp"
-                    className="-mb-12 w-[57rem] max-w-none rounded-tl-xl bg-gray-800 ring-1 ring-white/10 object-cover"
-                    fill
-                  />
+                 
                 </div>
                 <div
                   aria-hidden="true"
