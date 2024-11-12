@@ -1,3 +1,5 @@
+import DateDisplay from "@/components/misc/date";
+import Button from "@/components/reusables/button";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -50,43 +52,88 @@ export const metadata = {
 function Page() {
   return (
     <>
-      <div className="pb-20">
-        <div className="relative isolate px-6 lg:px-8 ">
-          <div className="mx-auto max-w-5xl py-32 sm:py-48 lg:py-56">
-            <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-              <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 transition-transform duration-300 transform hover:scale-105">
-                read about the developer and writer{" "}
-                <Link
-                  href="/about"
-                  className="font-semibold blackText"
-                  aria-label="read about ethan, the stoic quotes developer"
-                >
-                  <span aria-hidden="true" className="absolute inset-0" />
-                  read more <span aria-hidden="true">&rarr;</span>
-                </Link>
-              </div>
-            </div>
-            <div className="text-center">
-              <h1 className="text-balance text-5xl font-semibold tracking-tight blackText sm:text-7xl">
-                Timeless Wisdom from the Great Stoics.
-              </h1>
-              <p className="mt-8 text-lg blackText sm:text-xl/8">
-                A curated collection of profound insights from the greatest
-                Stoic philosophers, offering guidance on life, resilience, and
-                inner peace
-              </p>
-            </div>
+      <div className=" h-fit py-24 pt-32 sm:pt-52 px-4 sm:px-8 transition-all duration-700 max-w-[1700px] mx-auto">
+        <div className="blackText w-full pt-10 flex">
+          <h1 className="blackText text-6xl sm:text-8xl md:text-9xl ">
+            Quotes
+          </h1>
+          <span className="aria-hidden h-1.5 w-10 blackBg mt-8 ml-2 sm:mt-14 sm:h-2 sm:w-12 md:mt-20 md:h-3 md:w-14"></span>
+        </div>
+        <div className="flex gap-2 mt-5 sm:mt-6">
+          <Button
+            link="/about"
+            text="My pick"
+            className="text-xs sm:text-sm md:text-base md:py-0"
+          />
+        </div>
+
+        <div className="w-full relative mt-14">
+          <div className="w-full mt-16 text-lg sm:text-xl sm:mt-24 md:w-[65%] md:ml-auto ">
+            <h2 className=" lg:w-[50%] xl:w-[40%] tracking-tight">
+              Read quotes from the famous stoics, and read the daily quote. The
+              blog is updated weekly with insights on stoic applications to
+              modern day life.
+            </h2>
+            <div className="border-b-2 border-black mt-7"></div>
           </div>
+        </div>
+
+        <div className="md:w-[%] md:ml-auto lg:w-[65%] xl:w-[49%] md:-mt-7">
+          <span className="h-0.5 blackBg w-[45%] lg:w-[30%] xl:w-[20%] mt-3 hidden md:flex"></span>
+          <p className="grayText text-lg sm:text-xl mt-10 mb-5">Pages</p>
+          <ul className="space-y-2 ">
+            <li>
+              <Link
+                href="/philosophers/marcus-aurelius"
+                target="_blank"
+                aria-label="Share on Facebook"
+                className="text-lg sm:text-xl transition3 hoverText"
+              >
+                Secneca
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/philosophers/marcus-aurelius"
+                target="_blank"
+                aria-label="Share on Facebook"
+                className="text-lg sm:text-xl transition3 hoverText"
+              >
+                Epictetus
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/philosophers/marcus-aurelius"
+                target="_blank"
+                aria-label="Share on Facebook"
+                className="text-lg sm:text-xl transition3 hoverText"
+              >
+                Marcus Aurelius
+              </Link>
+            </li>
+          </ul>
+          <div className="h-0.5 bg-black w-full mt-7"></div>
+        </div>
+
+        <div className="mt-5 sm:flex sm:justify-end sm:-mt-9">
+          <Button
+            link="/quotes"
+            text="View all quotes"
+            className="w-full sm:w-auto transition3 shrinkAnimation "
+          />
         </div>
       </div>
       <div className="relative grid w-full  gap-5 p-5 mx-auto max-w-[400px] sm:max-w-[500px] md:max-w-[800px] lg:max-w-[1400px] md:grid-cols-2 lg:grid-cols-3 ">
-        <div className="relative grid grid-cols-1 grid-rows-[50%_50%] whiteBg shadow-lg rounded-xl h-[600px] lg:h-[630px] p-5 transition-transform duration-300 transform hover:scale-105">
-          <div className="relative h-full w-full rounded-xl">
+        <div className="relative grid grid-cols-1 grid-rows-[50%_50%] whiteBg h-[600px] lg:h-[630px] ">
+          <div className="relative h-full w-full">
+            <div className="h-0.5 bg-black w-[50%] -mt-1"></div>
+
             <Image
               src="/quotes/marcusOnHorse.webp"
               alt="Marcus Aurelius equestrian statue black and white image"
               fill
-              className="object-cover rounded-xl"
+              className="object-cover "
               loading="lazy"
             />
           </div>
