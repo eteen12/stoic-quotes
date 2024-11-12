@@ -63,23 +63,29 @@ function Page() {
           <Button
             link="/about"
             text="My pick"
-            className="text-xs sm:text-sm md:text-base md:py-0"
+            className="transition3 shrinkAnimation"
           />
         </div>
 
         <div className="w-full relative mt-14">
-          <div className="w-full mt-16 text-lg sm:text-xl sm:mt-24 md:w-[65%] md:ml-auto ">
-            <h2 className=" lg:w-[50%] xl:w-[40%] tracking-tight">
+          <div className="w-full mt-16 text-lg sm:text-xl sm:mt-24 ">
+            <h2 className="  sm:ml-auto md:w-[50%] lg:w-[30%] tracking-tight">
               Read quotes from the famous stoics, and read the daily quote. The
-              blog is updated weekly with insights on stoic applications to
-              modern day life.
+              blog is updated weekly with insights, ideas, and experiences on
+              stoic applications to modern day life.
             </h2>
-            <div className="border-b-2 border-black mt-7"></div>
+          </div>
+          <div className="lg:flex lg:space-x-8">
+            <div className="h-0.5 bg-black w-full sm:w-[10%] lg:w-[28%] xl:w-[29%] mt-7 hidden lg:block"></div>
+            <div className="border-b-2 border-black mt-7 hidden lg:block w-[20%]"></div>
+            <div className="border-b-2 border-black mt-7 sm:w-[47%] md:w-[50%] sm:ml-auto "></div>
+            <div className="sm:mt-1.5 lg:hidden">
+              <div className="h-0.5 blackBg sm:w-[47%] sm:-mt-2 hidden sm:block lg:hidden"></div>
+            </div>
           </div>
         </div>
 
-        <div className="md:w-[%] md:ml-auto lg:w-[65%] xl:w-[49%] md:-mt-7">
-          <span className="h-0.5 blackBg w-[45%] lg:w-[30%] xl:w-[20%] mt-3 hidden md:flex"></span>
+        <div className=" md:ml-auto lg:w-[70%] md:-mt-7">
           <p className="grayText text-lg sm:text-xl mt-10 mb-5">Pages</p>
           <ul className="space-y-2 ">
             <li>
@@ -89,7 +95,7 @@ function Page() {
                 aria-label="Share on Facebook"
                 className="text-lg sm:text-xl transition3 hoverText"
               >
-                Secneca
+                Seneca
               </Link>
             </li>
             <li>
@@ -113,10 +119,10 @@ function Page() {
               </Link>
             </li>
           </ul>
-          <div className="h-0.5 bg-black w-full mt-7"></div>
+          <div className="h-0.5 bg-black w-full sm:w-[45%] mt-7 lg:hidden"></div>
         </div>
 
-        <div className="mt-5 sm:flex sm:justify-end sm:-mt-9">
+        <div className="mt-5 sm:flex sm:justify-end sm:-mt-9 lg:justify-start">
           <Button
             link="/quotes"
             text="View all quotes"
