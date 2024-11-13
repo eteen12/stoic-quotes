@@ -17,7 +17,7 @@ const philosophers = [
       "/quotes/marcusOnHorse_ha1jt3_c_scale,w_1400.webp 1400w",
     sizes: "(max-width: 1400px) 100vw, 1400px",
     alt: "Marcus Aurelius equestrian statue black and white photo",
-    link: "/philosophers/marcus-aurelius",
+    link: "/quotes/marcus-aurelius",
   },
   {
     name: "Seneca the Younger",
@@ -34,7 +34,7 @@ const philosophers = [
       "/quotes/senecaDeath_jurtn9_c_scale,w_1024.webp 1024w",
     sizes: "(max-width: 1024px) 100vw, 1024px",
     alt: "Seneca the Younger statue or portrait",
-    link: "/philosophers/seneca",
+    link: "/quotes/seneca",
   },
   {
     name: "Epictetus",
@@ -56,7 +56,7 @@ const philosophers = [
       "/quotes/epictetusWriting_1_e6wlgd_c_scale,w_1380.webp 1380w",
     sizes: "(max-width: 1380px) 100vw, 1380px",
     alt: "Epictetus writing or portrait",
-    link: "/philosophers/epictetus",
+    link: "/quotes/epictetus",
   },
 ];
 

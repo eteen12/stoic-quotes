@@ -20,7 +20,6 @@ export async function generateStaticParams() {
   return quoteParams;
 }
 
-// Use async generateMetadata for dynamic metadata
 export async function generateMetadata({ params }) {
   const { id, name } = await params;
   const philosopher = Object.values(philosopherQuotesData).find(
@@ -46,7 +45,6 @@ export async function generateMetadata({ params }) {
 
   const postUrl = `https://www.stoicquotes.ca/${philosopher.name}/${id}`;
 
-  // Create meta description and title
   const metaDescription = `${quote.text} - A quote by ${philosopher.name}`;
   const metaTitle = `${philosopher.name}: "${quote.text}"`;
 

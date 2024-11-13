@@ -33,7 +33,7 @@ export async function generateMetadata({ params }) {
     og: {
       title: `${philosopher.name} - Biography and Quotes`,
       description: `Explore the biography and famous quotes of ${philosopher.name}. Discover insights and wisdom from one of the greatest philosophers.`,
-      url: `https://stoicquotes.ca/philosophers/${philosopher.name.toLowerCase()}`, // Update this with your actual URL
+      url: `https://www.stoicquotes.ca/philosophers/${philosopher.name.toLowerCase()}`,
       image: philosopher.image,
       type: "website",
     },
@@ -47,7 +47,7 @@ export async function generateMetadata({ params }) {
       "@context": "https://schema.org",
       "@type": "WebPage",
       name: `${philosopher.name} - Biography and Quotes`,
-      url: `https://stoicquotes.ca/philosophers/${philosopher.name.toLowerCase()}`, // Update this with your actual URL
+      url: `https://www.stoicquotes.ca/philosophers/${philosopher.name.toLowerCase()}`, 
       description: `Explore the biography and famous quotes of ${philosopher.name}. Discover insights and wisdom from one of the greatest philosophers.`,
       image: philosopher.image,
       sameAs: [
@@ -60,7 +60,7 @@ export async function generateMetadata({ params }) {
       potentialAction: {
         "@type": "SearchAction",
         target:
-          "https://stoicquotes.ca/philosophers/search?q={search_term_string}",
+          "https://www.stoicquotes.ca/philosophers/search?q={search_term_string}",
         "query-input": "required name=search_term_string",
       },
     },

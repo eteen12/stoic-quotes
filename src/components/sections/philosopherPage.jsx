@@ -2,39 +2,23 @@ import Image from "next/image";
 
 export default function PhilosopherPage({ philosopher }) {
   return (
-    <div className="overflow-hidden whiteBg rounded-xl blackText tracking-tight py-16 shadow-lg">
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-prose text-base ">
-          <h2 className="text-lg font-semibold ">About/Quotes</h2>
-          <h3 className="mt-2 text-3xl font-bold leading-8 sm:text-4xl text-gray-900">
-            {philosopher.name} - Quotes and Biography
-          </h3>
-        </div>
-        <div className="mt-8">
-          <div className="relative rounded-xl overflow-hidden">
-            <div className="relative mx-auto max-w-[700px] text-base">
+    <div className="h-fit py-32 sm:pt-40 px-4 sm:px-8 max-w-[1700px] mx-auto">
+      <div className="relative isolate px-6 lg:px-8 ">
+        <div className="grid grid-cols-1 sm:grid-cols-[20%_80%] gap-8">
+          <div className="w-full min-h-full relative">
+            <div className="relative flex-shrink-0 h-16 w-16 sm:h-20 sm:w-20 rounded-full transition-transform duration-300 transform hover:scale-105">
               <Image
-                alt={`Bust of ${philosopher.name} with a shadow transparent image`}
+                alt="Ethan Breitkreutz author and owner of Teleta Development"
                 src={philosopher.image}
-                width={1184}
-                height={1376}
-                priority
-                className="rounded-lg object-cover object-center "
+                className="object-cover rounded-full"
+                fill
               />
             </div>
           </div>
-          <div className="mt-8 blackBg rounded-xl whiteText shadow-2xl px-12 p-10">
-            <div className="mx-auto  text-base">
-              <p className="text-lg">{philosopher.bio}</p>
-            </div>
-            <ul className="about-list text-lg mt-4">
-              {philosopher.details.map((detail, index) => (
-                <li key={index} className="pt-4 lightText">
-                  <strong className="bold whiteText">{detail.label}:</strong>{" "}
-                  {detail.text}
-                </li>
-              ))}
-            </ul>
+          <div className="w-full h-full">
+            <h1 className="text-3xl leading-normal sm:text-4xl sm:leading-relaxed max-w-3xl mx-auto xl:text-5xl xl:leading-normal">
+              {philosopher.bio}
+            </h1>
           </div>
         </div>
       </div>

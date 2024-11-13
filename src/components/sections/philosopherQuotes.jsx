@@ -1,9 +1,10 @@
-import { FaShareFromSquare } from "react-icons/fa6";
 import Link from "next/link";
 
 function PhilosopherQuotes({ thisPhilosopher }) {
   const displayName =
-    thisPhilosopher.name === "Marcus-Aurelius" ? "Marcus Aurelius" : thisPhilosopher.name;
+    thisPhilosopher.name === "Marcus-Aurelius"
+      ? "Marcus Aurelius"
+      : thisPhilosopher.name;
 
   return (
     <>
@@ -17,21 +18,19 @@ function PhilosopherQuotes({ thisPhilosopher }) {
         >
           {thisPhilosopher.quotes.map((quote, index) => (
             <li
-              key={index} 
+              key={index}
               className="py-6 border-b border-gray-400 last:border-0 transition-transform duration-300 transform hover:scale-105"
             >
               <blockquote className="quote text-lg lg:text-xl">
                 &quot;{quote.text}&quot;
               </blockquote>
-              <div className="flex gap-10 mt-2">
-                <p className="text-lg lg:text-xl">
-                  - <strong>{displayName}</strong> 
-                </p>
+              <div className="flex gap-10">
+                <p className="text-lg lg:text-xl bold">- {displayName}</p>
                 <Link
-                  href={`/philosophers/${thisPhilosopher.name.toLowerCase()}/${index}`}
-                  aria-label={`Share quote from ${displayName}: ${quote.text}`} 
+                  href={`/quotes/${thisPhilosopher.name.toLowerCase()}/${index}`}
+                  aria-label={`Share quote from ${displayName}: ${quote.text}`}
                 >
-                  <FaShareFromSquare className="mt-1 text-2xl" />
+                  Share
                 </Link>
               </div>
             </li>
