@@ -1,17 +1,13 @@
-"use client";
 import Link from "next/link";
-
 import DailyQuote from "../reusables/dailyQuote";
 import Date from "../reusables/date";
 import Button from "../reusables/button";
+import Copy from "../reusables/handleCopy";
 
 export default function DailyQuoteSection() {
   const quoteText = `Visit StoicQuotes.ca to see the daily quote. \n`;
   const postUrl = `https://www.stoicquotes.ca/#daily-quote`;
-  const handleCopyLink = () => {
-    navigator.clipboard.writeText(postUrl);
-    alert("Link copied to clipboard!");
-  };
+
   return (
     <>
       <div className="h-fit w-full pb-24 px-4 sm:px-8 transition-all duration-700 max-w-[1700px] mx-auto">
@@ -60,13 +56,7 @@ export default function DailyQuoteSection() {
               </a>
             </li>
             <li>
-              <button
-                onClick={handleCopyLink}
-                className="text-lg sm:text-xl transition3 hoverText"
-                aria-label="copy link to quote to keyboard"
-              >
-                Copy link
-              </button>
+              <Copy postUrl={postUrl} />
               <div className="h-[1.5px] bg-black w-20 sm:w-24 mt-5"></div>
             </li>
           </ul>

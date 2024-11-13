@@ -3,7 +3,7 @@ import React from "react";
 import Hero from "@/components/sections/hero";
 import DailyQuoteSection from "@/components/sections/dailyQuoteSection";
 import FeaturedBlogs from "@/components/sections/featuredBlogs";
-import ListSection from "@/components/sections/philosophers";
+import ListSection from "@/components/sections/listSection";
 import CreatedBy from "@/components/sections/createdBy";
 
 export default function Home() {

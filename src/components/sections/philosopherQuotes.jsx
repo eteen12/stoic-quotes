@@ -1,6 +1,11 @@
 import Link from "next/link";
 
 function PhilosopherQuotes({ thisPhilosopher }) {
+  const displayName =
+    thisPhilosopher.name === "Marcus-Aurelius"
+      ? "Marcus Aurelius"
+      : thisPhilosopher.name;
+
   return (
     <>
       <div className="quote-container blackText tracking-tight flex justify-center p-5 px-4 sm:px-8 ">

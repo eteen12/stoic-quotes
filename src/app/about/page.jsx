@@ -1,4 +1,4 @@
-import ListSection from "@/components/sections/philosophers";
+import ListSection from "@/components/sections/listSection";
 import Image from "next/image";
 
 export const metadata = {
