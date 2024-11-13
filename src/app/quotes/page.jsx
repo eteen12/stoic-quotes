@@ -1,6 +1,4 @@
-import DateDisplay from "@/components/reusables/date";
 import Button from "@/components/reusables/button";
-import Image from "next/image";
 import Link from "next/link";
 import SrcSetImage from "@/components/reusables/srcSetImage";
 
@@ -19,6 +17,7 @@ const philosophers = [
       "/quotes/marcusOnHorse_ha1jt3_c_scale,w_1400.webp 1400w",
     sizes: "(max-width: 1400px) 100vw, 1400px",
     alt: "Marcus Aurelius equestrian statue black and white photo",
+    link: "/philosophers/marcus-aurelius",
   },
   {
     name: "Seneca the Younger",
@@ -35,6 +34,7 @@ const philosophers = [
       "/quotes/senecaDeath_jurtn9_c_scale,w_1024.webp 1024w",
     sizes: "(max-width: 1024px) 100vw, 1024px",
     alt: "Seneca the Younger statue or portrait",
+    link: "/philosophers/seneca",
   },
   {
     name: "Epictetus",
@@ -56,6 +56,7 @@ const philosophers = [
       "/quotes/epictetusWriting_1_e6wlgd_c_scale,w_1380.webp 1380w",
     sizes: "(max-width: 1380px) 100vw, 1380px",
     alt: "Epictetus writing or portrait",
+    link: "/philosophers/epictetus",
   },
 ];
 
@@ -146,9 +147,7 @@ function Page() {
           <ul className="space-y-2 ">
             <li>
               <Link
-                href="/philosophers/marcus-aurelius"
-                target="_blank"
-                aria-label="Share on Facebook"
+                href="/philosophers/seneca"
                 className="text-lg sm:text-xl transition3 hoverText"
               >
                 Seneca
@@ -156,9 +155,7 @@ function Page() {
             </li>
             <li>
               <Link
-                href="/philosophers/marcus-aurelius"
-                target="_blank"
-                aria-label="Share on Facebook"
+                href="/philosophers/epictetus"
                 className="text-lg sm:text-xl transition3 hoverText"
               >
                 Epictetus
@@ -167,8 +164,6 @@ function Page() {
             <li>
               <Link
                 href="/philosophers/marcus-aurelius"
-                target="_blank"
-                aria-label="Share on Facebook"
                 className="text-lg sm:text-xl transition3 hoverText"
               >
                 Marcus Aurelius
@@ -219,7 +214,7 @@ function Page() {
                 className={`mt-10 flex ${index === 1 ? "justify-start" : "justify-end"}`}
               >
                 <Button
-                  link="/quotes"
+                  link={philosopher.link}
                   text="Read"
                   className="w-full sm:w-auto transition3 shrinkAnimation "
                 />
