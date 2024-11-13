@@ -91,17 +91,18 @@ export default async function Page({ params }) {
 
   return (
     <>
-      <div className="flex items-center justify-center h-[80vh] blackText flex-col text-center p-2">
-        <h1 className="text-4xl font-bold">&quot;{quote.text}&quot;</h1>
-        <p className="text-4xl mt-10">-{displayName}</p>
-      </div>
-      <div className="px-3">
-        <div className=" whiteText blackBg rounded-t-xl flex flex-col pb-5">
-          <div className="flex justify-center items-center gap-5 whiteText blackBg rounded-t-xl h-24 cursor-pointer">
-            <ShareButtons
-              postUrl={postUrl}
-              quoteText={`"${quote.text}" - ${displayName}`}
-            />
+      <div className="h-screen py-32 sm:pt-40 px-4 sm:px-8 max-w-[1700px] mx-auto flex flex-col  justify-center">
+        <div className="flex">
+          <div className="sm:w-[45%]">
+            <h1 className="text-3xl">&quot;{quote.text}&quot;</h1>
+            <div className="h-0.5 blackBg w-full mt-5"></div>
+          </div>
+          <div className="sm:w-[45%] sm:ml-auto">
+            <dir className="h-full p-0 m-0"></dir>
+            <div className="h-0.5 blackBg w-full -mt-px hidden sm:block"></div>
+            <p className="text-3xl mt-5 tracking-tight text-right">
+              -{displayName}
+            </p>
           </div>
         </div>
       </div>
