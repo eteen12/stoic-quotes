@@ -57,11 +57,11 @@ export default async function BlogPostPage({ params }) {
         </div>
 
         {/* Image Section */}
-        <div className="relative w-full h-[30rem] rounded-xl whiteBg mx-auto mb-8">
+        <div className="relative w-full h-[30rem] whiteBg mx-auto mb-8">
           <Image
             alt={`${post.attributionText} ${", "} ${post.attributionDescription}`}
             src={post.src}
-            className="object-cover rounded-xl"
+            className="object-cover"
             fill
             priority
           />

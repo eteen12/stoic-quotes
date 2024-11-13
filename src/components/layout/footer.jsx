@@ -136,21 +136,20 @@ export default function Footer() {
             </div>
           </div>
         </div>
-       
       </div>
-      <div className="mt-16 border-t-2 border-black max-w-[1700px]">
-          <p className="text-sm/6 ">
-            &copy; 2024{" "}
-            <a
-              className="hoverText shrinkAnimation transition3 text-sm"
-              href="https://teletadevelopment.com"
-              target="_blank"
-            >
-              Teleta Development
-            </a>{" "}
-            , All rights reserved.
-          </p>
-        </div>
+      <div className="mt-16 border-t-2 border-black max-w-[1700px] text-right">
+        <p className="text-sm/6 ">
+          &copy; 2024{" "}
+          <a
+            className="hoverText shrinkAnimation transition3 text-sm"
+            href="https://teletadevelopment.com"
+            target="_blank"
+          >
+            Teleta Development
+          </a>{" "}
+          , All rights reserved.
+        </p>
+      </div>
     </footer>
   );
 }

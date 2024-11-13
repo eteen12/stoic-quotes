@@ -2,31 +2,60 @@ import DateDisplay from "@/components/reusables/date";
 import Button from "@/components/reusables/button";
 import Image from "next/image";
 import Link from "next/link";
+import SrcSetImage from "@/components/reusables/srcSetImage";
 
 const philosophers = [
   {
     name: "Marcus Aurelius",
-    imageSrc: "/quotes/marcusOnHorse.webp",
-    altText: "Marcus Aurelius equestrian statue black and white image",
     description:
-      "Roman Emperor and Stoic philosopher, Marcus Aurelius, believed in controlling one’s thoughts and emotions. His book Meditations is a cornerstone of Stoic thought.",
-    link: "/philosophers/marcus-aurelius",
+      "Roman Emperor and Stoic philosopher, Marcus Aurelius, believed in controlling one’s thoughts and emotions. His book Meditations is a cornerstone of Stoic thought. Marcus Aurelius is widely known as the philosopher king, and I could not agree more.",
+    src: "/quotes/marcusOnHorse_ha1jt3_c_scale,w_1400.webp",
+    srcSet:
+      "/quotes/marcusOnHorse_ha1jt3_c_scale,w_200.webp 200w, " +
+      "/quotes/marcusOnHorse_ha1jt3_c_scale,w_624.webp 624w, " +
+      "/quotes/marcusOnHorse_ha1jt3_c_scale,w_997.webp 997w, " +
+      "/quotes/marcusOnHorse_ha1jt3_c_scale,w_1378.webp 1378w, " +
+      "/quotes/marcusOnHorse_ha1jt3_c_scale,w_1395.webp 1395w, " +
+      "/quotes/marcusOnHorse_ha1jt3_c_scale,w_1400.webp 1400w",
+    sizes: "(max-width: 1400px) 100vw, 1400px",
+    alt: "Marcus Aurelius equestrian statue black and white photo",
   },
   {
-    name: "Marcus",
-    imageSrc: "/quotes/marcusOnHorse.webp",
-    altText: "Marcus Aurelius equestrian statue black and white image",
+    name: "Seneca the Younger",
     description:
-      "Roman Emperor and Stoic philosopher, Marcus Aurelius, believed in controlling one’s thoughts and emotions. His book Meditations is a cornerstone of Stoic thought.",
-    link: "/philosophers/marcus-aurelius",
+      "Seneca, a Roman Stoic philosopher, statesman, and tutor to Emperor Nero, emphasized the importance of wisdom, self-control, and the acceptance of fate. His writings, including Letters to Lucilius, explore how to live virtuously in a turbulent world.",
+    src: "/quotes/senecaDeath_jurtn9_c_scale,w_1024.webp",
+    srcSet:
+      "/quotes/senecaDeath_jurtn9_c_scale,w_110.webp 110w, " +
+      "/quotes/senecaDeath_jurtn9_c_scale,w_471.webp 471w, " +
+      "/quotes/senecaDeath_jurtn9_c_scale,w_666.webp 666w, " +
+      "/quotes/senecaDeath_jurtn9_c_scale,w_781.webp 781w, " +
+      "/quotes/senecaDeath_jurtn9_c_scale,w_913.webp 913w, " +
+      "/quotes/senecaDeath_jurtn9_c_scale,w_1020.webp 1020w, " +
+      "/quotes/senecaDeath_jurtn9_c_scale,w_1024.webp 1024w",
+    sizes: "(max-width: 1024px) 100vw, 1024px",
+    alt: "Seneca the Younger statue or portrait",
   },
   {
-    name: "Marcus B",
-    imageSrc: "/quotes/marcusOnHorse.webp",
-    altText: "Marcus Aurelius equestrian statue black and white image",
+    name: "Epictetus",
     description:
-      "Roman Emperor and Stoic philosopher, Marcus Aurelius, believed in controlling one’s thoughts and emotions. His book Meditations is a cornerstone of Stoic thought.",
-    link: "/philosophers/marcus-aurelius",
+      "Born a slave, Epictetus became one of the most influential Stoic philosophers. He taught that freedom comes from mastering the mind and desires. His Discourses and Enchiridion are foundational texts, offering guidance on living with integrity and resilience.",
+    src: "/quotes/epictetusWriting_1_e6wlgd_c_scale,w_1380.webp",
+    srcSet:
+      "/quotes/epictetusWriting_1_e6wlgd_c_scale,w_110.webp 110w, " +
+      "/quotes/epictetusWriting_1_e6wlgd_c_scale,w_364.webp 364w, " +
+      "/quotes/epictetusWriting_1_e6wlgd_c_scale,w_456.webp 456w, " +
+      "/quotes/epictetusWriting_1_e6wlgd_c_scale,w_555.webp 555w, " +
+      "/quotes/epictetusWriting_1_e6wlgd_c_scale,w_642.webp 642w, " +
+      "/quotes/epictetusWriting_1_e6wlgd_c_scale,w_713.webp 713w, " +
+      "/quotes/epictetusWriting_1_e6wlgd_c_scale,w_913.webp 913w, " +
+      "/quotes/epictetusWriting_1_e6wlgd_c_scale,w_1029.webp 1029w, " +
+      "/quotes/epictetusWriting_1_e6wlgd_c_scale,w_1012.webp 1012w, " +
+      "/quotes/epictetusWriting_1_e6wlgd_c_scale,w_1243.webp 1243w, " +
+      "/quotes/epictetusWriting_1_e6wlgd_c_scale,w_1351.webp 1351w, " +
+      "/quotes/epictetusWriting_1_e6wlgd_c_scale,w_1380.webp 1380w",
+    sizes: "(max-width: 1380px) 100vw, 1380px",
+    alt: "Epictetus writing or portrait",
   },
 ];
 
@@ -167,19 +196,18 @@ function Page() {
             }`}
           >
             <div className="relative h-full w-full">
-              <Image
-                src={philosopher.imageSrc}
-                alt={philosopher.altText}
-                fill
-                className="object-cover"
-                loading="lazy"
+              <SrcSetImage
+                src={philosopher.src}
+                alt={philosopher.alt}
+                srcSet={philosopher.srcSet}
+                sizes={philosopher.sizes}
               />
             </div>
             <div className="h-fit blackText flex flex-col">
               <div className={`${index === 1 ? "text-right" : ""}`}>
                 <h2 className="text-2xl pt-2  md:text-2xl inline-block">
                   {philosopher.name}
-                  <div className="h-0.5 bg-black w-full mt-2"></div>
+                  <div className="h-[1.5px] bg-black w-full mt-2"></div>
                 </h2>
               </div>
               <p
