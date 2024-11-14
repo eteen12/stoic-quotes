@@ -83,13 +83,13 @@ export default async function Page({ params }) {
     notFound();
   }
 
-  const postUrl = `https://www.stoicquotes.ca/quotes/${philosopher.name.toLowerCase()}/${id}`;
-  const quoteText = `${quote.text}`;
-
   const displayName =
     philosopher.name === "Marcus-Aurelius"
       ? "Marcus Aurelius"
       : philosopher.name;
+
+  const postUrl = `https://www.stoicquotes.ca/quotes/${philosopher.name.toLowerCase()}/${id}`;
+  const quoteText = `${quote.text} - ${displayName}`;
 
   return (
     <>
@@ -105,19 +105,18 @@ export default async function Page({ params }) {
             <p className="text-3xl mt-5 tracking-tight text-right">
               -{displayName}
             </p>
-            <div className="h-0.5 blackBg w-full mt-5"></div>
+            <div className="h-0.5 blackBg w-full mt-5 sm:hidden"></div>
           </div>
         </div>
-        <div className="w-full md:w-[%] md:ml-auto lg:w-[65%] xl:w-[49%] md:-mt-7 flex justify-end">
-          <span className="h-0.5 blackBg w-[45%] lg:w-[30%] xl:w-[20%] mt-3 hidden md:flex"></span>
-          <ul className="space-y-3 ">
-            <li className="grayText text-lg sm:text-xl sm:mt-5">Share</li>
+        <div className="w-full md:w-[%] md:ml-auto lg:w-[61%] xl:w-[60%] 2xl:w-[59%] mt-5">
+          <ul className="space-y-3 text-2xl">
+            <li className="grayText">Share</li>
             <li className="">
               <a
                 href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(postUrl)}`}
                 target="_blank"
                 aria-label="Share on Facebook"
-                className="text-lg sm:text-xl transition3 hoverText"
+                className=" transition3 hoverText"
               >
                 Facebook
               </a>
@@ -127,14 +126,14 @@ export default async function Page({ params }) {
                 href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(postUrl)}&text=${encodeURIComponent(quoteText)}`}
                 target="_blank"
                 aria-label="Share on Twitter"
-                className="text-lg sm:text-xl transition3 hoverText"
+                className=" transition3 hoverText"
               >
                 Twitter
               </a>
             </li>
             <li>
-              <Copy postUrl={postUrl} />
-              <div className="h-[1.5px] bg-black w-20 sm:w-24 mt-5"></div>
+              <Copy postUrl={postUrl} textSize="text-2xl" />
+              <div className="h-0.5 bg-black w-28 mt-5"></div>
             </li>
           </ul>
         </div>

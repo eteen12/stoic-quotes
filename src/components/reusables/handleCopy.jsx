@@ -1,6 +1,6 @@
 "use client";
 
-export default function Copy({ postUrl }) {
+export default function Copy({ postUrl, textSize }) {
   const handleCopyLink = () => {
     navigator.clipboard.writeText(postUrl);
     alert("Link copied to clipboard!");
@@ -8,7 +8,7 @@ export default function Copy({ postUrl }) {
   return (
     <button
       onClick={handleCopyLink}
-      className="text-lg sm:text-xl transition3 hoverText"
+      className={`transition3 hoverText`}
       aria-label="copy link to quote to keyboard"
     >
       Copy link

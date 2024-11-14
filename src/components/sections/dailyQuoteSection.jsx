@@ -56,7 +56,7 @@ export default function DailyQuoteSection() {
               </a>
             </li>
             <li>
-              <Copy postUrl={postUrl} />
+              <Copy postUrl={postUrl} textSize="text-lg sm:text-xl" />
               <div className="h-[1.5px] bg-black w-20 sm:w-24 mt-5"></div>
             </li>
           </ul>
