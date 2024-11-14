@@ -9,11 +9,11 @@ const links = [
   { href: "/quotes", text: "Quotes" },
   { href: "/blog", text: "Blog" },
   { href: "/about", text: "About" },
-  { href: "/contact", text: "Contact" },
+  { href: "https://teletadevelopment.com/contact", text: "Contact" },
 ];
 const menuItems = [
   { name: "About", path: "/about" },
-  { name: "Contact", path: "/contact" },
+  { name: "Contact", path: "https://teletadevelopment.com/contact" },
   { name: "Policies", path: "/policies" },
   { name: "Home", path: "/" },
 ];

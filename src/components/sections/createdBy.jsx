@@ -13,7 +13,7 @@ export default function CreatedBy() {
             Ethan Breitkreutz
           </p>
         </div>
-        <div className="mt-10 flex flex-col gap-y-5 sm:items-center gap-x-2">
+        <div className="mt-10 flex flex-col w-full gap-y-5 md:flex-row gap-x-2">
           <Button
             text="Teleta website"
             link="https://teletadevelopment.com"

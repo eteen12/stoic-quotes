@@ -23,7 +23,7 @@ export default function NavBurger() {
     { name: "Blog", href: "/blog" },
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "https://teletadevelopment.com/contact" },
   ];
 
   return (

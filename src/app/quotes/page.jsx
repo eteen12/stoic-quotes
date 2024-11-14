@@ -119,7 +119,7 @@ function Page() {
         </div>
         <div className="flex gap-2 mt-5 sm:mt-6">
           <Button
-            link="/about"
+            link="/quotes/marcus-aurelius"
             text="My pick"
             className="transition3 shrinkAnimation"
           />
@@ -148,7 +148,7 @@ function Page() {
           <ul className="space-y-2 ">
             <li>
               <Link
-                href="/philosophers/seneca"
+                href="/quotes/seneca"
                 className="text-lg sm:text-xl transition3 hoverText"
               >
                 Seneca
@@ -156,7 +156,7 @@ function Page() {
             </li>
             <li>
               <Link
-                href="/philosophers/epictetus"
+                href="/quotes/epictetus"
                 className="text-lg sm:text-xl transition3 hoverText"
               >
                 Epictetus
@@ -164,7 +164,7 @@ function Page() {
             </li>
             <li>
               <Link
-                href="/philosophers/marcus-aurelius"
+                href="/quotes/marcus-aurelius"
                 className="text-lg sm:text-xl transition3 hoverText"
               >
                 Marcus Aurelius

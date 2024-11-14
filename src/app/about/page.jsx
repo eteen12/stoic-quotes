@@ -86,6 +86,11 @@ export default function Page() {
             link: "https://www.instagram.com/ethan_breitkreutz/",
           },
           { name: "Github", link: "https://github.com/eteen12" },
+          { name: "Twitter", link: "https://x.com/12Eteen" },
+          {
+            name: "Youtube",
+            link: "https://www.youtube.com/@Ethan-Breitkreutz",
+          },
         ]}
         buttonText="Want to talk?"
         buttonLink="https://teletadevelopment.com/contact"
