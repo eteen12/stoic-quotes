@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/layout/navBar";
 import Footer from "@/components/layout/footer";
 
 const inter = Inter({
@@ -11,7 +12,7 @@ const inter = Inter({
 export const metadata = {
   title: "Stoic Quotes - Daily Wisdom from Stoic Philosophy",
   description:
-    "Explore quotes from Stoic philosophers to inspire resilience and inner strength. Made by Teleta Development, a Canadian web development company.",
+    "Explore blogs and quotes from Stoic philosophers to inspire resilience and inner strength. Made by Teleta Development, a Canadian web development company.",
   keywords:
     "Stoicism, Stoic quotes, philosophy, wisdom, Marcus Aurelius, Seneca, Epictetus, daily quotes, personal growth, resilience",
   author: "Teleta Development",
@@ -21,7 +22,7 @@ export const metadata = {
     description:
       "Explore quotes from Stoic philosophers to inspire resilience and inner strength. Made by Teleta Development, a Canadian web development company.",
     url: "https://www.stoicquotes.ca",
-    image: "https://www.stoicquotes.ca/rando.png",
+    image: "https://www.stoicquotes.ca/stoicQuotesLogo.jpg",
     type: "website",
   },
   twitter: {
@@ -29,27 +30,54 @@ export const metadata = {
     title: "Stoic Quotes",
     description:
       "Explore daily Stoic quotes to inspire resilience and inner strength.",
-    image: "https://www.stoicquotes.ca/rando.png",
+    image: "https://www.stoicquotes.ca/stoicQuotesLogo.jpg",
   },
-  schema: {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Stoic Quotes",
-    url: "https://www.stoicquotes.ca",
-    description:
-      "A collection of daily quotes and insights from Stoic philosophy.",
-    image: "https://www.stoicquotes.ca/rando.png",
-    sameAs: [
-      "https://www.facebook.com/TeletaDevelopment",
-      "https://www.instagram.com/Teleta_Development/",
-      "https://www.linkedin.com/in/ethan-breitkreutz-43399b322/",
-    ],
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://www.stoicquotes.ca/search?q={search_term_string}",
-      "query-input": "required name=search_term_string",
+  schema: [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Stoic Quotes",
+      url: "https://www.stoicquotes.ca",
+      description:
+        "A collection of daily quotes and insights from Stoic philosophy.",
+      image: "https://www.stoicquotes.ca/stoicQuotesLogo.jpg",
+      sameAs: [
+        "https://www.facebook.com/TeletaDevelopment",
+        "https://www.instagram.com/Teleta_Development/",
+        "https://www.linkedin.com/company/teleta-development",
+        "https://www.youtube.com/@TeletaDevelopment",
+        "https://x.com/12Eteen",
+        "https://github.com/eteen12",
+      ],
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://www.stoicquotes.ca/search?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
     },
-  },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Teleta Development",
+      url: "https://teletadevelopment.com",
+      logo: "https://teletadevelopment.com/teletaLogo.png",
+      sameAs: [
+        "https://www.facebook.com/TeletaDevelopment",
+        "https://www.instagram.com/Teleta_Development/",
+        "https://www.linkedin.com/company/teleta-development",
+        "https://www.youtube.com/@TeletaDevelopment",
+        "https://x.com/12Eteen",
+        "https://github.com/eteen12",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+1-778-581-9151",
+        contactType: "Customer Service",
+        areaServed: "CA",
+        availableLanguage: "English",
+      },
+    },
+  ],
 };
 
 export default function RootLayout({ children }) {
@@ -96,7 +124,10 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body className={`${inter.variable} antialiased max-w-[1700px] mx-auto`}>
+      <body
+        className={`${inter.variable} antialiased transition-all duration-700`}
+      >
+        <NavBar />
         {children}
         <Footer />
       </body>

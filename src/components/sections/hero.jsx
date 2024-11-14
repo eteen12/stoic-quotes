@@ -1,47 +1,51 @@
-import Link from "next/link";
-import Image from "next/image";
-import NavBar from "../layout/navBar";
+import React from "react";
+import Button from "../reusables/button";
+import SrcSetImage from "../reusables/srcSetImage";
 
 export default function Hero() {
   return (
-    <div className="overflow-hidden rounded-xl bg-white shadow h-[720px] sm:h-[800px] xl:h-[850px] w-full pb-2 md:pb-5">
-      <div className="-ml-2 -mr-2 -mt-2">
-        <NavBar />
-      </div>
-      <div className="relative mx-auto sm:h-[630px] lg:h-[700px] xl:h-[750px] w-full hidden sm:block ">
-        <Image
-          src="/hero/heroImageDesktop.webp"
-          alt="black and white marcus aurelius equestrian statue in black and white"
-          className="object-contain hidden sm:block ml-32 lg:ml-20"
-          fill
-          priority
-        />
-      </div>
-      <div className="relative mx-auto h-[600px] w-full sm:hidden">
-        <Image
-          src="/hero/heroImageMobile_nxcvhm_c_scale,w_830.webp"
-          alt="black and white marcus aurelius equestrian statue"
-          className="object-cover sm:hidden object-left"
-          sizes="(max-width: 830px) 100vw, 830px"
-          srcSet="
-          /hero/heroImageMobile_nxcvhm_c_scale,w_300.webp 300w,
-          /hero/heroImageMobile_nxcvhm_c_scale,w_713.webp 713w,
-          /hero/heroImageMobile_nxcvhm_c_scale,w_830.webp 830w"
-          fill
-          priority
-        />
-      </div>
-      <div className="relative flex flex-col blackText px-5 tracking-tighter bold text-2xl md:text-3xl -mt-4 sm:mt-8 md:mt-4 lg:-mt-12">
-        <h1>
-          Discover what it means <br /> to be stoic
-          <Link
-            href="/quotes"
-            className="relative rounded-md blackBg px-7 py-1.5 sm:py-2 sm:text-lg whiteText shadow-sm hoverBg ml-4 tracking-tighter bold text-base md:text-lg md:px-8 md:ml-10 transition-transform duration-300 transform hover:scale-105"
-            aria-label="Learn more about Stoic quotes and philosophy"
-          >
-            discover
-          </Link>
+    <div className=" h-fit py-24 pt-32 sm:pt-52 px-4 sm:px-8 transition-all duration-700 max-w-[1700px] mx-auto">
+      <div className="blackText w-full pt-10 flex">
+        <h1 className="blackText text-6xl sm:text-8xl md:text-9xl ">
+          Stoicism
         </h1>
+        <span className="aria-hidden h-1.5 w-10 blackBg mt-8 ml-2 sm:mt-14 sm:h-2 sm:w-12 md:mt-20 md:h-3 md:w-14"></span>
+      </div>
+      <div className="flex gap-2 mt-5 sm:mt-6">
+        <Button
+          link="/blog"
+          text="Blogs"
+          aria="go to the blog page section"
+          className="py-0.5 text-xs sm:text-sm md:text-base "
+        />
+        <Button
+          link="/quotes"
+          text="Quotes"
+          aria="go to the quotes page section"
+          className="py-0.5 text-xs sm:text-sm md:text-base md:py-0"
+        />
+      </div>
+      <div className="w-full mt-16 text-lg sm:text-xl sm:mt-24 md:w-[65%] md:ml-auto ">
+        <h2 className="lg:w-[50%] xl:w-[40%] tracking-tight">
+          Read quotes from the famous stoics, and read the daily quote. The blog
+          is updated weekly with insights on stoic applications to modern day
+          life.
+        </h2>
+        <div className="relative w-full h-full mt-8">
+          <div className="relative w-full h-[350px] sm:h-[420px] md:h-[500px] lg:h-[600px] xl:h-[800px]">
+            <SrcSetImage
+              sizes="(max-width: 1000px) 100vw, 1000px"
+              srcSet="
+             /bento/epictetusWriting_i5itci_c_scale,w_100.webp 100w,
+             /bento/epictetusWriting_i5itci_c_scale,w_358.webp 358w,
+             /bento/epictetusWriting_i5itci_c_scale,w_621.webp 621w,
+             /bento/epictetusWriting_i5itci_c_scale,w_844.webp 844w,
+             /bento/epictetusWriting_i5itci_c_scale,w_1000.webp 1000w"
+              src="/bento/epictetusWriting_i5itci_c_scale,w_1000.webp"
+              alt="epictetus writing black and white photo"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

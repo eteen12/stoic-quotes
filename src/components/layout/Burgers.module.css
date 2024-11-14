@@ -10,21 +10,21 @@
 
 .burgerSpan {
   border-radius: 999999px;
-  height: 4px;
-  margin: 4px 0;
+  height: 3px;
+  margin: 3px 0;
   transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 
 .burgerSpan:nth-of-type(1) {
-  width: 50%;
+  width: 45%;
 }
 
 .burgerSpan:nth-of-type(2) {
-  width: 95%;
+  width: 90%;
 }
 
 .burgerSpan:nth-of-type(3) {
-  width: 75%;
+  width: 70%;
 }
 
 .hiddenCheckbox {
@@ -33,17 +33,20 @@
 
 .checkedSpan1 {
   transform-origin: bottom;
-  transform: rotatez(45deg) translate(6px, 1px);
+  background-color: white;
+  transform: rotatez(45deg) translate(4px, -1px);
 }
 
 .checkedSpan2 {
   transform-origin: top;
+  background-color: white;
   transform: rotateZ(-46deg);
 }
 
 .checkedSpan3 {
   transform-origin: bottom;
+  height: 3px;
+  background-color: white;
   width: 50%;
-  transform: translate(7px, -10px) rotateZ(47deg);
+  transform: translate(7.5px, -7px) rotateZ(45deg);
 }
-

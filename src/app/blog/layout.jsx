@@ -1,6 +1,3 @@
-import NavBar from "@/components/layout/navBar";
-import "../globals.css";
-
 export const metadata = {
   title: "Read The Stoic Quotes Blog",
   description:
@@ -11,7 +8,7 @@ export const metadata = {
     title: "Stoic Quotes Blog",
     description:
       "Explore a collection of stoic philosophy blogs, quotes, and insights to foster personal growth and resilience.",
-    url: "https://www.stoicquotes.ca/blog", 
+    url: "https://www.stoicquotes.ca/blog",
     type: "website",
     images: "https://www.stoicquotes.ca/marcusFaceLogo.webp",
   },
@@ -20,18 +17,16 @@ export const metadata = {
     title: "Stoic Quotes Blog",
     description:
       "Explore a collection of stoic philosophy blogs, quotes, and insights to foster personal growth and resilience.",
-    images: "https://www.stoicquotes.ca/marcusFaceLogo.webp", 
+    images: "https://www.stoicquotes.ca/marcusFaceLogo.webp",
   },
 };
 
 export default function Layout({ children }) {
   return (
     <>
-    
-    <div>
-      <NavBar />
-      <div>{children}</div>
-    </div>
+      <div>
+        <div>{children}</div>
+      </div>
     </>
   );
 }

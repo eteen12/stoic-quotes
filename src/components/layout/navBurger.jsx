@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { IoIosArrowForward } from "react-icons/io";
 import styles from "./Burgers.module.css";
 
 export default function NavBurger() {
@@ -23,8 +22,8 @@ export default function NavBurger() {
     { name: "Quotes", href: "/quotes" },
     { name: "Blog", href: "/blog" },
     { name: "Home", href: "/" },
-    { name: "Contact", href: "/contact" },
     { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -53,10 +52,10 @@ export default function NavBurger() {
         ></span>
       </label>
       <div
-        className={`fixed top-0 left-0 w-full min-h-[100vh] whiteBg transition-opacity duration-500 ease-in-out flex flex-col z-20 
+        className={`fixed top-0 left-0 w-full min-h-[100vh] bg-black transition-opacity duration-500 ease-in-out flex flex-col z-20 pt-56 px-8
           ${opened ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
       >
-        <ul className="flex flex-col items-start py-10 pt-20 gap-8 tracking-tighter bold text-2xl md:text-3xl ">
+        <ul className="flex flex-col items-start whiteText tracking-tighter text-3xl  space-y-4">
           {menuItems.map((item, index) => (
             <li key={index} className="w-full">
               <div
@@ -65,23 +64,33 @@ export default function NavBurger() {
               >
                 <Link
                   href={item.href}
-                  className="ml-5"
+                  className=""
                   aria-label={`go to the ${item.name} page section`}
                   onClick={() => handleClose(index)}
                 >
                   {item.name}
                 </Link>
-                <Link href={item.href}>
-                  <IoIosArrowForward
-                    className="mt-px mr-3.5 text-5xl"
-                    aria-label={`go to the ${item.name} page section`}
-                    onClick={() => handleClose(index)}
-                  />
-                </Link>
               </div>
             </li>
           ))}
         </ul>
+
+        <div className="text-right w-full mt-4">
+          <div className="h-1 w-full whiteBg"></div>
+          <p className="whiteText">
+            <span className="text-sm/6 ">
+              &copy; 2024{" "}
+              <a
+                className="hoverText shrinkAnimation transition3 text-sm"
+                href="https://teletadevelopment.com"
+                target="_blank"
+              >
+                Teleta Development
+              </a>{" "}
+              , All rights reserved.
+            </span>
+          </p>
+        </div>
       </div>
     </>
   );
