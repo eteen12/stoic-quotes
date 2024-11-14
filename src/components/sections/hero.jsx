@@ -36,12 +36,12 @@ export default function Hero() {
             <SrcSetImage
               sizes="(max-width: 1000px) 100vw, 1000px"
               srcSet="
-             /bento/epictetusWriting_i5itci_c_scale,w_100.webp 100w,
-             /bento/epictetusWriting_i5itci_c_scale,w_358.webp 358w,
-             /bento/epictetusWriting_i5itci_c_scale,w_621.webp 621w,
-             /bento/epictetusWriting_i5itci_c_scale,w_844.webp 844w,
-             /bento/epictetusWriting_i5itci_c_scale,w_1000.webp 1000w"
-              src="/bento/epictetusWriting_i5itci_c_scale,w_1000.webp"
+             /hero/epictetusWriting_i5itci_c_scale,w_100.webp 100w,
+             /hero/epictetusWriting_i5itci_c_scale,w_358.webp 358w,
+             /hero/epictetusWriting_i5itci_c_scale,w_621.webp 621w,
+             /hero/epictetusWriting_i5itci_c_scale,w_844.webp 844w,
+            /hero/epictetusWriting_i5itci_c_scale,w_1000.webp 1000w"
+              src="/hero/epictetusWriting_i5itci_c_scale,w_1000.webp"
               alt="epictetus writing black and white photo"
             />
           </div>
