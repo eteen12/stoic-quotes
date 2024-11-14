@@ -41,23 +41,20 @@ export default async function BlogPostPage({ params }) {
   const postUrl = `https://www.stoicquotes.ca/blog/${id}`;
 
   return (
-    <div className="mx-auto mt-10 sm:mt-20 px-5 blackText mb-10 max-w-3xl text-center">
+    <div className="mx-auto pt-32 px-4 sm:px-8 mb-10 max-w-[1700px] text-center">
       <div>
         {/* Post Header */}
-        <div className="pb-8">
-          <p className="text-base font-semibold leading-7 tracking-tighter mediumBold lg:text-xl">
-            {post.subject}
-          </p>
-          <h1 className="text-3xl font-semibold tracking-tighter bold sm:text-4xl">
+        <div className="text-left md:w-[60%] lg:w-[50%] pt-10 mb-5">
+          <h1 className="relative blackText text-4xl md:text-6xl lg:text-7xl inline-block">
             {post.title}
+            <div className="h-0.5 blackBg w-full mt-5 "></div>
           </h1>
-          <p className="mt-1 text-lg leading-8 tracking-tighter lg:text-2xl">
-            {post.description}
-          </p>
+        </div>
+        <div className="text-right md:w-[40%] lg:w-[30%] sm:ml-auto">
+          <p className="text-lg lg:text-xl">{post.description}</p>
         </div>
 
-        {/* Image Section */}
-        <div className="relative w-full h-[30rem] whiteBg mx-auto mb-8">
+        <div className="relative w-full h-[30rem] lg:h-[40rem] whiteBg mx-auto mt-8 max-w-4xl lg:mx-0 lg:ml-auto">
           <Image
             alt={`${post.attributionText} ${", "} ${post.attributionDescription}`}
             src={post.src}
@@ -66,21 +63,21 @@ export default async function BlogPostPage({ params }) {
             priority
           />
         </div>
-        <div>
-          <div className="text-xs -mt-8 text-right">
-            <div className="flex justify-end">
-              <a
-                href={post.attributionLink}
-                className="underline"
-                target="_blank"
-                aria-label={`link to ${post.attributionText} ${""} ${post.attributionDescription}`}
-              >
-                {post.attributionText}
-              </a>
-              <p>, {post.attributionDescription}</p>
-            </div>
+        <div className="text-right mt-5 ">
+          <div className="flex flex-col justify-end text-xs max-w-[200px] ml-auto">
             <a
-              className="mt-2 underline"
+              href={post.attributionLink}
+              className="underline"
+              target="_blank"
+              aria-label={`link to ${post.attributionText} ${post.attributionDescription}`}
+            >
+              {post.attributionText},
+            </a>
+
+            <span> {post.attributionDescription}</span>
+
+            <a
+              className="underline"
               target="_blank"
               href={post.imageLicense}
               aria-label="link to image license"
@@ -89,34 +86,39 @@ export default async function BlogPostPage({ params }) {
             </a>
           </div>
         </div>
-
         {/* Content Sections */}
-        <div className="text-left mx-auto max-w-3xl leading-7 tracking-tighter mt-5">
-          <h2 className="text-2xl lg:text-3xl bold">{post.h2}</h2>
-          <p className="mt-2 lg:text-xl">{post.content}</p>
-
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900 mt-5 lg:text-3xl">
-            Relevant Quotes
-          </h2>
-          <p className="mt-2 lg:text-xl">{post.quotes}</p>
-
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900 mt-5 lg:text-3xl">
-            {post.h2v2}
-          </h2>
-          <p className="mt-2 lg:text-xl">{post.reflection}</p>
+        <div className="mt-10">
+          <div className="mx-auto lg:grid lg:grid-cols-2 lg:gap-5 py-5">
+            <div>
+              <h2 className="text-4xl md:text-5xl lg:text-left">{post.h2}</h2>
+              <div className="h-0.5 blackBg w-full mt-5 inline-block lg:w-[98%]"></div>
+              <p className="text-lg lg:text-xl mt-5 lg:text-left">
+                {post.content}
+              </p>
+            </div>
+            <div>
+              <div className="py-5 lg:py-0">
+                <h2 className="text-4xl md:text-5xl lg:text-right ">
+                  {post.h2v2}
+                </h2>
+                <div className="h-0.5 blackBg w-full mt-5 inline-block lg:w-[98%]"></div>
+                <p className="text-lg lg:text-xl mt-5 lg:text-right">
+                  {post.reflection}
+                </p>
+              </div>
+              <div className="py-5">
+                <p className="text-lg lg:text-xl mt-5 lg:text-right">
+                  {post.quotes}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="mt-10 text-center sm:flex justify-center gap-5 items-center">
-          <ShareButtons
-            postUrl={postUrl}
-            quoteText={quoteText}
-            className="transition-transform duration-300 transform hover:scale-105"
-          />
+        <div className="mt-10 flex gap-5 justify-center lg:justify-start">
+          <ShareButtons postUrl={postUrl} quoteText={quoteText} className="" />
 
-          <Link
-            href="/about"
-            className="mb-6 flex justify-center items-center "
-          >
+          <Link href="/about" className="mb-6 flex ">
             <Author post={post} />
           </Link>
         </div>
