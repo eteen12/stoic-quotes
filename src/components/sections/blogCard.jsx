@@ -11,15 +11,15 @@ const BlogCard = ({
   return (
     <Link href={`/blog/${post.id}`} className="mb-5">
       <div
-        className={`flex flex-col overflow-hidden hover:shadow-sm shrinkAnimation transition3 blackText h-full ${className}`}
+        className={`relative flex flex-col overflow-hidden hover:shadow-sm shrinkAnimation transition3 blackText h-full ${className}`}
       >
         {/*BORDER*/}
         <div className="flex w-full">
-          <span className="h-[1.5px] blackBg w-[70%] mt-2"></span>
+          <span className="h-0.5 blackBg w-[70%] mt-2"></span>
           <div className={`mr-auto px-2 text-nowrap ${blogBorderTextSize}`}>
             {post.subject}
           </div>
-          <span className="h-[1.5px] blackBg w-[20%] mt-2"></span>
+          <span className="h-0.5 blackBg w-[20%] mt-2"></span>
         </div>
         {/*CONTENT*/}
         <div className={`relative ${imageHeight} overflow-hidden`}>
@@ -42,11 +42,11 @@ const BlogCard = ({
         </div>
         {/*BORDER*/}
         <div className="flex w-full">
-          <span className="h-[1.5px] blackBg w-[20%] mt-2"></span>
+          <span className="h-0.5 blackBg w-[20%] mt-2"></span>
           <div className={`mr-auto px-2 text-nowrap ${blogBorderTextSize}`}>
             {post.date}
           </div>
-          <span className="h-[1.5px] blackBg w-[70%] mt-2"></span>
+          <span className="h-0.5 blackBg w-[70%] mt-2"></span>
         </div>
       </div>
     </Link>

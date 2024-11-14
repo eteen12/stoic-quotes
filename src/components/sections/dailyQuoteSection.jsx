@@ -65,6 +65,7 @@ export default function DailyQuoteSection() {
           <Button
             link="/quotes"
             text="View all quotes"
+            aria="view the quotes section page"
             className="w-full sm:w-auto transition3 shrinkAnimation "
           />
         </div>

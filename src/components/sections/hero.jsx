@@ -15,11 +15,13 @@ export default function Hero() {
         <Button
           link="/blog"
           text="Blogs"
+          aria="go to the blog page section"
           className="py-0.5 text-xs sm:text-sm md:text-base "
         />
         <Button
           link="/quotes"
           text="Quotes"
+          aria="go to the quotes page section"
           className="py-0.5 text-xs sm:text-sm md:text-base md:py-0"
         />
       </div>

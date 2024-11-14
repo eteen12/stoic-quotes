@@ -16,7 +16,7 @@ export default function ListSection({ title, items, buttonText, buttonLink }) {
   };
 
   return (
-    <div className="h-full pb-24">
+    <div className="h-full pb-24 transition-all duration-700">
       <div className="h-full w-full px-6 lg:px-8 max-w-[1700px] mx-auto">
         <div className="mb-8">
           <h2 className="text-3xl sm:text-4xl tracking-tight text-right">
@@ -34,6 +34,7 @@ export default function ListSection({ title, items, buttonText, buttonLink }) {
                 <Link
                   href={item.link}
                   className="flex justify-between"
+                  aria-label={`go to ${item.name} section`}
                   onClick={(e) => handleClick(e, item.link)}
                 >
                   {item.name}
@@ -47,6 +48,7 @@ export default function ListSection({ title, items, buttonText, buttonLink }) {
         <Button
           text={buttonText}
           link={buttonLink}
+          aria={`go to ${title} section`}
           className="w-full md:w-auto"
         />
       </div>

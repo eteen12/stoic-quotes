@@ -8,7 +8,7 @@ export default function Copy({ postUrl, textSize }) {
   return (
     <button
       onClick={handleCopyLink}
-      className={`transition3 hoverText`}
+      className={`transition3 hoverText ${textSize}`}
       aria-label="copy link to quote to keyboard"
     >
       Copy link

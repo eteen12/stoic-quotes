@@ -2,7 +2,7 @@ import Button from "../reusables/button";
 
 export default function CreatedBy() {
   return (
-    <div className="">
+    <div className="transition-all duration-700">
       <div className="mx-auto max-w-[1700px] px-6 pb-24 lg:px-8">
         <div className="max-w-2xl">
           <h2 className="  text-4xl tracking-tight sm:text-5xl">
@@ -13,9 +13,17 @@ export default function CreatedBy() {
             Ethan Breitkreutz
           </p>
         </div>
-        <div className="mt-10 flex items-center gap-x-2">
-          <Button text="Teleta website" link="https://teletadevelopment.com" />
-          <Button text="About me" link="/about" />
+        <div className="mt-10 flex flex-col gap-y-5 sm:items-center gap-x-2">
+          <Button
+            text="Teleta website"
+            link="https://teletadevelopment.com"
+            aria="go to the teleta development website"
+          />
+          <Button
+            text="About me"
+            link="/about"
+            aria="go to the about ethan breitkreutz section"
+          />
         </div>
       </div>
     </div>

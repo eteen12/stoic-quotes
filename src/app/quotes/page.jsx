@@ -94,8 +94,9 @@ export const metadata = {
     sameAs: [
       "https://www.facebook.com/TeletaDevelopment",
       "https://www.instagram.com/Teleta_Development/",
-      "https://www.linkedin.com/in/ethan-breitkreutz",
+      "https://www.linkedin.com/company/teleta-development",
       "https://www.youtube.com/@TeletaDevelopment",
+      "https://x.com/12Eteen",
       "https://github.com/eteen12",
     ],
     potentialAction: {

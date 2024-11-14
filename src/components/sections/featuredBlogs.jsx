@@ -32,6 +32,7 @@ export default function FeaturedBlogs() {
           <Button
             link="/blog"
             text="View all blogs"
+            aria="go to the blogs page section"
             className="w-full md:w-auto"
           />
         </div>
