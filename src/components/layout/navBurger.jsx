@@ -19,7 +19,7 @@ export default function NavBurger() {
   };
 
   const menuItems = [
-    { name: "Quotes", href: "/quotes" },
+    { name: "Quotes", href: "https://teletadevelopment.com/contact" },
     { name: "Blog", href: "/blog" },
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },

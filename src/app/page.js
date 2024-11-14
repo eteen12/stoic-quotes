@@ -15,12 +15,12 @@ export default function Home() {
       <ListSection
         title="Read quotes from the famous stoics"
         items={[
-          { name: "Marcus Aurelius", link: "/philosophers/marcus-aurelius" },
-          { name: "Seneca the Younger", link: "/philosophers/seneca" },
-          { name: "Epictetus", link: "/philosophers/epictetus" },
+          { name: "Marcus Aurelius", link: "/quotes/marcus-aurelius" },
+          { name: "Seneca the Younger", link: "/quotes/seneca" },
+          { name: "Epictetus", link: "/quotes/epictetus" },
         ]}
         buttonText="View all philosophers"
-        buttonLink="/philosophers"
+        buttonLink="/quotes"
       />
       <CreatedBy />
     </div>
