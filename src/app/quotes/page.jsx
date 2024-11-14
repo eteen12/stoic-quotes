@@ -96,10 +96,7 @@ export const metadata = {
       "https://www.instagram.com/Teleta_Development/",
       "https://www.linkedin.com/company/teleta-development",
       "https://www.youtube.com/@TeletaDevelopment",
-<<<<<<< HEAD
-=======
       "https://x.com/12Eteen",
->>>>>>> styling-overhaul
       "https://github.com/eteen12",
     ],
     potentialAction: {
@@ -113,33 +110,6 @@ export const metadata = {
 function Page() {
   return (
     <>
-<<<<<<< HEAD
-      <div className="pb-20">
-        <div className="relative isolate px-6 lg:px-8 ">
-          <div className="mx-auto max-w-5xl py-32 sm:py-48 lg:py-56">
-            <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-              <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 transition-transform duration-300 transform hover:scale-105">
-                read about the developer and writer{" "}
-                <Link
-                  href="/about"
-                  className="font-semibold blackText"
-                  aria-label="read about ethan, the stoic quotes developer"
-                >
-                  <span aria-hidden="true" className="absolute inset-0" />
-                  read more <span aria-hidden="true">&rarr;</span>
-                </Link>
-              </div>
-            </div>
-            <div className="text-center">
-              <h1 className="text-balance text-5xl font-semibold tracking-tight blackText sm:text-7xl">
-                Timeless Wisdom from the Great Stoics.
-              </h1>
-              <p className="mt-8 text-lg blackText sm:text-xl/8">
-                A curated collection of profound insights from the greatest
-                Stoic philosophers, offering guidance on life, resilience, and
-                inner peace
-              </p>
-=======
       <div className=" h-fit py-24 pt-32 sm:pt-52 px-4 sm:px-8 transition-all duration-700 max-w-[1700px] mx-auto">
         <div className="blackText w-full pt-10 flex">
           <h1 className="blackText text-6xl sm:text-8xl md:text-9xl ">
@@ -169,7 +139,6 @@ function Page() {
             <div className="border-b-2 border-black mt-7 sm:w-[47%] md:w-[50%] sm:ml-auto "></div>
             <div className="sm:mt-1.5 lg:hidden">
               <div className="h-0.5 blackBg sm:w-[47%] sm:-mt-2 hidden sm:block lg:hidden"></div>
->>>>>>> styling-overhaul
             </div>
           </div>
         </div>
@@ -213,86 +182,6 @@ function Page() {
           />
         </div>
       </div>
-<<<<<<< HEAD
-      <div className="relative grid w-full  gap-5 p-5 mx-auto max-w-[400px] sm:max-w-[500px] md:max-w-[800px] lg:max-w-[1400px] md:grid-cols-2 lg:grid-cols-3 ">
-        <div className="relative grid grid-cols-1 grid-rows-[50%_50%] whiteBg shadow-lg rounded-xl h-[600px] lg:h-[630px] p-5 transition-transform duration-300 transform hover:scale-105">
-          <div className="relative h-full w-full rounded-xl">
-            <Image
-              src="/quotes/marcusOnHorse.webp"
-              alt="Marcus Aurelius equestrian statue black and white image"
-              fill
-              className="object-cover rounded-xl"
-              loading="lazy"
-            />
-          </div>
-          <div className=" h-full w-full blackText items-center flex flex-col">
-            <h2 className="text-2xl text-center pt-2 bold md:text-2xl">
-              Marcus Aurelius
-            </h2>
-            <p className="text-center mt-2 ">
-              Roman Emperor and Stoic philosopher, Marcus Aurelius, believed in
-              controlling one&apos;s thoughts and emotions. His book Meditations
-              is a cornerstone of Stoic thought.
-            </p>
-            <Link
-              href="/philosophers/marcus-aurelius"
-              aria-label="read marcus aurelius quotes"
-              className="rounded-md mt-10 blackBg px-7 py-1.5 whiteText shadow-sm hoverBg  tracking-tighter bold text-base absolute bottom-0 mb-10"
-            >
-              read quotes
-            </Link>
-          </div>
-        </div>
-
-        <div className="relative grid grid-cols-1 grid-rows-[50%_50%] whiteBg shadow-lg rounded-xl h-[600px] lg:h-[630px] p-5 transition-transform duration-300 transform hover:scale-105">
-          <div className="relative h-full w-full rounded-xl">
-            <Image
-              src="/quotes/senecaDeath.webp"
-              alt="seneca's suicide, forced by nero painting black and white"
-              fill
-              className="object-cover rounded-xl"
-              loading="lazy"
-            />
-          </div>
-          <div className=" h-full w-full blackText items-center flex flex-col">
-            <h2 className="text-2xl text-center pt-2 bold md:text-2xl">
-              Seneca The Younger
-            </h2>
-            <p className="text-center mt-2 ">
-              Seneca, a Roman Stoic philosopher, statesman, and tutor to Emperor
-              Nero, emphasized the importance of wisdom, self-control, and the
-              acceptance of fate. His writings, including Letters to Lucilius,
-              explore how to live virtuously in a turbulent world.
-            </p>
-            <Link
-              href="/philosophers/seneca"
-              aria-label="read seneca quotes"
-              className="rounded-md mt-10 blackBg px-7 py-1.5 whiteText shadow-sm hoverBg  tracking-tighter bold text-base absolute bottom-0 mb-10"
-            >
-              read quotes
-            </Link>
-          </div>
-        </div>
-        <div
-          className="relative whiteBg shadow-lg grid grid-cols-1 grid-rows-[50%_50%] rounded-xl h-[600px] 
-      lg:h-[630px] md:col-span-2 lg:col-span-1 md:w-[55%] lg:w-full md:flex md:flex-col md:justify-center md:mx-auto p-5 transition-transform duration-300 transform hover:scale-105"
-        >
-          <div className="relative h-full w-full rounded-xl">
-            <Image
-              sizes="(max-width: 1000px) 100vw, 1000px"
-              srcSet="
-                  /bento/epictetusWriting_i5itci_c_scale,w_100.webp 100w,
-                  /bento/epictetusWriting_i5itci_c_scale,w_358.webp 358w,
-                  /bento/epictetusWriting_i5itci_c_scale,w_621.webp 621w,
-                  /bento/epictetusWriting_i5itci_c_scale,w_844.webp 844w,
-                  /bento/epictetusWriting_i5itci_c_scale,w_1000.webp 1000w"
-              src="/bento/epictetusWriting_i5itci_c_scale,w_1000.webp"
-              alt="epictetus writing black and white photo"
-              className="object-cover rounded-xl"
-              loading="lazy"
-              fill
-            />
-=======
 
       <div className="relative grid w-full gap-10 lg:gap-0 mb-20 p-5 mx-auto  grid-cols-1 max-w-[1700px]">
         {philosophers.map((philosopher, index) => (
@@ -332,7 +221,6 @@ function Page() {
                 />
               </div>
             </div>
->>>>>>> styling-overhaul
           </div>
         ))}
       </div>
