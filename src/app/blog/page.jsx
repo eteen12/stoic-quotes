@@ -7,8 +7,11 @@ import Search from "@/components/reusables/search";
 import BlogCard from "@/components/sections/blogCard";
 import blogs from "@/data/blogs";
 
+
+
 function Page() {
   const [filteredBlogs, setFilteredBlogs] = useState(blogs);
+  
   return (
     <>
       <div className="pb-20">

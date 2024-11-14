@@ -44,7 +44,7 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const postUrl = `https://www.stoicquotes.ca/${philosopher.name}/${id}`;
+  const postUrl = `https://www.stoicquotes.ca/quotes/${philosopher.name}/${id}`;
 
   const metaDescription = `${quote.text} - A quote by ${philosopher.name}`;
   const metaTitle = `${philosopher.name}: "${quote.text}"`;

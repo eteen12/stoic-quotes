@@ -1,6 +1,3 @@
-import NavBar from "@/components/layout/navBar";
-import "../globals.css";
-
 export const metadata = {
   title: "Read The Stoic Quotes Blog",
   description:

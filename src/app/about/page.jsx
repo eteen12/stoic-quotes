@@ -11,7 +11,7 @@ export const metadata = {
     title: "Ethan Breitkreutz - About Me",
     description:
       "Learn more about Ethan Breitkreutz, a passionate Canadian web developer and business owner. Discover insights on Stoicism and explore his web development services at Teleta Development.",
-    url: "https://TeletaDevelopment.com/about",
+    url: "https://www.stoicquotes.ca.com/about",
     type: "website",
     images: "https://www.stoicquotes.ca/misc/ethan.webp",
   },
@@ -20,8 +20,32 @@ export const metadata = {
     title: "Ethan Breitkreutz - About Me",
     description:
       "Learn more about Ethan Breitkreutz, a passionate Canadian web developer and business owner. Discover insights on Stoicism and explore his web development services at Teleta Development.",
-    image: "https://TeletaDevelopment.com/misc/ethan.webp",
+    image: "https://www.stoicquotes.ca/misc/ethan.webp",
   },
+  schema: [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Teleta Development",
+      url: "https://teletadevelopment.com",
+      logo: "https://teletadevelopment.com/teletaLogo.png",
+      sameAs: [
+        "https://www.facebook.com/TeletaDevelopment",
+        "https://www.instagram.com/Teleta_Development/",
+        "https://www.linkedin.com/company/teleta-development",
+        "https://www.youtube.com/@TeletaDevelopment",
+        "https://x.com/12Eteen",
+        "https://github.com/eteen12",
+      ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+1-778-581-9151",
+        contactType: "Customer Service",
+        areaServed: "CA",
+        availableLanguage: "English",
+      },
+    },
+  ],
 };
 
 export default function Page() {
