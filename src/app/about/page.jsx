@@ -57,7 +57,7 @@ export default function Page() {
             <div className="w-full min-h-full relative">
               <div className="relative flex-shrink-0 h-16 w-16 sm:h-20 sm:w-20 rounded-full transition-transform duration-300 transform hover:scale-105">
                 <Image
-                  alt="Ethan Breitkreutz author and owner of Teleta Development"
+                  alt="Ethan Breitkreutz author and owner of Teleta Development."
                   src="/misc/ethan.webp"
                   className="object-cover rounded-full"
                   fill
