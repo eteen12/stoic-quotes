@@ -1,12 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./Burgers.module.css";
 
 export default function NavBurger() {
   const [opened, setOpened] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
+  useEffect(() => {
+    if (opened) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  });
 
   const handleToggle = () => {
     setOpened((prevOpened) => !prevOpened);
