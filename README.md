@@ -1,5 +1,7 @@
 # Stoic Quotes 
 
+* this site should have not had so many commits 
+
 Stoic quotes is a website that desplays the most famous quotes from stoic philosophers, as well as containing a blog, and a biography of each stoic.
 The site is user friendly, and easily accessible by anyone.
 
